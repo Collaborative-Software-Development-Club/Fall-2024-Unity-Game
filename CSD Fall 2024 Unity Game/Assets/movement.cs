@@ -6,7 +6,7 @@ public class movement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
-    public float runspeedtimefactor;
+    public float runspeedtimefactor; //times we want the speed to be increased
     private bool isrunning;
     void Start()
     {
@@ -38,17 +38,19 @@ public class movement : MonoBehaviour
         {
             gameObject.transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
+        
+        //delete those if you don't need them (I wrote this because I need them to see if the camera is tracking the object correctly)
         Debug.Log(speed);
         Debug.Log(gameObject.transform.position);
     }
     private void speedup()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift)&&!isrunning)
+        if (Input.GetKeyDown(KeyCode.LeftShift)&&!isrunning) //if user hits left shift in the current frame, multiply the speed by runspeedtimefactor
         {
-            isrunning = true;
+            isrunning = true; //to avoid the speed gets increased exponentially if the user holds left shift
             speed *= runspeedtimefactor;
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift)&&isrunning)
+        else if (Input.GetKeyUp(KeyCode.LeftShift)&&isrunning) //if user didn't, restore the original speed by dividing the current speed by runspeedtimefactor
         {
             speed/=runspeedtimefactor;
             isrunning = false;
