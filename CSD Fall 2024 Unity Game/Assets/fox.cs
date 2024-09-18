@@ -51,6 +51,7 @@ public class fox : MonoBehaviour, movement
     // Update is called once per frame
     void Update()
     {
+        updateSprite();
         speed_Up();
         move();
     }
@@ -65,6 +66,26 @@ public class fox : MonoBehaviour, movement
         body.velocity = player;
     }
 
+    public void updateSprite()
+    {
+        Vector2 movement = _action.ReadValue<Vector2>();
+        if (movement.x < 0)
+        {
+            spriteRenderer.sprite = sprites_Array[3];
+        }
+        else if (movement.x > 0)
+        {
+            spriteRenderer.sprite = sprites_Array[2];
+        }
+        else if (movement.y < 0)
+        {
+            spriteRenderer.sprite = sprites_Array[1];
+        }
+        else if (movement.y > 0)
+        {
+            spriteRenderer.sprite = sprites_Array[0];
+        }
+    }
     public void speed_Down()
     {
     }

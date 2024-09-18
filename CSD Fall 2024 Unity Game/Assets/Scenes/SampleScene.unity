@@ -660,7 +660,11 @@ MonoBehaviour:
   speed: 10
   runSpeedtimefactor: 3
   currentSpeed: 0
-  sprites_Array: []
+  sprites_Array:
+  - {fileID: 21300000, guid: 22f4b0c26131ef646a998b0db869599d, type: 3}
+  - {fileID: 21300000, guid: bd173dff4d0c6884c9f24283cfa9e5de, type: 3}
+  - {fileID: 21300000, guid: 65cdbf423afc2f3418e36df52d2defe7, type: 3}
+  - {fileID: 21300000, guid: 57ab9540e12011b4ba399022a61475c9, type: 3}
   body: {fileID: 1955300276}
   foxCollision: {fileID: 0}
 --- !u!50 &1955300276
