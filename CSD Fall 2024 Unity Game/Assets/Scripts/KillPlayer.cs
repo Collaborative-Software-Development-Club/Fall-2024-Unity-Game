@@ -22,15 +22,7 @@ public class KillPlayer : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            killPlayer();
-        }
-    }
-
-    void killPlayer()
+    public void killPlayer()
     {
         player.transform.position = respawnPoint.position;
         Debug.Log("You Died! ");

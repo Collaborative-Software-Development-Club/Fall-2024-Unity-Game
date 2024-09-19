@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &320251208 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8524339896692536800, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
+  m_PrefabInstance: {fileID: 1396056641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &696866919
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +288,63 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
+--- !u!1001 &1396056641
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6523244217866616300, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
+      propertyPath: m_Name
+      value: RespawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524339896692536800, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524339896692536800, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524339896692536800, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524339896692536800, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524339896692536800, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524339896692536800, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524339896692536800, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524339896692536800, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524339896692536800, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524339896692536800, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
 --- !u!1 &1585682718
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,9 +633,10 @@ GameObject:
   - component: {fileID: 1955300275}
   - component: {fileID: 1955300274}
   - component: {fileID: 1955300276}
+  - component: {fileID: 1955300277}
   m_Layer: 0
   m_Name: Fox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -738,6 +801,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1955300277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955300270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b722ec768319aec498a5a5167834d470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1955300270}
+  respawnPoint: {fileID: 320251208}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -746,3 +823,4 @@ SceneRoots:
   - {fileID: 1955300273}
   - {fileID: 1839677718}
   - {fileID: 696866921}
+  - {fileID: 1396056641}
