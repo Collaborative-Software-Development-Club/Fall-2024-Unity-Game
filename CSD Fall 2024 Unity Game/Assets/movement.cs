@@ -5,7 +5,7 @@ using UnityEngine;
 public interface movement
 {
    void move();
-    void speedup();
-    void speeddown();
+    void speed_Up();
+    void speed_Down();
 
 }

@@ -2,81 +2,103 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class fox : MonoBehaviour, movement
 {
     [Header("Character Speed")]
     public float speed;
     [Header("Character Speed Multiplied by this when running")]
-    public float runspeedtimefactor;
-    private bool isrunning;
+    public float runSpeedtimefactor;
+    public float currentSpeed;
+    private bool isRunning;
     private SpriteRenderer spriteRenderer;
-    public Sprite[] movepics; //0is the sprite moving upward£¬1downward£¬2to right£¬3to left
+    public Sprite[] sprites_Array; //element 0 is the sprite moving upward£¬1 downward£¬2 to right£¬3 to left
     public Rigidbody2D body;
-    public Collider2D coll;
+    public Collider2D foxCollision;
+    private InputAction _action;
+    private InputAction _sprint;
+    private PlayerInputActions _playerMap;
 
         // Start is called before the first frame update
+    void Awake()
+    {
+        _playerMap = new PlayerInputActions();
+    }
+    void OnEnable()
+    {
+        _action = _playerMap.PlayerAction.Movement;
+        _sprint = _playerMap.PlayerAction.Sprint;
+        _action.Enable();
+        _sprint.Enable();
+    }
+    void OnDisable()
+    {
+        _sprint.Disable();
+        _action.Disable();
+    }
+
+
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         body=GetComponent<Rigidbody2D>();
-        coll = GetComponent<Collider2D>();
+        foxCollision = GetComponent<Collider2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        speedup();
+        updateSprite();
+        speed_Up();
         move();
     }
 
     //Realizing methods in interface charactermove
     public void move()
     {
-        Vector2 location=body.position;
-        if (Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.UpArrow))
-        {
-            location.y += speed * Time.deltaTime;
-            spriteRenderer.sprite=movepics[0];
-        }
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        {
-            location.y -= speed * Time.deltaTime;
-            spriteRenderer.sprite = movepics[1];
-        }
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            location.x += speed * Time.deltaTime;
-            spriteRenderer.sprite = movepics[2];
-        }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            location.x -= speed * Time.deltaTime;
-            spriteRenderer.sprite = movepics[3];
-        }
-        body.position = location;
+        Vector2 movement = _action.ReadValue<Vector2>();
+        Vector3 player = new Vector3();
+        player.x = movement.x * currentSpeed;
+        player.y = movement.y * currentSpeed;
+        body.velocity = player;
     }
 
-    public void speeddown()
+    public void updateSprite()
+    {
+        Vector2 movement = _action.ReadValue<Vector2>();
+        if (movement.x < 0)
+        {
+            spriteRenderer.sprite = sprites_Array[3];
+        }
+        else if (movement.x > 0)
+        {
+            spriteRenderer.sprite = sprites_Array[2];
+        }
+        else if (movement.y < 0)
+        {
+            spriteRenderer.sprite = sprites_Array[1];
+        }
+        else if (movement.y > 0)
+        {
+            spriteRenderer.sprite = sprites_Array[0];
+        }
+    }
+    public void speed_Down()
     {
     }
 
-    public void speedup()
+    public void speed_Up()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isrunning) //if user hits left shift in the current frame, multiply the speed by runspeedtimefactor
+        if (_sprint.ReadValue<float>()>0)
         {
-            isrunning = true; //to avoid the speed gets increased exponentially if the user holds left shift
-            speed *= runspeedtimefactor;
+            currentSpeed = speed*runSpeedtimefactor;
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift) && isrunning) //if user didn't, restore the original speed by dividing the current speed by runspeedtimefactor
+        else
         {
-            speed /= runspeedtimefactor;
-            isrunning = false;
+            currentSpeed = speed;
         }
-    }
-
-    public void collide()
-    {
-
     }
 }
