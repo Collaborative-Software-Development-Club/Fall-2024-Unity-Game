@@ -7,7 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class NPC : MonoBehaviour, InteractableInterface
 {
-    [SerializeField] private string name;
+    [SerializeField] private string npcName;
 
     [Header("TMPro UI Elements")]
 
