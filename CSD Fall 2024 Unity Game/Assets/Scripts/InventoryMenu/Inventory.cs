@@ -6,10 +6,10 @@ using static UnityEditor.Progress;
 public class Inventory : MonoBehaviour
 {
     // List to store the inventory items
-    public List<Item> inventoryItems = new List<Item>();
+    public List<GameObject> inventoryItems = new List<GameObject>();
 
     // Add an item to the inventory
-    public void AddItem(Item item)
+    public void AddItem(GameObject item)
     {
 
         if (inventoryItems.Count >= 12)
@@ -19,23 +19,23 @@ public class Inventory : MonoBehaviour
         else
         {
             inventoryItems.Add(item);
-            Debug.Log("Added: " + item.itemName);
+            Debug.Log("Added: " + item.name);
         }
         
     }
 
     // Remove an item from the inventory
-    public void RemoveItem(Item item)
+    public void RemoveItem(GameObject item)
     {
         if (inventoryItems.Contains(item))
         {
             inventoryItems.Remove(item);
-            Debug.Log("Removed: " + item.itemName);
+            Debug.Log("Removed: " + item.name);
         }
     }
 
     // Check if the inventory contains a specific item
-    public bool HasItem(Item item)
+    public bool HasItem(GameObject item)
     {
         return inventoryItems.Contains(item);
     }

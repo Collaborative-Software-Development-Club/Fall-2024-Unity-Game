@@ -53,7 +53,7 @@ public class InventoryManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        foreach (Item item in Inventory.GetComponent<Inventory>().inventoryItems)
+        foreach (GameObject item in Inventory.GetComponent<Inventory>().inventoryItems)
         {
             GameObject newButton = Instantiate(ItemSlot, ItemPanel);
             InventoryButton inventoryButton = newButton.GetComponent<InventoryButton>();  // Get the InventoryButton script
