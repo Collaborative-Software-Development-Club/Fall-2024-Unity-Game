@@ -229,11 +229,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!4 &384308644 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8524339896692536800, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
-  m_PrefabInstance: {fileID: 1761713712}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &621079030
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +569,11 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!4 &1118581814 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8524339896692536800, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
+  m_PrefabInstance: {fileID: 1629350387}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1119500517
 GameObject:
   m_ObjectHideFlags: 3
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
---- !u!1001 &1389466730
+--- !u!1001 &1515534479
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -714,33 +714,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KillZone
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -7904610677148841436, guid: 4d7ac489b4138bc468e0080d0655ec5c, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8783311152224817017, guid: 4d7ac489b4138bc468e0080d0655ec5c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1389466732}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d7ac489b4138bc468e0080d0655ec5c, type: 3}
---- !u!1 &1389466731 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8783311152224817017, guid: 4d7ac489b4138bc468e0080d0655ec5c, type: 3}
-  m_PrefabInstance: {fileID: 1389466730}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1389466732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389466731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8898c8e2f5ce19d49a6b03fa98a9c178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  KillPlayer: {fileID: 1955300278}
 --- !u!1 &1585682718
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,7 +846,7 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!1001 &1761713712
+--- !u!1001 &1629350387
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -925,6 +903,105 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b44f8fe1dcec4f488b851a16691a4c8, type: 3}
+--- !u!1 &1828758242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1828758243}
+  - component: {fileID: 1828758245}
+  - component: {fileID: 1828758244}
+  m_Layer: 0
+  m_Name: Mushroom Enemy
+  m_TagString: MushroomEnemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1828758243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828758242}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4899998, y: -5.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1828758244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828758242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79bf9a620466bf439bd63c8f2c2ae25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spore: {fileID: 340704952879707311, guid: cff14ce999c26a8448f0aea3f6689807, type: 3}
+  spawnRate: 5
+--- !u!212 &1828758245
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828758242}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -2413806693520163455, guid: f91f6528132621c4d90a0f62f53a359b, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1839677715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,9 +1295,9 @@ GameObject:
   - component: {fileID: 1955300273}
   - component: {fileID: 1955300272}
   - component: {fileID: 1955300275}
+  - component: {fileID: 1955300278}
   - component: {fileID: 1955300276}
   - component: {fileID: 1955300277}
-  - component: {fileID: 1955300278}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Player
@@ -1392,7 +1469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1955300270}
-  respawnPoint: {fileID: 384308644}
+  respawnPoint: {fileID: 1118581814}
 --- !u!1 &1991386906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1616,7 +1693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2060413849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1795,5 +1872,6 @@ SceneRoots:
   - {fileID: 217980965}
   - {fileID: 2066184423}
   - {fileID: 2060413851}
-  - {fileID: 1389466730}
-  - {fileID: 1761713712}
+  - {fileID: 1828758243}
+  - {fileID: 1515534479}
+  - {fileID: 1629350387}
