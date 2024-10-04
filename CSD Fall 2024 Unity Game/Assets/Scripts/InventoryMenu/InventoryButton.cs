@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class InventoryButton : MonoBehaviour
 {
-    public Button button;           // Reference to the UI Button
-    public Image iconImage;         // Reference to the Image component to show the icon
+    [SerializeField] private Button button;           // Reference to the UI Button
+    [SerializeField] private Image iconImage;         // Reference to the Image component to show the icon
 
     // Method to set up the button with the item's sprite
     public void SetItem(GameObject item)

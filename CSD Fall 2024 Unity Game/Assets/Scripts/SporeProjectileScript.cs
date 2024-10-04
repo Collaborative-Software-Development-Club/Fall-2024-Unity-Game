@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SporeProjectileScript : MonoBehaviour
 {
-    public KillPlayer killPlayer;
-    public GameObject mushroom;
-    public float moveSpeed;
-    public float deadZone;
+    [SerializeField] private KillPlayer killPlayer;
+    [SerializeField] private GameObject mushroom;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float deadZone;
 
     // Start is called before the first frame update
     void Start()
@@ -22,16 +22,14 @@ public class SporeProjectileScript : MonoBehaviour
     {
         transform.position = transform.position + (Vector3.down * moveSpeed) * Time.deltaTime;
 
-        if (transform.position.y - mushroom.transform.position.y <= deadZone)
-        {
+        if (transform.position.y - mushroom.transform.position.y <= deadZone) {
             Debug.Log("Spore Deleted");
             Destroy(gameObject);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
+        if (collision.gameObject.CompareTag("Player")) {
             killPlayer.killPlayer();
         }
     }

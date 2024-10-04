@@ -6,7 +6,7 @@ using static UnityEditor.Progress;
 public class Inventory : MonoBehaviour
 {
     // List to store the inventory items
-    public List<GameObject> inventoryItems = new List<GameObject>();
+    [SerializeField] private List<GameObject> inventoryItems = new List<GameObject>();
 
     // Add an item to the inventory
     public void AddItem(GameObject item)
@@ -38,5 +38,8 @@ public class Inventory : MonoBehaviour
     public bool HasItem(GameObject item)
     {
         return inventoryItems.Contains(item);
+    }
+    public List<GameObject> getInventoryItems () {
+        return inventoryItems; 
     }
 }

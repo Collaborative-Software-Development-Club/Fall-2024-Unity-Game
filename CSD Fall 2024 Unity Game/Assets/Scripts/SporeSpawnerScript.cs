@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SporeSpawnerScript : MonoBehaviour
 {
-    public GameObject spore;
-    public float spawnRate;
-    private float timer = 0;
+    [SerializeField] private GameObject spore;
+    [SerializeField] private float spawnRate;
+    [SerializeField] private float timer = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,12 +17,9 @@ public class SporeSpawnerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer < spawnRate)
-        {
+        if (timer < spawnRate) {
             timer += Time.deltaTime;
-        }
-        else
-        {
+        } else {
             spawnSpore();
             timer = 0;
         }
