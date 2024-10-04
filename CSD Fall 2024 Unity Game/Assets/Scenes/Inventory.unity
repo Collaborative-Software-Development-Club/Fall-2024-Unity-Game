@@ -486,55 +486,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795905373}
   m_CullTransparentMesh: 1
---- !u!1 &1081545721
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1081545723}
-  - component: {fileID: 1081545722}
-  m_Layer: 0
-  m_Name: ItemGiver
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1081545722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081545721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a8a3efe969d99c4ab9581d792562e22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item:
-    itemName: flower
-    itemIcon: {fileID: 21300000, guid: 4fcd973d060f6154a87c5c38b54c3057, type: 3}
-    itemID: 0
-  playerInventory: {fileID: 465576393}
---- !u!4 &1081545723
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081545721}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 399.1896, y: 250.81477, z: -2.1092272}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1123840399
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,4 +898,3 @@ SceneRoots:
   - {fileID: 1805995931}
   - {fileID: 2057563493}
   - {fileID: 301065975}
-  - {fileID: 1081545723}
