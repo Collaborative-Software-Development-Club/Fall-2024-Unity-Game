@@ -2337,6 +2337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f003fec70397c2c45ba8da8933c0df09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPaused: 0
   GamePaused:
     m_PersistentCalls:
       m_Calls:
@@ -2930,7 +2931,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 65cdbf423afc2f3418e36df52d2defe7, type: 3}
   - {fileID: 21300000, guid: 57ab9540e12011b4ba399022a61475c9, type: 3}
   body: {fileID: 1955300276}
-  foxCollision: {fileID: 0}
+  foxCollision: {fileID: 1955300277}
+  pauseMenuScript: {fileID: 1829416214}
 --- !u!50 &1955300276
 Rigidbody2D:
   serializedVersion: 4
@@ -3229,17 +3231,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30890188a5e1d74d947695b603639e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcName: 
+  name: 
   textElement: {fileID: 1998586320}
   textBackgroundImg: {fileID: 1991386909}
   popUpPrompt: {fileID: 1954229094}
   nextDialogueInfo: {fileID: 841465481}
   escDialogueMenuInfo: {fileID: 621079031}
   player: {fileID: 1955300270}
-  upperDetectionBorder: 5
-  lowerDetectionBorder: 5
-  leftDetectionBorder: 3
-  rightDetectionBorder: 3
+  detectionRadius: 6
   Notes: "Do not add text to both variables.\nIf there is only one dialogue, then
     add it to the \"dialogue\" variable. \nIf there is multiple dialogues, then add
     them to the \"dialogues\" list."
