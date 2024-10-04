@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Spore
-  - Protagonist
+  - KillZone
+  - MushroomEnemy
   layers:
   - Default
   - TransparentFX
@@ -13,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Distortion
+  - 
   - 
   - 
   - 
@@ -42,7 +42,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Above
-    uniqueID: 341695811
     locked: 0
