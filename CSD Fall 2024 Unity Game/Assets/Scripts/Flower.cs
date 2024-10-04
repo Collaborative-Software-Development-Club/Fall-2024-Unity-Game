@@ -17,7 +17,10 @@ public class Flower : MonoBehaviour, InteractableInterface
     private FlowerCounter flowerCounter;
     private bool nearPlayer = false;
 
-    
+    //inventory class needs to be called to update inventory when item is grabbed
+    public Inventory playerInventory;
+
+
     //Initializes flowerCounter variable to a flowerCounter in scene then makes the interactionTip invisible
     void Start()
     {
@@ -50,9 +53,13 @@ public class Flower : MonoBehaviour, InteractableInterface
     //Increments the flowerCounter, prints out a message saying so, then deletes the flower
     private void PickUp()
     {
+        //gameObject is added to the inventory
+        playerInventory.AddItem(gameObject);
+
         flowerCounter.incrementFlower();
         Debug.Log("Flower picked up");
-        Destroy(gameObject);
+
+        gameObject.SetActive(false);
     }
 
     //When the flower's collider collides with another collider it marks that it's near a player and the interactionTip appears
