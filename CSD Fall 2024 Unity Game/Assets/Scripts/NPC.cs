@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using static System.Net.Mime.MediaTypeNames;
+using System.Runtime.CompilerServices;
 
 public class NPC : MonoBehaviour, InteractableInterface
 {
-    [SerializeField] private string name;
+    [SerializeField] private string npcName;
 
     [Header("TMPro UI Elements")]
 
@@ -44,105 +45,94 @@ public class NPC : MonoBehaviour, InteractableInterface
     //private string[] dialogues = new string[] { "Hello World", "Why is collision detection so annoying?", "I gave up on collision detection...", "Nevermind, Github merging is even more annoying." };
     private int dialogueNum = 0;
 
-    Dialogue dialogueMenu;
+    private Dialogue dialogueMenu;
 
-    bool inPopUp = false;
+    private bool inPopUp = false;
 
-    private void Start()
-    {
+    private void Start() {
         dialogueMenu = new Dialogue("", textBackgroundImg, textElement);
     }
 
-    private void Update()
-    {
+    private void Update() {
         Interact();
     }
 
     // implementation of popUp method from I_Interactable.cs
-    public void Interact()
-    {
-        if (dialogue != "")
-        { // pop up if there is a single dialogue
-            if (player.transform.position.x < transform.position.x + rightDetectionBorder &&
-                player.transform.position.x > transform.position.x - leftDetectionBorder &&
-                player.transform.position.y < transform.position.y + upperDetectionBorder &&
-                player.transform.position.y > transform.position.y - lowerDetectionBorder)
-            { // check position of player in relation to the NPC position
+    public void Interact() {
+        if (dialogue != "") { // pop up if there is a single dialogue
 
-                if (!inPopUp)
-                { // checks if the user is in the pop up
-                    popUpPrompt.gameObject.SetActive(true); // displays text prompting user to click f
-                }
-                if (Input.GetKeyDown(KeyCode.F))
-                { // detects keyboard input for the "f" key and enables popup
-                    inPopUp = true;
-                    popUpPrompt.gameObject.SetActive(false);
-                    escDialogueMenuInfo.gameObject.SetActive(true);
-                    dialogueMenu = new Dialogue("Hello World", textBackgroundImg, textElement);
-                    dialogueMenu.displayDialogue();
-                }
+            if (isInDetectionRange ()) { // check position of player in relation to the NPC position
 
-            }
-            else
-            { // disables prompt to user to click f if he is not in contact with the NPC
-                popUpPrompt.gameObject.SetActive(false);
-            }
-            if (Input.GetKeyDown(KeyCode.Escape))
-            { // detects keyboard input for "Esc" key and will proceed to disable everything related to the pop up
-                inPopUp = false;
-                popUpPrompt.gameObject.SetActive(false);
-                escDialogueMenuInfo.gameObject.SetActive(false);
-                dialogueMenu.disableDialogue();
-            }
+                if (!inPopUp)  // checks if the user is in the pop up
+                    popUpPrompt.gameObject.SetActive (true); // displays text prompting user to click f
+                showDialogueMenu (true);
+
+            } else  // disables prompt to user to click f if he is not in contact with the NPC
+                popUpPrompt.gameObject.SetActive (false);
+
+            exitDialogueMenu (true);
+
+        } else { // pop up if there is multiple dialogues
+
+            if (isInDetectionRange ()) { // check position of player in relation to the NPC position
+
+                if (!popUpPrompt.gameObject.activeSelf && !inPopUp) // checks if the user is in the pop up
+                    popUpPrompt.gameObject.SetActive (true);
+                showDialogueMenu (false);
+
+            } else // disables prompt to user to click f if he is not in contact with the NPC
+                popUpPrompt.gameObject.SetActive (false);
+
+            exitDialogueMenu (false);
+            if (Input.GetKeyDown (KeyCode.E) && dialogueNum < dialogues.Length - 1)
+                cycleDialogues (false);
+            else if (Input.GetKeyDown (KeyCode.E) && dialogueNum == dialogues.Length - 1)
+                cycleDialogues (true);
         }
-        else
-        { // pop up if there is multiple dialogues
-            if (player.transform.position.x < transform.position.x + rightDetectionBorder &&
+    }
+
+    public bool isInDetectionRange() { // check to see if the player is within the defined detection range of the NPC
+        return player.transform.position.x < transform.position.x + rightDetectionBorder &&
                 player.transform.position.x > transform.position.x - leftDetectionBorder &&
                 player.transform.position.y < transform.position.y + upperDetectionBorder &&
-                player.transform.position.y > transform.position.y - lowerDetectionBorder)
-            { // check position of player in relation to the NPC position
+                player.transform.position.y > transform.position.y - lowerDetectionBorder;
+    }
 
-                if (!popUpPrompt.gameObject.activeSelf && !inPopUp)
-                { // checks if the user is in the pop up
-                    popUpPrompt.gameObject.SetActive(true);
-                }
-                if (Input.GetKeyDown(KeyCode.F))
-                { // detects keyboard input for the "f" key and enables popup
-                    inPopUp = true;
-                    popUpPrompt.gameObject.SetActive(false);
-                    nextDialogueInfo.gameObject.SetActive(true);
-                    escDialogueMenuInfo.gameObject.SetActive(true);
-                    dialogueMenu = new Dialogue(dialogues[dialogueNum], textBackgroundImg, textElement);
-                    dialogueMenu.displayDialogue();
-                }
+    private void showDialogueMenu(bool isSingleDialogue) { // detects input for the interact key and enables all UI elements related to the dialogue menu if clicked
+        if (Input.GetKeyDown(KeyCode.F)) { 
+            inPopUp = true;
+            popUpPrompt.gameObject.SetActive(false);
+            nextDialogueInfo.gameObject.SetActive(true);
+            escDialogueMenuInfo.gameObject.SetActive(true);
+            dialogueMenu = new Dialogue(dialogues[dialogueNum], textBackgroundImg, textElement);
+            dialogueMenu.displayDialogue();
 
-            }
-            else
-            { // disables prompt to user to click f if he is not in contact with the NPC
-                popUpPrompt.gameObject.SetActive(false);
-            }
-            if (Input.GetKeyDown(KeyCode.Escape))
-            { // detects keyboard input for "Esc" key and will proceed to disable everything related to the pop up
-                inPopUp = false;
-                popUpPrompt.gameObject.SetActive(false);
-                escDialogueMenuInfo.gameObject.SetActive(false);
+            if (!isSingleDialogue)
+                nextDialogueInfo.gameObject.SetActive(true);
+        }
+    }
+    // detects keyboard input for "Esc" key and will proceed to disable everything related to the pop up
+    private void exitDialogueMenu(bool isSingleDialogue) {
+        // detects keyboard input for "Esc" key and will proceed to disable everything related to the pop up
+        if (Input.GetKeyDown(KeyCode.Escape)) { 
+            inPopUp = false;
+            popUpPrompt.gameObject.SetActive(false);
+            escDialogueMenuInfo.gameObject.SetActive(false);
+            dialogueMenu.disableDialogue();
+
+            if (!isSingleDialogue) 
                 nextDialogueInfo.gameObject.SetActive(false);
-                dialogueMenu.disableDialogue();
-            }
-            if (Input.GetKeyDown(KeyCode.E) && dialogueNum < dialogues.Length - 1)
-            { // detects keyboard input for "E" key and will go to the next dialogue if player isn't at final dialogue
-                dialogueNum++;
-                dialogueMenu = new Dialogue(dialogues[dialogueNum], textBackgroundImg, textElement);
-                dialogueMenu.displayDialogue();
-                Debug.Log(dialogueNum);
-            }
-            else if (Input.GetKeyDown(KeyCode.E) && dialogueNum == dialogues.Length - 1)
-            { // detects keyboard input for "E" key and will reset the dialogue shown back to the first one if the dialogue show is the last one
-                dialogueNum = 0;
-                dialogueMenu = new Dialogue(dialogues[dialogueNum], textBackgroundImg, textElement);
-                dialogueMenu.displayDialogue();
-            }
+        }
+    }
+    private void cycleDialogues(bool isFinalDialogue) {
+        if (isFinalDialogue) {
+            dialogueNum = 0;
+            dialogueMenu = new Dialogue (dialogues [dialogueNum], textBackgroundImg, textElement);
+            dialogueMenu.displayDialogue ();
+        } else {
+            dialogueMenu = new Dialogue (dialogues [dialogueNum], textBackgroundImg, textElement);
+            dialogueMenu.displayDialogue ();
+            Debug.Log (dialogueNum);
         }
     }
 
