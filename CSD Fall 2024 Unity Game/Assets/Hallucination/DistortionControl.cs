@@ -12,6 +12,7 @@ public class DistortionControl : MonoBehaviour
     public Vector2 distortionStrengthGradient = new Vector2(10.0f, 10.0f);
     public float distortionScaleGradient = 10f;
     public int sporeStep = 5; // The number of spore required to enhance the distortion effect
+    private int currentSporeCount;
     private bool distortionIncreased = false;
     private int previousSpore;
     private System.Random random;
@@ -23,7 +24,7 @@ public class DistortionControl : MonoBehaviour
         distortionSpeed = objectMaterial.GetVector("_DistortionSpeed");
         distortionScale = objectMaterial.GetFloat("_GradientScale");
         distortionStrength = objectMaterial.GetVector("_DistortionStrength");
-        previousSpore = GameObject.Find("Fox").GetComponent<Hallucination>().sporeCount;
+        currentSporeCount = GameObject.Find("Fox").GetComponent<Hallucination>().sporeCount;
         random = new System.Random(); 
     }
 
@@ -32,18 +33,17 @@ public class DistortionControl : MonoBehaviour
     {
         distortionStrength = objectMaterial.GetVector("_DistortionStrength");
         updateDistortion();
+        previousSpore = currentSporeCount;
     }
 
     void updateDistortion()
     {
-        int currentSporeCount = GameObject.Find("Fox").GetComponent<Hallucination>().sporeCount;
-
         // if sporeCount changes and it's variation reaches sporeStep
         if (currentSporeCount % sporeStep == 0 && currentSporeCount != previousSpore)
         {
             if (!distortionIncreased) 
             {
-                // update parameters of material
+                // update material
                 objectMaterial.SetVector("_DistortionSpeed", distortionSpeed + distortionSpeedGradient);
                 objectMaterial.SetFloat("_GradientScale", distortionScale + distortionScaleGradient);
 

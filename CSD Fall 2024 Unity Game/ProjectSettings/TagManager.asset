@@ -6,6 +6,8 @@ TagManager:
   tags:
   - KillZone
   - MushroomEnemy
+  - Spore
+  - Inventory
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Hallucination
   - 
   - 
   - 
@@ -42,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: HallucinationEffect
+    uniqueID: 3303627667
     locked: 0

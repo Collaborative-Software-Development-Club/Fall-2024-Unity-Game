@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class fox : MonoBehaviour, movement
+public class fox : MonoBehaviour
 {
     [Header("Character Speed")]
     public float speed;

@@ -18,7 +18,7 @@ public class Hallucination_Spore : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Protagonist"))
+        if (collision.CompareTag("Player"))
         {
             Destroy(gameObject);
         }

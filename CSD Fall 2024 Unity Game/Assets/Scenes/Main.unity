@@ -1050,6 +1050,13 @@ MonoBehaviour:
     GateFit: 2
     FocusDistance: 10
     m_SensorSize: {x: 1, y: 1}
+    Iso: 200
+    ShutterSpeed: 0.005
+    Aperture: 16
+    BladeCount: 5
+    Curvature: {x: 2, y: 11}
+    BarrelClipping: 0.25
+    Anamorphism: 0
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1608,9 +1615,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae7539ba919326b4ab37948af077e767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Inventory: {fileID: 504271810}
-  ItemPanel: {fileID: 1407956150}
-  ItemSlot: {fileID: 103958246644231729, guid: 2b29b400f56a21842a18762d62f7aa68, type: 3}
+  Inventory: {fileID: 0}
+  ItemPanel: {fileID: 0}
+  ItemSlot: {fileID: 0}
 --- !u!4 &1321237777
 Transform:
   m_ObjectHideFlags: 0
@@ -2339,58 +2346,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GamePaused:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1673441293}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1321237775}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   GameResumed:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1673441293}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1321237775}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &1829416215
 Transform:
   m_ObjectHideFlags: 0
@@ -2474,7 +2433,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1839677718
@@ -2921,16 +2880,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b5aa3f644240794d8f48d51117553bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  runSpeedtimefactor: 3
-  currentSpeed: 0
-  sprites_Array:
-  - {fileID: 21300000, guid: 22f4b0c26131ef646a998b0db869599d, type: 3}
-  - {fileID: 21300000, guid: bd173dff4d0c6884c9f24283cfa9e5de, type: 3}
-  - {fileID: 21300000, guid: 65cdbf423afc2f3418e36df52d2defe7, type: 3}
-  - {fileID: 21300000, guid: 57ab9540e12011b4ba399022a61475c9, type: 3}
+  speed: 1
+  runSpeedtimefactor: 1
+  currentSpeed: 1
+  sprites_Array: []
   body: {fileID: 1955300276}
-  foxCollision: {fileID: 0}
+  foxCollision: {fileID: 1955300277}
 --- !u!50 &1955300276
 Rigidbody2D:
   serializedVersion: 4
@@ -3230,25 +3185,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcName: 
-  textElement: {fileID: 1998586320}
-  textBackgroundImg: {fileID: 1991386909}
-  popUpPrompt: {fileID: 1954229094}
-  nextDialogueInfo: {fileID: 841465481}
-  escDialogueMenuInfo: {fileID: 621079031}
-  player: {fileID: 1955300270}
-  upperDetectionBorder: 5
-  lowerDetectionBorder: 5
-  leftDetectionBorder: 3
-  rightDetectionBorder: 3
+  textElement: {fileID: 0}
+  textBackgroundImg: {fileID: 0}
+  popUpPrompt: {fileID: 0}
+  nextDialogueInfo: {fileID: 0}
+  escDialogueMenuInfo: {fileID: 0}
+  player: {fileID: 0}
+  upperDetectionBorder: 1
+  lowerDetectionBorder: 1
+  leftDetectionBorder: 1
+  rightDetectionBorder: 1
   Notes: "Do not add text to both variables.\nIf there is only one dialogue, then
     add it to the \"dialogue\" variable. \nIf there is multiple dialogues, then add
     them to the \"dialogues\" list."
   dialogue: 
-  dialogues:
-  - Hello World
-  - Why is collision detection so annoying?
-  - I gave up on collision detection...
-  - Nevermind, Github merging is even more annoying.
+  dialogues: []
 --- !u!212 &2060413850
 SpriteRenderer:
   m_ObjectHideFlags: 0
