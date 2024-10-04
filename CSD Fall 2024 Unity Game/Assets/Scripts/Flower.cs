@@ -32,22 +32,20 @@ public class Flower : MonoBehaviour, InteractableInterface
      *then the interact function will be called
      */
     void Update()
-    {
-        
+    {  
         if (nearPlayer && Input.GetKeyDown(KeyCode.F))
         {
             Interact();
         }
-        
     }
 
     //Calls the PickUp() method, added for the sake of having a generalized Interact() method among all Interactable objects
     public void Interact()
     {
-            PickUp();
+        PickUp();
     }
 
-    //Increments the flowerCounter, prints out a message saying so, then deletes the flower
+    // Increments the flowerCounter, prints out a message saying so, then deletes the flower
     private void PickUp()
     {
         flowerCounter.incrementFlower();

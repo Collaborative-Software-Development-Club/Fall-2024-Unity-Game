@@ -15,8 +15,7 @@ public class Dialogue : MonoBehaviour
     private RawImage textBackground;
     private TextMeshProUGUI text;
 
-    public Dialogue(string dialogue, RawImage textBackground, TextMeshProUGUI text)
-    {
+    public Dialogue(string dialogue, RawImage textBackground, TextMeshProUGUI text) {
         this.dialogue = dialogue;
         this.textBackground = textBackground;
         this.text = text;
@@ -25,10 +24,8 @@ public class Dialogue : MonoBehaviour
     }
 
     // uses Image and text references to show the background and text if the dialogue string is not empty
-    public void displayDialogue()
-    {
-        if (dialogue != null)
-        {
+    public void displayDialogue() {
+        if (dialogue != null) {
             textBackground.gameObject.SetActive(true);
             text.text = dialogue;
             text.gameObject.SetActive(true);
@@ -37,8 +34,7 @@ public class Dialogue : MonoBehaviour
     }
 
     // disables background and text 
-    public void disableDialogue()
-    {
+    public void disableDialogue() {
         textBackground.gameObject.SetActive(false);
         text.gameObject.SetActive(false);
     }

@@ -20,6 +20,8 @@ public class fox : MonoBehaviour, movement
     private InputAction _sprint;
     private PlayerInputActions _playerMap;
 
+    public PauseMenuScript pauseMenuScript;
+
         // Start is called before the first frame update
     void Awake()
     {
@@ -69,21 +71,16 @@ public class fox : MonoBehaviour, movement
     public void updateSprite()
     {
         Vector2 movement = _action.ReadValue<Vector2>();
-        if (movement.x < 0)
-        {
-            spriteRenderer.sprite = sprites_Array[3];
-        }
-        else if (movement.x > 0)
-        {
-            spriteRenderer.sprite = sprites_Array[2];
-        }
-        else if (movement.y < 0)
-        {
-            spriteRenderer.sprite = sprites_Array[1];
-        }
-        else if (movement.y > 0)
-        {
-            spriteRenderer.sprite = sprites_Array[0];
+        if (!pauseMenuScript._isPaused) {
+            if (movement.x < 0) {
+                spriteRenderer.sprite = sprites_Array [3];
+            } else if (movement.x > 0) {
+                spriteRenderer.sprite = sprites_Array [2];
+            } else if (movement.y < 0) {
+                spriteRenderer.sprite = sprites_Array [1];
+            } else if (movement.y > 0) {
+                spriteRenderer.sprite = sprites_Array [0];
+            }
         }
     }
     public void speed_Down()
@@ -92,12 +89,9 @@ public class fox : MonoBehaviour, movement
 
     public void speed_Up()
     {
-        if (_sprint.ReadValue<float>()>0)
-        {
+        if (_sprint.ReadValue<float>()>0){
             currentSpeed = speed*runSpeedtimefactor;
-        }
-        else
-        {
+        } else {
             currentSpeed = speed;
         }
     }

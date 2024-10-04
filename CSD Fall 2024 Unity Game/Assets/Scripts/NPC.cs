@@ -27,11 +27,13 @@ public class NPC : MonoBehaviour, InteractableInterface
     [Tooltip("GameObject for the player")]
     [SerializeField] private GameObject player;
 
-    [Header("Player-NPC detection border values")]
-    [SerializeField] private int upperDetectionBorder = 1;
+    [Header ("")]
+    /*[SerializeField] private int upperDetectionBorder = 1;
     [SerializeField] private int lowerDetectionBorder = 1;
     [SerializeField] private int leftDetectionBorder = 1;
-    [SerializeField] private int rightDetectionBorder = 1;
+    [SerializeField] private int rightDetectionBorder = 1;*/
+    [Tooltip("Player-NPC detection border radius")]
+    [SerializeField] private int detectionRadius = 1;
 
     [Header("Dialogue(s)")]
     [TextArea]
@@ -41,8 +43,6 @@ public class NPC : MonoBehaviour, InteractableInterface
     [SerializeField] private string dialogue;
     [SerializeField] private string[] dialogues;
 
-    //private string dialogue;
-    //private string[] dialogues = new string[] { "Hello World", "Why is collision detection so annoying?", "I gave up on collision detection...", "Nevermind, Github merging is even more annoying." };
     private int dialogueNum = 0;
 
     private Dialogue dialogueMenu;
@@ -59,62 +59,51 @@ public class NPC : MonoBehaviour, InteractableInterface
 
     // implementation of popUp method from I_Interactable.cs
     public void Interact() {
-        if (dialogue != "") { // pop up if there is a single dialogue
-
-            if (isInDetectionRange ()) { // check position of player in relation to the NPC position
-
-                if (!inPopUp)  // checks if the user is in the pop up
-                    popUpPrompt.gameObject.SetActive (true); // displays text prompting user to click f
-                showDialogueMenu (true);
-
-            } else  // disables prompt to user to click f if he is not in contact with the NPC
+        if (dialogue != "") {                                        // pop up if there is a single dialogue
+            if (isInDetectionRange ()) {                             // check position of player in relation to the NPC position
+                showPromptWhenInRange ();                            // displays text prompting user to click f
+                showDialogueOnClick ();
+            } else {                                                   // disables prompt to user to click f if he is not in contact with the NPC
                 popUpPrompt.gameObject.SetActive (false);
+            }
 
-            exitDialogueMenu (true);
-
-        } else { // pop up if there is multiple dialogues
-
-            if (isInDetectionRange ()) { // check position of player in relation to the NPC position
-
-                if (!popUpPrompt.gameObject.activeSelf && !inPopUp) // checks if the user is in the pop up
-                    popUpPrompt.gameObject.SetActive (true);
-                showDialogueMenu (false);
-
-            } else // disables prompt to user to click f if he is not in contact with the NPC
+            exitDialogueMenuOnClick (true);
+        } else {                                                    // pop up if there is multiple dialogues
+            if (isInDetectionRange ()) {                            // check position of player in relation to the NPC position
+                showPromptWhenInRange ();
+                showDialogueOnClick ();
+            } else {                                                 // disables prompt to user to click f if he is not in contact with the NPC
                 popUpPrompt.gameObject.SetActive (false);
+            }
 
-            exitDialogueMenu (false);
-            if (Input.GetKeyDown (KeyCode.E) && dialogueNum < dialogues.Length - 1)
-                cycleDialogues (false);
-            else if (Input.GetKeyDown (KeyCode.E) && dialogueNum == dialogues.Length - 1)
-                cycleDialogues (true);
+            exitDialogueMenuOnClick (false);
+            cycleDialoguesOnClick ();
         }
     }
 
-    public bool isInDetectionRange() { // check to see if the player is within the defined detection range of the NPC
-        return player.transform.position.x < transform.position.x + rightDetectionBorder &&
+    public bool isInDetectionRange() { 
+        /*return player.transform.position.x < transform.position.x + rightDetectionBorder &&
                 player.transform.position.x > transform.position.x - leftDetectionBorder &&
                 player.transform.position.y < transform.position.y + upperDetectionBorder &&
-                player.transform.position.y > transform.position.y - lowerDetectionBorder;
+                player.transform.position.y > transform.position.y - lowerDetectionBorder;*/
+        return Mathf.Sqrt (Mathf.Pow (transform.position.x - player.transform.position.x, 2) + 
+            Mathf.Pow (transform.position.y - player.transform.position.y, 2)) <= detectionRadius;
     }
 
-    private void showDialogueMenu(bool isSingleDialogue) { // detects input for the interact key and enables all UI elements related to the dialogue menu if clicked
-        if (Input.GetKeyDown(KeyCode.F)) { 
-            inPopUp = true;
-            popUpPrompt.gameObject.SetActive(false);
-            nextDialogueInfo.gameObject.SetActive(true);
-            escDialogueMenuInfo.gameObject.SetActive(true);
-            dialogueMenu = new Dialogue(dialogues[dialogueNum], textBackgroundImg, textElement);
-            dialogueMenu.displayDialogue();
+    private void showDialogueMenu(bool isSingleDialogue) {
+        inPopUp = true;
+        popUpPrompt.gameObject.SetActive (false);
+        nextDialogueInfo.gameObject.SetActive (true);
+        escDialogueMenuInfo.gameObject.SetActive (true);
+        dialogueMenu = new Dialogue (dialogues [dialogueNum], textBackgroundImg, textElement);
+        dialogueMenu.displayDialogue ();
 
-            if (!isSingleDialogue)
-                nextDialogueInfo.gameObject.SetActive(true);
-        }
+        if (!isSingleDialogue)
+            nextDialogueInfo.gameObject.SetActive (true);
     }
-    // detects keyboard input for "Esc" key and will proceed to disable everything related to the pop up
-    private void exitDialogueMenu(bool isSingleDialogue) {
-        // detects keyboard input for "Esc" key and will proceed to disable everything related to the pop up
-        if (Input.GetKeyDown(KeyCode.Escape)) { 
+
+    private void exitDialogueMenuOnClick(bool isSingleDialogue) {
+        if (Input.GetKeyDown(KeyCode.Space)) { 
             inPopUp = false;
             popUpPrompt.gameObject.SetActive(false);
             escDialogueMenuInfo.gameObject.SetActive(false);
@@ -124,16 +113,26 @@ public class NPC : MonoBehaviour, InteractableInterface
                 nextDialogueInfo.gameObject.SetActive(false);
         }
     }
-    private void cycleDialogues(bool isFinalDialogue) {
-        if (isFinalDialogue) {
-            dialogueNum = 0;
-            dialogueMenu = new Dialogue (dialogues [dialogueNum], textBackgroundImg, textElement);
-            dialogueMenu.displayDialogue ();
-        } else {
-            dialogueMenu = new Dialogue (dialogues [dialogueNum], textBackgroundImg, textElement);
-            dialogueMenu.displayDialogue ();
-            Debug.Log (dialogueNum);
+
+    private void cycleDialoguesOnClick() {
+        if (Input.GetKeyDown (KeyCode.E)) {
+            if (dialogueNum == dialogues.Length - 1) {
+                dialogueNum = 0;
+                dialogueMenu = new Dialogue (dialogues [dialogueNum], textBackgroundImg, textElement);
+                dialogueMenu.displayDialogue ();
+            } else {
+                dialogueNum++;
+                dialogueMenu = new Dialogue (dialogues [dialogueNum], textBackgroundImg, textElement);
+                dialogueMenu.displayDialogue ();
+            }
         }
     }
-
+    private void showPromptWhenInRange () {
+        if (!inPopUp)                                        // checks if the user is in the pop up
+            popUpPrompt.gameObject.SetActive (true);
+    }
+    private void showDialogueOnClick() {
+        if (Input.GetKeyDown (KeyCode.F))
+            showDialogueMenu (false);
+    }
 }

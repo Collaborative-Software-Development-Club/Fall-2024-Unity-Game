@@ -14,7 +14,7 @@ using UnityEngine.Events;
 public class PauseMenuScript : MonoBehaviour
 {
     //Tracks paused state
-    private bool _isPaused;
+    public bool _isPaused;
 
     //Events are used when we want to 
     public UnityEvent GamePaused;
@@ -24,23 +24,18 @@ public class PauseMenuScript : MonoBehaviour
     private void Update()
     {   
         //pause menu can only be opened with escape key press
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             //change current pause state to opposite pause state
             _isPaused = !_isPaused;
-            
 
             //if it was paused, timescale becomes zero and paused event is invoked
-            if (_isPaused)
-            {
+            if (_isPaused) {
                 PauseGame();
-            } 
-            //otherwise, game is resumed
-            else
-            {
-                ResumeGame();
+            } else { //otherwise, game is resumed
+                ResumeGame ();
             }
         }
+        
     }
 
 
@@ -73,6 +68,9 @@ public class PauseMenuScript : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Game is quitting");
+    }
+    public bool getPauseState() {
+        return _isPaused;
     }
 
 }

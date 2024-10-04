@@ -23,6 +23,5 @@ public class FlowerCounter : MonoBehaviour
     {
         flowerCount++;
         flowerText.text = flowerCount.ToString();
-
     }
 }
