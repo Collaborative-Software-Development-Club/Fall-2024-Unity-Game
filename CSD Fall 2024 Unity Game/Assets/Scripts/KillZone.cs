@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KillZone : MonoBehaviour
 {
-    public KillPlayer killPlayer;
+    [SerializeField] private KillPlayer killPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +20,7 @@ public class KillZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
+        if (collision.gameObject.CompareTag("Player")) {
             killPlayer.killPlayer();
         }
     }

@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class KillPlayer : MonoBehaviour
 {
-    public GameObject player;
-    public Transform respawnPoint;
+    [SerializeField] private GameObject player;
+    [SerializeField] private Transform respawnPoint;
     // Start is called before the first frame update
     void Start()
     {
