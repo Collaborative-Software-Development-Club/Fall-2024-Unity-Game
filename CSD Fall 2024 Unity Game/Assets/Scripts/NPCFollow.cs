@@ -6,69 +6,93 @@ using UnityEngine;
 
 public class NPCFollow : MonoBehaviour
 {
-    public Transform followCharacter;
-    public float distanceFromCharacter;
-    public List<Vector2> followCharacterPositions = new List<Vector2>();
-    public float allowableSampleDistance;
-    public float removeDistance;
 
-    public float sampleTimeDifference;
+    public Transform followCharacter;
+    public float distanceFromCharacter = 4;
+    public List<Vector2> followCharacterPositions = new List<Vector2>();
+    public float allowableSampleDistance = 0.5f;
+    public float removeDistance = 3;
+
+    Vector2 previousPosition;
+    Vector2 movementDirection;
+
+    public Sprite[] spritesArray; //0 is up, 1 is left, 2 is down, 3 is right
+    private SpriteRenderer spriteRenderer;
+
+    public float sampleTimeDifference = 0.02f;
     float sampleTime;
 
-    public float followSpeed;
-    public float walkSpeed;
-    public float jogSpeed;
-    public float runSpeed;
-    
-    public float fastDistance;
-    public float jogDistance;
+    private Vector2 velocity = Vector2.zero;
+
+    public float followSpeed = 30;
 
     void Start()
     {
+        previousPosition = transform.position;
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
         sampleTime = Time.time;
         followCharacterPositions.Add(followCharacter.position);
-        followSpeed = runSpeed;
     }
 
     void Update()
     {
+        float distance = Vector2.Distance(transform.position, followCharacter.position);
+        float step = Mathf.Min(followSpeed * Time.fixedDeltaTime, distance - distanceFromCharacter);
+
+        // Calculate movement direction
+        movementDirection = (Vector2)transform.position - previousPosition;
+
+        // Update the previous position for the next frame
+        previousPosition = transform.position;
+
+        changeSprite();
+
         if (Time.time > sampleTime)
         {
             sampleTime = Time.time + sampleTimeDifference;
-            
-            //if the player has moved enough from the last position
-            if (Vector2.Distance(transform.position, followCharacter.position) > distanceFromCharacter &&
-                Vector2.Distance(followCharacter.position, followCharacterPositions[followCharacterPositions.Count- 1])
-                > allowableSampleDistance) 
-            {
-                followCharacterPositions.Add(followCharacter.position);
-            }
+
+            followCharacterPositions.Clear();
+            followCharacterPositions.Add(followCharacter.position);
         }
 
-        if (Vector2.Distance(transform.position, followCharacter.position) > fastDistance)
+        if (distance > distanceFromCharacter)
         {
-            followSpeed = runSpeed;
-        }
-        else if (Vector2.Distance(transform.position, followCharacter.position) > jogDistance)
-        {
-            followSpeed = jogSpeed;
+            transform.position = Vector2.MoveTowards(transform.position, followCharacter.position, step);
+
         }
         else
         {
-            followSpeed = walkSpeed;
-        }
-        if (Vector2.Distance(transform.position, followCharacter.position) > distanceFromCharacter)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, followCharacterPositions[0], Time.deltaTime * followSpeed);
-            if (Vector2.Distance(transform.position, followCharacterPositions[0]) < removeDistance)
+            if (followCharacterPositions.Count > 1)
             {
-                if (followCharacterPositions.Count > 1)
-                {
-                    followCharacterPositions.RemoveAt(0);
-                }
+                followCharacterPositions.RemoveAt(0);
             }
         }
+    }
 
+    private void changeSprite()
+    {
+
+        //face upward
+        if (movementDirection.y > 0.1f)
+        {
+            spriteRenderer.sprite = spritesArray[0];
+        }
+        //face downward
+        else if (movementDirection.y < -0.1f)
+        {
+            spriteRenderer.sprite = spritesArray[2];
+        }
+        //face right
+        else if (movementDirection.x > 0.1f)
+        {
+            spriteRenderer.sprite = spritesArray[3];
+        }
+        //face left
+        else if (movementDirection.x < -0.1f)
+        {
+            spriteRenderer.sprite = spritesArray[1];
+        }
     }
 
 

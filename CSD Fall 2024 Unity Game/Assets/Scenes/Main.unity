@@ -2337,7 +2337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f003fec70397c2c45ba8da8933c0df09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isPaused: 0
   GamePaused:
     m_PersistentCalls:
       m_Calls:
@@ -3212,8 +3211,10 @@ GameObject:
   - component: {fileID: 2060413851}
   - component: {fileID: 2060413850}
   - component: {fileID: 2060413849}
+  - component: {fileID: 2060413852}
+  - component: {fileID: 2060413853}
   m_Layer: 0
-  m_Name: TEMP_NPC
+  m_Name: RavenNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3289,12 +3290,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f2a01fdcdf6c41f4fb2a7f28cc6421e3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 10.31, y: 10.92}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3310,11 +3311,62 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2060413852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060413848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57ece2e41de253942bcfdc806645d8cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followCharacter: {fileID: 1955300273}
+  distanceFromCharacter: 5
+  followCharacterPositions: []
+  allowableSampleDistance: 0.5
+  removeDistance: 3
+  spritesArray:
+  - {fileID: 21300000, guid: 2aa41722b1ca23347895b1bac61fdf3f, type: 3}
+  - {fileID: 21300000, guid: c2e3931e29bc38646ab68cedc4c234c2, type: 3}
+  - {fileID: 21300000, guid: f2a01fdcdf6c41f4fb2a7f28cc6421e3, type: 3}
+  - {fileID: 21300000, guid: 5c14131bff7324943bd0054fa784bbeb, type: 3}
+  sampleTimeDifference: 0.05
+  followSpeed: 30
+--- !u!50 &2060413853
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060413848}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2066184420
 GameObject:
   m_ObjectHideFlags: 0

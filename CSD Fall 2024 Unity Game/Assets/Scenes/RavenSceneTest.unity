@@ -419,8 +419,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 1
-  m_LookAt: {fileID: 436957937}
-  m_Follow: {fileID: 436957937}
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 100
     OrthographicSize: 5
@@ -590,6 +590,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 57ab9540e12011b4ba399022a61475c9, type: 3}
   body: {fileID: 436957940}
   foxCollision: {fileID: 0}
+  pauseMenuScript: {fileID: 0}
 --- !u!212 &436957942
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1067,17 +1068,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30890188a5e1d74d947695b603639e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcName: The Raven
+  name: Raven
   textElement: {fileID: 1744842956}
   textBackgroundImg: {fileID: 1272260497}
   popUpPrompt: {fileID: 2014612349}
   nextDialogueInfo: {fileID: 54291490}
   escDialogueMenuInfo: {fileID: 1938300763}
   player: {fileID: 436957936}
-  upperDetectionBorder: 5
-  lowerDetectionBorder: 5
-  leftDetectionBorder: 3
-  rightDetectionBorder: 3
+  detectionRadius: 1
   Notes: "Do not add text to both variables.\nIf there is only one dialogue, then
     add it to the \"dialogue\" variable. \nIf there is multiple dialogues, then add
     them to the \"dialogues\" list."
