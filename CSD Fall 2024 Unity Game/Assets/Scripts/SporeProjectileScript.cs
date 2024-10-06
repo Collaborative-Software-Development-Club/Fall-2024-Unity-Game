@@ -31,12 +31,6 @@ public class SporeProjectileScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Vector3 moveDirNormailized = (player.transform.position - transform.position).normalized;
-        //transform.position += moveDirNormailized * moveSpeed * Time.deltaTime;
-        //transform.position = transform.position + (Vector3.MoveTowards(transform.position, player.transform.position, 10) * moveSpeed * Time.deltaTime);
-        //transform.position = transform.position + (Vector2. * moveSpeed * Time.deltaTime);
-        //transform.position += transform.position * moveSpeed * Time.deltaTime;
-
         if (timer < despawnTime)
         {
             timer += Time.deltaTime;
@@ -48,7 +42,7 @@ public class SporeProjectileScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player")) 
         {
             killPlayer.killPlayer();
             Destroy(gameObject);
