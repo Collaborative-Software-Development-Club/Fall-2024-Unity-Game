@@ -7,7 +7,7 @@ public class CollisionTrigger : MazeTrigger
 {
     
 
-
+    //Runs the TriggerEvent from the MazeTrigger abstract class
     private void OnTriggerEnter2D(Collider2D collision)
     {
         TriggerEvent();

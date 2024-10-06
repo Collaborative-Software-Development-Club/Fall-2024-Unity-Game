@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class MazeTrigger : MonoBehaviour
 {
-    [Tooltip("Can the trigger only be triggered once")]
+    [Tooltip("The trigger only be triggered once")]
     [SerializeField]
     protected bool oneShot;
 
@@ -64,5 +64,6 @@ public abstract class MazeTrigger : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
     
 }
