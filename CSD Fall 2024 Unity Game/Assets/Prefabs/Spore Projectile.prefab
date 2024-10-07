@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3159917635175180724}
   - component: {fileID: 3718989002359939867}
+  - component: {fileID: 3399300550123886033}
   - component: {fileID: 5827296094399472394}
   - component: {fileID: 4359181454728345472}
   m_Layer: 0
@@ -29,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.56, y: -5.15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -86,6 +87,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &3399300550123886033
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340704952879707311}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 1
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!58 &5827296094399472394
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -133,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7690b95be26408c43939f35740ee8ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mushroom: {fileID: 0}
-  moveSpeed: 4
-  deadZone: -15
+  moveSpeed: 12
+  minDrag: 1
+  maxDrag: 4
+  despawnTime: 8
