@@ -7,10 +7,11 @@ public class KillPlayer : MonoBehaviour
 {
     public GameObject player;
     public Transform respawnPoint;
+    public GameObject dieMessage;
     // Start is called before the first frame update
     void Start()
     {
-
+        dieMessage.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,5 +28,6 @@ public class KillPlayer : MonoBehaviour
     {
         player.transform.position = respawnPoint.position;
         Debug.Log("You Died! ");
+        dieMessage.SetActive(true);
     }
 }
