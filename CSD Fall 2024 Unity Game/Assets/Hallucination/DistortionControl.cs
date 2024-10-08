@@ -13,7 +13,6 @@ public class DistortionControl : MonoBehaviour
     public float distortionScaleGradient = 10f;
     public int sporeStep = 5; // The number of spores required to enhance the distortion effect
     private int currentSporeCount;
-    private bool distortionIncreased = false;
     private int previousSpore;
     private Hallucination hallucinationComponent; // Cache the Hallucination component
     private System.Random random;
@@ -28,6 +27,7 @@ public class DistortionControl : MonoBehaviour
         hallucinationComponent = GameObject.Find("Fox").GetComponent<Hallucination>(); // Cache the Hallucination component
         currentSporeCount = hallucinationComponent.sporeCount;
         random = new System.Random();
+        previousSpore = 0;
     }
 
     // Update is called once per frame
@@ -38,6 +38,8 @@ public class DistortionControl : MonoBehaviour
         {
             updateDistortion();
         }
+        // Update previous spore count
+        previousSpore = currentSporeCount;
     }
 
     void updateDistortion()
@@ -45,34 +47,22 @@ public class DistortionControl : MonoBehaviour
         // If sporeCount changes and reaches a multiple of sporeStep
         if (currentSporeCount % sporeStep == 0 && currentSporeCount != previousSpore)
         {
-            if (!distortionIncreased)
-            {
-                // Update material properties
-                objectMaterial.SetVector("_DistortionSpeed", distortionSpeed + distortionSpeedGradient);
-                objectMaterial.SetFloat("_GradientScale", distortionScale + distortionScaleGradient);
-                objectMaterial.SetVector("_DistortionStrength", distortionStrength + distortionStrengthGradient);
+            // Update material properties
+            objectMaterial.SetVector("_DistortionSpeed", distortionSpeed + distortionSpeedGradient);
+            objectMaterial.SetFloat("_GradientScale", distortionScale + distortionScaleGradient);
+            objectMaterial.SetVector("_DistortionStrength", distortionStrength + distortionStrengthGradient);
 
-                // Update internal state
-                distortionSpeed += distortionSpeedGradient;
-                distortionStrength += distortionStrengthGradient;
-                distortionScale += distortionScaleGradient;
-
-                distortionIncreased = true;
-            }
+            // Update internal state
+            distortionSpeed += distortionSpeedGradient;
+            distortionStrength += distortionStrengthGradient;
+            distortionScale += distortionScaleGradient;
         }
-        else if (currentSporeCount % sporeStep != 0)
-        {
-            distortionIncreased = false;
-        }
-
-        // Update previous spore count
-        previousSpore = currentSporeCount;
     }
 
-    void clearDistortion()
+    public void clearDistortion()
     {
         objectMaterial.SetVector("_DistortionSpeed", new Vector2(0f, 0f));
         objectMaterial.SetFloat("_GradientScale", 0);
-        objectMaterial.SetVector("_DistortionStrength", new Vector2(0f, 0f));
+        objectMaterial.SetVector("_DistortionStrength", new Vector2(0.1f, 0.1f));
     }
 }

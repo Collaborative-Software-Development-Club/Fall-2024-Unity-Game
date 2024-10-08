@@ -8,6 +8,7 @@ public class KillPlayer : MonoBehaviour
     public GameObject player;
     public Transform respawnPoint;
     public GameObject dieMessage;
+    public GameObject hallucinationEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +30,6 @@ public class KillPlayer : MonoBehaviour
         player.transform.position = respawnPoint.position;
         Debug.Log("You Died! ");
         dieMessage.SetActive(true);
+        hallucinationEffect.GetComponent<DistortionControl>().clearDistortion();
     }
 }
