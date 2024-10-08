@@ -18,7 +18,7 @@ public class Flower : MonoBehaviour, InteractableInterface
     private bool nearPlayer = false;
 
     //inventory class needs to be called to update inventory when item is grabbed
-    public Inventory playerInventory;
+    [SerializeField] private Inventory playerInventory;
 
 
     //Initializes flowerCounter variable to a flowerCounter in scene then makes the interactionTip invisible
