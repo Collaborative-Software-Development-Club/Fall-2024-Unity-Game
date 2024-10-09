@@ -6,6 +6,7 @@ TagManager:
   tags:
   - KillZone
   - MushroomEnemy
+  - Spore
   - Inventory
   layers:
   - Default
@@ -14,8 +15,8 @@ TagManager:
   - Level
   - Water
   - UI
-  - NPC
-  - Player
+  - Hallucination
+  - 
   - 
   - 
   - 
@@ -44,6 +45,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Accessory
-    uniqueID: 2539273631
+  - name: HallucinationEffect
+    uniqueID: 3303627667
     locked: 0

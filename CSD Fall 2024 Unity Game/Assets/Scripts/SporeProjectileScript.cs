@@ -4,35 +4,48 @@ using UnityEngine;
 
 public class SporeProjectileScript : MonoBehaviour
 {
-    public KillPlayer killPlayer;
-    public GameObject mushroom;
-    public float moveSpeed;
-    public float deadZone;
+    private GameObject player;
+    private Rigidbody2D rb;
+    private KillPlayer killPlayer;
 
+    public float moveSpeed;
+    public float minDrag;
+    public float maxDrag;
+
+    public float despawnTime;
+    private float timer = 0;
+   
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        killPlayer = player.GetComponent<KillPlayer>();
 
-        killPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<KillPlayer>();
-        mushroom = GameObject.FindGameObjectWithTag("MushroomEnemy");
+        Vector3 direction = (player.transform.position - transform.position).normalized;
+        rb.velocity = new Vector2 (direction.x, direction.y) * moveSpeed;
+        
+        rb.drag = Random.Range(minDrag, maxDrag);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = transform.position + (Vector3.down * moveSpeed) * Time.deltaTime;
-
-        if (transform.position.y - mushroom.transform.position.y <= deadZone)
+        if (timer < despawnTime)
         {
-            Debug.Log("Spore Deleted");
+            timer += Time.deltaTime;
+        }
+        else 
+        {
             Destroy(gameObject);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player")) 
         {
             killPlayer.killPlayer();
+            Destroy(gameObject);
         }
     }
 }

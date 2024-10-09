@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    public GameObject Inventory;  // Reference to the inventory UI panel
-    public Transform ItemPanel;  // Reference to the inventory UI panel
-    public GameObject ItemSlot;  // Reference to the inventory UI panel
+    [SerializeField] private GameObject Inventory;  // Reference to the inventory UI panel
+    [SerializeField] private Transform ItemPanel;  // Reference to the inventory UI panel
+    [SerializeField] private GameObject ItemSlot;  // Reference to the inventory UI panel
     private bool isInventoryOpen = false;  // Track if the inventory is open
 
     private void Start()
@@ -53,7 +53,7 @@ public class InventoryManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        foreach (GameObject item in Inventory.GetComponent<Inventory>().inventoryItems)
+        foreach (GameObject item in Inventory.GetComponent<Inventory>().getInventoryItems())
         {
             GameObject newButton = Instantiate(ItemSlot, ItemPanel);
             InventoryButton inventoryButton = newButton.GetComponent<InventoryButton>();  // Get the InventoryButton script

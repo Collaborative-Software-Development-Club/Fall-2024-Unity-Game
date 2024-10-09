@@ -4,33 +4,39 @@ using UnityEngine;
 
 public class SporeSpawnerScript : MonoBehaviour
 {
+    public Transform player;
     public GameObject spore;
     public float spawnRate;
-    private float timer = 0;
+    private float spawnDelay;
+    public float range;
 
     // Start is called before the first frame update
     void Start()
     {
-        spawnSpore();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        spawnDelay = Random.Range(spawnDelay - 1, spawnDelay);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer < spawnRate)
+        float distance = Vector3.Distance(transform.position, player.position);
+        if (distance < range)
         {
-            timer += Time.deltaTime;
-        }
-        else
-        {
-            spawnSpore();
-            timer = 0;
+            if (spawnDelay < spawnRate)
+            {
+                spawnDelay += Time.deltaTime;
+            }
+            else
+            {
+                spawnSpore();
+                spawnDelay = 0;
+            }
         }
     }
 
     void spawnSpore()
     { 
         Instantiate(spore, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
-        Debug.Log("Spore spawned");
     }
 }
