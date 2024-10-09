@@ -4,12 +4,12 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-, movement
+public class fox : MonoBehaviour
 {
     [Header("Character Speed")]
     [SerializeField] private float speed;
     [Header("Character Speed Multiplied by this when running")]
-    [SerializeField] private float runSpeedtimefactor;
+    [SerializeField] private float runSpeedTimeFactor;
     [SerializeField] private float currentSpeed;
     private bool isRunning;
     private SpriteRenderer spriteRenderer;
