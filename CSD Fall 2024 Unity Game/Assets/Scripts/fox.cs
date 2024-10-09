@@ -9,33 +9,35 @@ public class fox : MonoBehaviour, movement
     [Header("Character Speed")]
     public float speed;
     [Header("Character Speed Multiplied by this when running")]
-    public float runSpeedtimefactor;
+    public float runSpeedTimeFactor;
     public float currentSpeed;
     private bool isRunning;
     private SpriteRenderer spriteRenderer;
-    public Sprite[] sprites_Array; //element 0 is the sprite moving upward£¬1 downward£¬2 to right£¬3 to left
+    public Sprite[] sprites_Array; //element 0 is the sprite moving upwardï¿½ï¿½1 downwardï¿½ï¿½2 to rightï¿½ï¿½3 to left
     public Rigidbody2D body;
     public Collider2D foxCollision;
-    private InputAction _action;
-    private InputAction _sprint;
-    private PlayerInputActions _playerMap;
+    private InputAction action;
+    private InputAction sprint;
+    private PlayerInputActions playerMap;
+    private Animator anim;
 
         // Start is called before the first frame update
     void Awake()
     {
-        _playerMap = new PlayerInputActions();
+        playerMap = new PlayerInputActions();
+        anim = GetComponent<Animator>();
     }
     void OnEnable()
     {
-        _action = _playerMap.PlayerAction.Movement;
-        _sprint = _playerMap.PlayerAction.Sprint;
-        _action.Enable();
-        _sprint.Enable();
+        action = playerMap.PlayerAction.Movement;
+        sprint = playerMap.PlayerAction.Sprint;
+        action.Enable();
+        sprint.Enable();
     }
     void OnDisable()
     {
-        _sprint.Disable();
-        _action.Disable();
+        sprint.Disable();
+        action.Disable();
     }
 
 
@@ -59,7 +61,7 @@ public class fox : MonoBehaviour, movement
     //Realizing methods in interface charactermove
     public void move()
     {
-        Vector2 movement = _action.ReadValue<Vector2>();
+        Vector2 movement = action.ReadValue<Vector2>();
         Vector3 player = new Vector3();
         player.x = movement.x * currentSpeed;
         player.y = movement.y * currentSpeed;
@@ -68,22 +70,30 @@ public class fox : MonoBehaviour, movement
 
     public void updateSprite()
     {
-        Vector2 movement = _action.ReadValue<Vector2>();
+        Vector2 movement = action.ReadValue<Vector2>();
+        anim.SetBool("Idle", false);
+        // change animation based on direction of movement
         if (movement.x < 0)
         {
-            spriteRenderer.sprite = sprites_Array[3];
+            anim.SetInteger("DirectionMoving", 4);
+            spriteRenderer.flipX = true;
         }
         else if (movement.x > 0)
         {
-            spriteRenderer.sprite = sprites_Array[2];
+            anim.SetInteger("DirectionMoving", 2);
+            spriteRenderer.flipX = false;
         }
         else if (movement.y < 0)
         {
-            spriteRenderer.sprite = sprites_Array[1];
+            anim.SetInteger("DirectionMoving", 3);
+            spriteRenderer.flipX = false;
         }
         else if (movement.y > 0)
         {
-            spriteRenderer.sprite = sprites_Array[0];
+            anim.SetInteger("DirectionMoving", 1);
+            spriteRenderer.flipX = false;
+        } else {
+            anim.SetBool("Idle", true);
         }
     }
     public void speed_Down()
@@ -92,9 +102,9 @@ public class fox : MonoBehaviour, movement
 
     public void speed_Up()
     {
-        if (_sprint.ReadValue<float>()>0)
+        if (sprint.ReadValue<float>()>0)
         {
-            currentSpeed = speed*runSpeedtimefactor;
+            currentSpeed = speed*runSpeedTimeFactor;
         }
         else
         {
