@@ -6,11 +6,13 @@ TagManager:
   tags:
   - KillZone
   - MushroomEnemy
+  - Inventory
+  - Obstacle
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
