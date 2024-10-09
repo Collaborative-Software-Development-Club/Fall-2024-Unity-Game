@@ -14,8 +14,11 @@ public class TongueProjectileScript : MonoBehaviour
 
     private Vector3 direction;
     public float moveSpeed;
+    private const float SPEED_MULTIPLIER = 4;
     public float range;
     private float timer = 0;
+    private bool playerLicked = false;
+    //private bool itemLicked = false;
     private bool toMouth = false;
 
     // Start is called before the first frame update
@@ -40,13 +43,18 @@ public class TongueProjectileScript : MonoBehaviour
         {
             returnToMouth(rb);
         }
+        if (playerLicked)
+        {
+            stickToTongue(player);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.Equals(player))
         {
-            returnToMouth(playerRb);
+            playerLicked = true;
             returnToMouth(rb);
+            //transformToMouth(player);
         }
         /* if (collision.gameObject.Equals(item))
          {
@@ -56,6 +64,7 @@ public class TongueProjectileScript : MonoBehaviour
        */
         if (collision.gameObject.Equals(spawner) && toMouth == true)
         {
+            playerLicked = false;
             Destroy(gameObject);
         }
     }
@@ -66,6 +75,12 @@ public class TongueProjectileScript : MonoBehaviour
         direction = (spawner.transform.position - transform.position).normalized;
         rb.velocity = new Vector3(direction.x, direction.y) * moveSpeed;
         Debug.Log("ToMouth");
+    }
+
+    public void stickToTongue(GameObject gameObject)
+    {
+        gameObject.transform.position = transform.position;
+        Debug.Log("PlayerToMouth");
     }
 }
 
