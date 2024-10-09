@@ -9,35 +9,36 @@ public class fox : MonoBehaviour
     [Header("Character Speed")]
     [SerializeField] private float speed;
     [Header("Character Speed Multiplied by this when running")]
-    [SerializeField] private float runSpeedtimefactor;
+    [SerializeField] private float runSpeedTimeFactor;
     [SerializeField] private float currentSpeed;
     private bool isRunning;
     private SpriteRenderer spriteRenderer;
-    [SerializeField] private Sprite [] sprites_Array; //element 0 is the sprite moving upward£¬1 downward£¬2 to right£¬3 to left
     [SerializeField] private Rigidbody2D body;
     [SerializeField] private Collider2D foxCollision;
-    private InputAction _action;
-    private InputAction _sprint;
-    private PlayerInputActions _playerMap;
+    private InputAction action;
+    private InputAction sprint;
+    private PlayerInputActions playerMap;
+    private Animator anim;
 
     [SerializeField] private PauseMenuScript pauseMenuScript;
 
         // Start is called before the first frame update
     void Awake()
     {
-        _playerMap = new PlayerInputActions();
+        playerMap = new PlayerInputActions();
+        anim = GetComponent<Animator>();
     }
     void OnEnable()
     {
-        _action = _playerMap.PlayerAction.Movement;
-        _sprint = _playerMap.PlayerAction.Sprint;
-        _action.Enable();
-        _sprint.Enable();
+        action = playerMap.PlayerAction.Movement;
+        sprint = playerMap.PlayerAction.Sprint;
+        action.Enable();
+        sprint.Enable();
     }
     void OnDisable()
     {
-        _sprint.Disable();
-        _action.Disable();
+        sprint.Disable();
+        action.Disable();
     }
 
 
@@ -61,7 +62,7 @@ public class fox : MonoBehaviour
     //Realizing methods in interface charactermove
     public void move()
     {
-        Vector2 movement = _action.ReadValue<Vector2>();
+        Vector2 movement = action.ReadValue<Vector2>();
         Vector3 player = new Vector3();
         player.x = movement.x * currentSpeed;
         player.y = movement.y * currentSpeed;
@@ -70,17 +71,30 @@ public class fox : MonoBehaviour
 
     public void updateSprite()
     {
-        Vector2 movement = _action.ReadValue<Vector2>();
-        if (!pauseMenuScript.getPauseState()) {
-            if (movement.x < 0) {
-                spriteRenderer.sprite = sprites_Array [3];
-            } else if (movement.x > 0) {
-                spriteRenderer.sprite = sprites_Array [2];
-            } else if (movement.y < 0) {
-                spriteRenderer.sprite = sprites_Array [1];
-            } else if (movement.y > 0) {
-                spriteRenderer.sprite = sprites_Array [0];
-            }
+        Vector2 movement = action.ReadValue<Vector2>();
+        anim.SetBool("Idle", false);
+        // change animation based on direction of movement
+        if (movement.x < 0)
+        {
+            anim.SetInteger("DirectionMoving", 4);
+            spriteRenderer.flipX = true;
+        }
+        else if (movement.x > 0)
+        {
+            anim.SetInteger("DirectionMoving", 2);
+            spriteRenderer.flipX = false;
+        }
+        else if (movement.y < 0)
+        {
+            anim.SetInteger("DirectionMoving", 3);
+            spriteRenderer.flipX = false;
+        }
+        else if (movement.y > 0)
+        {
+            anim.SetInteger("DirectionMoving", 1);
+            spriteRenderer.flipX = false;
+        } else {
+            anim.SetBool("Idle", true);
         }
     }
     public void speed_Down()
@@ -89,9 +103,12 @@ public class fox : MonoBehaviour
 
     public void speed_Up()
     {
-        if (_sprint.ReadValue<float>()>0) {
-            currentSpeed = speed*runSpeedtimefactor;
-        } else {
+        if (sprint.ReadValue<float>()>0)
+        {
+            currentSpeed = speed*runSpeedTimeFactor;
+        }
+        else
+        {
             currentSpeed = speed;
         }
     }
