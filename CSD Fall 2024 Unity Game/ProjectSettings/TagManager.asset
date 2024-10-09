@@ -6,6 +6,9 @@ TagManager:
   tags:
   - KillZone
   - MushroomEnemy
+  - Inventory
+  - TongueSpawner
+  - Item
   layers:
   - Default
   - TransparentFX
