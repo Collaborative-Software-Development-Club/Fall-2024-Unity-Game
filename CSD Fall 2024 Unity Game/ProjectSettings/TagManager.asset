@@ -6,15 +6,16 @@ TagManager:
   tags:
   - KillZone
   - MushroomEnemy
+  - Inventory
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Level
   - Water
   - UI
-  - 
-  - 
+  - NPC
+  - Player
   - 
   - 
   - 
@@ -42,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Accessory
+    uniqueID: 2539273631
     locked: 0
