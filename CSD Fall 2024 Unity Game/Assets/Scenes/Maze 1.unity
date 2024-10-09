@@ -16011,6 +16011,7 @@ GameObject:
   - component: {fileID: 1544326028}
   - component: {fileID: 1544326027}
   - component: {fileID: 1544326026}
+  - component: {fileID: 1544326031}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -16093,13 +16094,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  runSpeedtimefactor: 3
+  runSpeedTimeFactor: 0
   currentSpeed: 0
-  sprites_Array:
-  - {fileID: 21300000, guid: 22f4b0c26131ef646a998b0db869599d, type: 3}
-  - {fileID: 21300000, guid: bd173dff4d0c6884c9f24283cfa9e5de, type: 3}
-  - {fileID: 21300000, guid: 65cdbf423afc2f3418e36df52d2defe7, type: 3}
-  - {fileID: 21300000, guid: 57ab9540e12011b4ba399022a61475c9, type: 3}
   body: {fileID: 1544326027}
   foxCollision: {fileID: 0}
   pauseMenuScript: {fileID: 1483145086}
@@ -16170,6 +16166,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1544326031
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544326025}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5211897785ab0c7488789ec9f2cbb7b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1548611946
 GameObject:
   m_ObjectHideFlags: 0
