@@ -42,14 +42,14 @@ public class NPCFollow : MonoBehaviour
         // Calculate movement direction (toward player)
         movementDirection = ((Vector2)followCharacter.position - (Vector2)transform.position).normalized;
 
-        // Raycasting forward (toward the player)
+        /*// Raycasting forward (toward the player)
         RaycastHit2D hitCenter = Physics2D.Raycast(transform.position, movementDirection, obstacleAvoidanceDistance, obstacleLayer);
 
         // Optional: cast rays to the sides (forward-left, forward-right)
         Vector2 leftDir = Quaternion.Euler(0, 0, 30) * movementDirection;  // Rotate direction by 30 degrees
         Vector2 rightDir = Quaternion.Euler(0, 0, -30) * movementDirection; // Rotate direction by -30 degrees
         RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, leftDir, obstacleAvoidanceDistance, obstacleLayer);
-        RaycastHit2D hitRight = Physics2D.Raycast(transform.position, rightDir, obstacleAvoidanceDistance, obstacleLayer);
+        RaycastHit2D hitRight = Physics2D.Raycast(transform.position, rightDir, obstacleAvoidanceDistance, obstacleLayer); */
 
         // Update the previous position for the next frame
         previousPosition = transform.position;
@@ -63,7 +63,8 @@ public class NPCFollow : MonoBehaviour
             followCharacterPositions.Add(followCharacter.position);
         }
 
-        // Check if an obstacle is hit (center, left, or right rays)
+        
+        /*// Check if an obstacle is hit (center, left, or right rays)
         if (hitCenter.collider != null || hitLeft.collider != null || hitRight.collider != null)
         {
             // Handle obstacle avoidance
@@ -91,7 +92,7 @@ public class NPCFollow : MonoBehaviour
             // Move in the smoothed direction
             transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + newDirection, followSpeed * Time.deltaTime);
         }
-        else if (distance > distanceFromCharacter)
+        else*/ if (distance > distanceFromCharacter)
         {
             // No obstacles detected, move toward the player
             transform.position = Vector2.MoveTowards(transform.position, followCharacter.position, step);
@@ -125,5 +126,7 @@ public class NPCFollow : MonoBehaviour
         {
             spriteRenderer.sprite = spritesArray[1]; // Left
         }
+
+
     }
 }
