@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class KillPlayer : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private Transform respawnPoint;
+    public GameObject player;
+    public Transform respawnPoint;
+    public GameObject dieMessage;
+    public GameObject hallucinationEffect;
     // Start is called before the first frame update
     void Start()
     {
-
+        dieMessage.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,5 +29,7 @@ public class KillPlayer : MonoBehaviour
     {
         player.transform.position = respawnPoint.position;
         Debug.Log("You Died! ");
+        dieMessage.SetActive(true);
+        hallucinationEffect.GetComponent<DistortionControl>().clearDistortion();
     }
 }
