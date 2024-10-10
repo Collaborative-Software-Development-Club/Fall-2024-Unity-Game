@@ -9,14 +9,16 @@ TagManager:
   - Inventory
   - TongueSpawner
   - Item
+  - Spore
+  - Inventory
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Level
   - Water
   - UI
-  - 
+  - Hallucination
   - 
   - 
   - 
@@ -45,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: HallucinationEffect
+    uniqueID: 3303627667
     locked: 0
