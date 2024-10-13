@@ -98865,7 +98865,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 169834567}
-  - {fileID: 1176623320}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &621079030
@@ -99320,7 +99319,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1252080910}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -100310,7 +100309,6 @@ RectTransform:
   m_Children:
   - {fileID: 465348509}
   - {fileID: 237575803}
-  - {fileID: 1252080910}
   m_Father: {fileID: 1891558297}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -100527,6 +100525,7 @@ GameObject:
   - component: {fileID: 1585682720}
   - component: {fileID: 1585682719}
   - component: {fileID: 1585682722}
+  - component: {fileID: 1585682723}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -100642,6 +100641,50 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1585682723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585682718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &1617735137
 GameObject:
   m_ObjectHideFlags: 0
@@ -101651,6 +101694,9 @@ GameObject:
   - component: {fileID: 1955300275}
   - component: {fileID: 1955300276}
   - component: {fileID: 1955300277}
+  - component: {fileID: 1955300280}
+  - component: {fileID: 1955300278}
+  - component: {fileID: 1955300279}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Player
@@ -102255,3 +102301,12 @@ SceneRoots:
   - {fileID: 2060413851}
   - {fileID: 1829416215}
   - {fileID: 1321237777}
+  - {fileID: 1358490400}
+  - {fileID: 1943304413}
+  - {fileID: 464010586}
+  - {fileID: 7276114}
+  - {fileID: 547996510}
+  - {fileID: 847573132}
+  - {fileID: 916650302}
+  - {fileID: 1816532944}
+  - {fileID: 1891558297}
