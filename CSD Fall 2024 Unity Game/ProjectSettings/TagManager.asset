@@ -6,6 +6,9 @@ TagManager:
   tags:
   - KillZone
   - MushroomEnemy
+  - TongueSpawner
+  - Item
+  - Spore
   - Inventory
   - Obstacle
   layers:
