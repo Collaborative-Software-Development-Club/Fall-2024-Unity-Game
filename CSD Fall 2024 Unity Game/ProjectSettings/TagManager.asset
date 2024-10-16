@@ -6,16 +6,19 @@ TagManager:
   tags:
   - KillZone
   - MushroomEnemy
+  - TongueSpawner
+  - Item
   - Spore
   - Inventory
+  - Obstacle
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Level
+  - NPC
   - Water
   - UI
-  - Hallucination
+  - Player
   - 
   - 
   - 
@@ -44,7 +47,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: HallucinationEffect
-    uniqueID: 3303627667
     locked: 0
