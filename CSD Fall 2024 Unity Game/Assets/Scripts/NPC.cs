@@ -48,6 +48,13 @@ public class NPC : MonoBehaviour, InteractableInterface {
 
     private bool inPopUp = false;
 
+
+    //This field does not need to be filled in the inspector, only if the NPC will follow the player after dialogue
+    public NPCFollow npc;
+
+    //This field does not need to be filled in the inspector, only if you want a sound effect to play if NPC is interacted with
+    public AudioSource interactDialogueSound;
+
     private void Start () {
         dialogueMenu = new Dialogue ("", textBackgroundImg, textElement);
     }
@@ -97,6 +104,11 @@ public class NPC : MonoBehaviour, InteractableInterface {
         dialogueMenu = new Dialogue (dialogues [dialogueNum], textBackgroundImg, textElement);
         dialogueMenu.displayDialogue ();
 
+        if (interactDialogueSound != null && !interactDialogueSound.isPlaying)
+        {
+            interactDialogueSound.Play();
+        }
+
         if (!isSingleDialogue)
             nextDialogueInfo.gameObject.SetActive (true);
     }
@@ -107,6 +119,10 @@ public class NPC : MonoBehaviour, InteractableInterface {
             popUpPrompt.gameObject.SetActive (false);
             escDialogueMenuInfo.gameObject.SetActive (false);
             dialogueMenu.disableDialogue ();
+            if (npc != null)
+            {
+                npc.isFollowing = true;
+            }
 
             if (!isSingleDialogue)
                 nextDialogueInfo.gameObject.SetActive (false);
