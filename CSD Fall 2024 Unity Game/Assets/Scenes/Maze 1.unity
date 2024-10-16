@@ -12497,13 +12497,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30890188a5e1d74d947695b603639e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  name: Unpleasant Mushroom
   textElement: {fileID: 0}
   textBackgroundImg: {fileID: 0}
   popUpPrompt: {fileID: 0}
   nextDialogueInfo: {fileID: 0}
   escDialogueMenuInfo: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 1544326025}
   detectionRadius: 1
   Notes: "Do not add text to both variables.\nIf there is only one dialogue, then
     add it to the \"dialogue\" variable. \nIf there is multiple dialogues, then add
@@ -12587,7 +12587,7 @@ Animator:
   m_GameObject: {fileID: 1101010552}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a45b38e412e981e4bbca1fe76cabb777, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
