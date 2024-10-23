@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Rendering.Universal.Internal;
 
 public class SporeProjectileScript : MonoBehaviour
 {
@@ -8,12 +10,20 @@ public class SporeProjectileScript : MonoBehaviour
     private Rigidbody2D rb;
     private KillPlayer killPlayer;
 
-    public float moveSpeed;
-    public float minDrag;
-    public float maxDrag;
+    [SerializeField]
+    [Tooltip("Movement Speed of the Spores")]
+    private float moveSpeed;
 
-    public float despawnTime;
-    private float timer = 0;
+    [SerializeField]
+    [Tooltip("Max time until spore despawns")]
+    private float despawnTime;
+
+    private float despawnTimer = 0;
+
+    //The time interval in which the spore will update it's homing on the player, this is for performance
+    private const float redirectionInterval = 0.1f;
+    
+    private float redirectionTimer;
    
     // Start is called before the first frame update
     void Start()
@@ -21,19 +31,17 @@ public class SporeProjectileScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         killPlayer = player.GetComponent<KillPlayer>();
-
-        Vector3 direction = (player.transform.position - transform.position).normalized;
-        rb.velocity = new Vector2 (direction.x, direction.y) * moveSpeed;
+        redirectionTimer = redirectionInterval;
         
-        rb.drag = Random.Range(minDrag, maxDrag);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer < despawnTime)
+        redirectSpore();
+        if (despawnTimer < despawnTime)
         {
-            timer += Time.deltaTime;
+            despawnTimer += Time.deltaTime;
         }
         else 
         {
@@ -42,10 +50,30 @@ public class SporeProjectileScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")) 
+        if (!collision.gameObject.CompareTag("Spore"))
         {
-            killPlayer.killPlayer();
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                killPlayer.killPlayer();
+
+            }
             Destroy(gameObject);
+        }
+    }
+
+    private void redirectSpore()
+    {
+        
+        if (redirectionTimer < redirectionInterval)
+        {
+            redirectionTimer += Time.deltaTime;
+        }
+        else
+        {
+            Vector3 direction = (player.transform.position - transform.position).normalized;
+            rb.velocity = direction * moveSpeed;
+            redirectionTimer = 0;
+
         }
     }
 }

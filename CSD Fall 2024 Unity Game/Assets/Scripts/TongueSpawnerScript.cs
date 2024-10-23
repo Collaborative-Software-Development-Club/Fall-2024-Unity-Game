@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TongueSpawnerScript : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     public GameObject tongue;
     public float spawnRate;
     private float timer = 0;
