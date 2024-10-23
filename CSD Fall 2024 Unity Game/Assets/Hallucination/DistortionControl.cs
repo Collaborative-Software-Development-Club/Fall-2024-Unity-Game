@@ -25,6 +25,7 @@ public class DistortionControl : MonoBehaviour
         distortionScale = objectMaterial.GetFloat("_GradientScale");
         distortionStrength = objectMaterial.GetVector("_DistortionStrength");
         hallucinationComponent = GameObject.Find("Fox").GetComponent<Hallucination>(); // Cache the Hallucination component
+        Debug.Log(hallucinationComponent);
         currentSporeCount = hallucinationComponent.sporeCount;
         random = new System.Random();
         previousSpore = 0;
