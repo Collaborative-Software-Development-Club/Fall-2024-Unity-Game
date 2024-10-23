@@ -8,7 +8,6 @@ public class fox : MonoBehaviour
 {
     [Header("Character Speed")]
     [SerializeField] private float speed;
-    [Header("Character Speed Multiplied by this when running")]
     [SerializeField] private float runSpeedTimeFactor;
     [SerializeField] private float currentSpeed;
     private bool isRunning;
@@ -63,6 +62,7 @@ public class fox : MonoBehaviour
     public void move()
     {
         Vector2 movement = action.ReadValue<Vector2>();
+        //Debug.Log("Movement input: " + movement);
         Vector3 player = new Vector3();
         player.x = movement.x * currentSpeed;
         player.y = movement.y * currentSpeed;
