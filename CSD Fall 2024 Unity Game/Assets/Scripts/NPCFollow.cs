@@ -96,4 +96,9 @@ public class NPCFollow : MonoBehaviour
 
         
     }
+
+    public void shouldFollow(bool f)
+    {
+        isFollowing = f;
+    }
 }
