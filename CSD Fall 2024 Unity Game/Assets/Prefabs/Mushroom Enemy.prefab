@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1640975426899716134}
   - component: {fileID: 2111101910421327204}
   - component: {fileID: 2765213143297253313}
+  - component: {fileID: 6924864705977172592}
   m_Layer: 0
   m_Name: Mushroom Enemy
   m_TagString: MushroomEnemy
@@ -97,7 +98,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79bf9a620466bf439bd63c8f2c2ae25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   spore: {fileID: 340704952879707311, guid: cff14ce999c26a8448f0aea3f6689807, type: 3}
   spawnRate: 4
   range: 15
+--- !u!95 &6924864705977172592
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7463857721236544422}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 259aac817d255f241b5382be24de4cd5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

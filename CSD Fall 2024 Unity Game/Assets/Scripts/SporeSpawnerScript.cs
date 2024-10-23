@@ -1,42 +1,70 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SporeSpawnerScript : MonoBehaviour
 {
-    public Transform player;
+    //Animator component of the mushroom for the sake of animation stuff
+    private Animator animator;
+
+    private Transform playerTransform;
     public GameObject spore;
+
+    //The frequency which spores are shot
     public float spawnRate;
+    
+    //Tracks how much time is remaining until next spore is spawned
     private float spawnDelay;
+
+    //Tracks whether the mushroom is currently on cooldown or not
+    bool onCooldown;
+
+    //The range in which the mushroom will start firing
     public float range;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        spawnDelay = Random.Range(spawnDelay - 1, spawnDelay);
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = GetComponent<Animator>();
+        spawnDelay = spawnRate;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(transform.position, player.position);
-        if (distance < range)
+        float distanceFromPlayer = Vector3.Distance(transform.position, playerTransform.position);
+
+        /*
+         * Fires a spore when the player enters into the mushroom's range, it then goes on cooldown for as long as the
+         * spawnRate dictates. After the time passes, the next time the player is in range, the mushroom will fire again.
+         */
+        if (distanceFromPlayer < range && !onCooldown)
         {
-            if (spawnDelay < spawnRate)
+            spawnSpore();
+            animator.Play("Shoot");
+            onCooldown = true;
+        }
+        else if (onCooldown)
+        {
+            if (spawnDelay > 0)
             {
-                spawnDelay += Time.deltaTime;
+                spawnDelay -= Time.deltaTime;
             }
             else
             {
-                spawnSpore();
-                spawnDelay = 0;
+                onCooldown = false;
+                spawnDelay = spawnRate;
             }
         }
+
+        
     }
 
     void spawnSpore()
     { 
         Instantiate(spore, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
     }
+
 }
