@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -25,12 +27,16 @@ public class CutsceneNPC : MonoBehaviour
     [Header("Dialogue(s)")]
     [TextArea]
     [SerializeField] private string[] dialogues;
+    [SerializeField] private float textSpeed = 0.05f;
 
-    
+    private bool isWriting = false;
 
     private int dialogueNum = 0;
 
+
     private Dialogue dialogueMenu;
+
+    private IEnumerator writingCoroutine;
 
 
     //This field does not need to be filled in the inspector, only if you want a sound effect to play if NPC is interacted with
@@ -59,9 +65,16 @@ public class CutsceneNPC : MonoBehaviour
 
     public void exitDialogueMenu()
     {
+        if (writingCoroutine != null)
+        {
+            StopCoroutine(writingCoroutine);
+            writingCoroutine = null;
+        }
+
         nameElement.gameObject.SetActive(false);
         nameBackgroundImg.gameObject.SetActive(false);
         dialogueMenu.disableDialogue();
+
     }
 
     public void cycleDialogues()
@@ -72,17 +85,45 @@ public class CutsceneNPC : MonoBehaviour
             }
             else if (dialogueNum == 0)
             {
-                showDialogueMenu();
-                dialogueNum++;
+                nameElement.gameObject.SetActive(true);
+                nameBackgroundImg.gameObject.SetActive(true);
+                nameElement.text = NPCName;
+
+                writingCoroutine = WriteDialogue();
+
+                StartCoroutine(writingCoroutine);
             }
             else
             {
                 nameElement.gameObject.SetActive(true);
                 nameBackgroundImg.gameObject.SetActive(true);
-                dialogueMenu = new Dialogue(dialogues[dialogueNum], textBackgroundImg, textElement);
-                dialogueMenu.displayDialogue();
                 nameElement.text = NPCName;
-                dialogueNum++;
+
+                writingCoroutine = WriteDialogue();
+
+                StartCoroutine(writingCoroutine);
         }
+    }
+
+    IEnumerator WriteDialogue()
+    {
+        isWriting = true;
+
+        int index = 0;
+        string changingText = "";
+
+        while (index < dialogues[dialogueNum].Length)
+        {
+            changingText += dialogues[dialogueNum][index];
+            dialogueMenu = new Dialogue(changingText, textBackgroundImg, textElement);
+            dialogueMenu.displayDialogue();
+
+            index++;
+
+            yield return new WaitForSeconds(textSpeed);
+        }
+
+        isWriting = false;
+        dialogueNum++;
     }
 }
