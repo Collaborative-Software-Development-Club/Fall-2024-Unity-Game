@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 5692088706181889734}
   m_Layer: 0
   m_Name: Fox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -457,7 +457,7 @@ MonoBehaviour:
   defaultMoveSpeed: 10
   runSpeedTimeFactor: 2
   currentSpeed: 0
-  maxSprintTime: 2
+  maxSprintTime: 1
   body: {fileID: 5448392505692305741}
   pauseMenuScript: {fileID: 0}
   sprintUI: {fileID: 101962890066990380}
@@ -624,7 +624,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8243275343530814652}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
