@@ -5,49 +5,61 @@ using UnityEngine.UI;
 using TMPro;
 using static System.Net.Mime.MediaTypeNames;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 
 public class NPC : MonoBehaviour, InteractableInterface {
-    [SerializeField] private string name;
+
+
+    [Tooltip("Name which will be displayed in dialogue.")]
+    [SerializeField] private string NPCName;
 
     [Header ("TMPro UI Elements")]
-
+    [Tooltip("Background art for NPC name. UI Element Name: DialogueMenuBackground")]
+    [SerializeField] private RawImage nameBackgroundImage;
+    [Tooltip("Text element to display NPC name. UI Element Name: DialogueText")]
+    [SerializeField] private TextMeshProUGUI nameElement;
     [Tooltip ("Text element to display dialogue. UI Element Name: DialogueText")]
     [SerializeField] private TextMeshProUGUI textElement;
     [Tooltip ("Background art for dialogue. UI Element Name: DialogueMenuBackground")]
     [SerializeField] private RawImage textBackgroundImg;
     [Tooltip ("Text element telling the user how to interact. UI Element Name: InteractPrompt")]
     [SerializeField] private TextMeshProUGUI popUpPrompt;
-    [Tooltip ("Text element telling the user how to cycle through dialogues. UI Elment Name: CycleDialoguesText")]
-    [SerializeField] private TextMeshProUGUI nextDialogueInfo;
-    [Tooltip ("Text element telling the user how to exit the dialogue menu. UI Element Name: ExitDialogueMenuText")]
-    [SerializeField] private TextMeshProUGUI escDialogueMenuInfo;
 
     [Header ("")]
     [Tooltip ("GameObject for the player")]
     [SerializeField] private GameObject player;
 
     [Header ("")]
-    /*[SerializeField] private int upperDetectionBorder = 1;
-    [SerializeField] private int lowerDetectionBorder = 1;
-    [SerializeField] private int leftDetectionBorder = 1;
-    [SerializeField] private int rightDetectionBorder = 1;*/
     [Tooltip ("Player-NPC detection border radius")]
-    [SerializeField] private int detectionRadius = 1;
+    [SerializeField] private int detectionRadius = 3;
 
+    
     [Header ("Dialogue(s)")]
-    [TextArea]
-    public string Notes = "Do not add text to both variables." +
-        "\nIf there is only one dialogue, then add it to the \"dialogue\" variable. " +
-        "\nIf there is multiple dialogues, then add them to the \"dialogues\" list.";
-    [SerializeField] private string dialogue;
-    [SerializeField] private string [] dialogues;
+    //allDialogue array allows the current cycle of dialogue to switch based on some sort of trigger
+    [SerializeField] private string[][] allDialogue;
+    //a single grouping of dialogue that the player can cycle through
+    [SerializeField] private string [] dialogueArr;
 
-    private int dialogueNum = 0;
+    //The amount of time between each character being rendered in the dialogue box
+    [SerializeField] private float textSpeed = 0.02f;
 
+    //tracks the dialouge array to be cycled through
+    private int currentDialogueArr = 0;
+
+    //tracks the cycle of the current dialogue array
+    private int currentLine = 0;
+
+    //Dialogue menu object to be manipulated by NPC class
     private Dialogue dialogueMenu;
 
     private bool inPopUp = false;
+    private bool dialogueIsOpen = false;
 
+    //if the writing coroutine is in progress
+    private bool isWriting = false;
+
+    //coroutine object
+    private IEnumerator writingCoroutine;
 
     //This field does not need to be filled in the inspector, only if the NPC will follow the player after dialogue
     public NPCFollow npcFollow;
@@ -57,97 +69,166 @@ public class NPC : MonoBehaviour, InteractableInterface {
 
     private void Start () {
         dialogueMenu = new Dialogue ("", textBackgroundImg, textElement);
+        dialogueArr = allDialogue[currentDialogueArr];
     }
 
     private void Update () {
         Interact ();
     }
 
-    // implementation of popUp method from I_Interactable.cs
+    // implementation of Interact() method from I_Interactable.cs
     public void Interact () {
-        if (dialogue != "") {                                        // pop up if there is a single dialogue
-            if (isInDetectionRange ()) {                             // check position of player in relation to the NPC position
-                showPromptWhenInRange ();                            // displays text prompting user to click f
-                showDialogueOnClick ();
-            } else {                                                   // disables prompt to user to click f if he is not in contact with the NPC
-                popUpPrompt.gameObject.SetActive (false);
+        //if the player is close enough to the npc
+        if (isInDetectionRange())
+        {
+            //if the dialogue is already open
+            if (!dialogueIsOpen)
+            {                             
+                showPromptWhenInRange();
+                cycleDialoguesOnClick();
             }
-
-            exitDialogueMenuOnClick (true);
-        } else {                                                    // pop up if there is multiple dialogues
-            if (isInDetectionRange ()) {                            // check position of player in relation to the NPC position
-                showPromptWhenInRange ();
-                showDialogueOnClick ();
-            } else {                                                 // disables prompt to user to click f if he is not in contact with the NPC
-                popUpPrompt.gameObject.SetActive (false);
+            else
+            {
+                popUpPrompt.gameObject.SetActive(false);
+                cycleDialoguesOnClick();
             }
-
-            exitDialogueMenuOnClick (false);
-            cycleDialoguesOnClick ();
+        } 
+        //if out of range, exit dialogue menu
+        else
+        {
+            popUpPrompt.gameObject.SetActive(false);
+            exitDialogueMenuOnClick();
         }
     }
 
+    //returns true if player is within detetctionRadius
     public bool isInDetectionRange () {
-        /*return player.transform.position.x < transform.position.x + rightDetectionBorder &&
-                player.transform.position.x > transform.position.x - leftDetectionBorder &&
-                player.transform.position.y < transform.position.y + upperDetectionBorder &&
-                player.transform.position.y > transform.position.y - lowerDetectionBorder;*/
         return Mathf.Sqrt (Mathf.Pow (transform.position.x - player.transform.position.x, 2) +
             Mathf.Pow (transform.position.y - player.transform.position.y, 2)) <= detectionRadius;
     }
 
-    private void showDialogueMenu (bool isSingleDialogue) {
-        inPopUp = true;
-        popUpPrompt.gameObject.SetActive (false);
-        nextDialogueInfo.gameObject.SetActive (true);
-        escDialogueMenuInfo.gameObject.SetActive (true);
-        dialogueMenu = new Dialogue (dialogues [dialogueNum], textBackgroundImg, textElement);
-        dialogueMenu.displayDialogue ();
-
-        if (interactDialogueSound != null && !interactDialogueSound.isPlaying)
-        {
-            interactDialogueSound.Play();
-        }
-
-        if (!isSingleDialogue)
-            nextDialogueInfo.gameObject.SetActive (true);
-    }
-
-    private void exitDialogueMenuOnClick (bool isSingleDialogue) {
-        if (Input.GetKeyDown (KeyCode.Space)) {
-            inPopUp = false;
-            popUpPrompt.gameObject.SetActive (false);
-            escDialogueMenuInfo.gameObject.SetActive (false);
-            dialogueMenu.disableDialogue ();
+    //exits and resets the dialogue menu
+    private void exitDialogueMenuOnClick()
+    {
+        //only exits if there is a dialogue menu open
+        if (dialogueIsOpen || inPopUp) 
+        { 
+            //will stop writing animation if stil active
+            if (writingCoroutine != null)
+            {
+                StopCoroutine(writingCoroutine);
+                writingCoroutine = null;
+            }
+        
             if (npcFollow != null)
             {
                 npcFollow.isFollowing = true;
             }
 
-            if (!isSingleDialogue)
-                nextDialogueInfo.gameObject.SetActive (false);
+            //resets dialogue values
+            inPopUp = false;
+            dialogueIsOpen = false;
+            currentLine = 0;
+            isWriting = false;
+            nameElement.gameObject.SetActive(false);
+            nameBackgroundImage.gameObject.SetActive(false);
+            dialogueMenu.disableDialogue();
+
+            
         }
     }
 
+    //Main controller of dialogue. Opens and closes each line of dialogue
     private void cycleDialoguesOnClick () {
-        if (Input.GetKeyDown (KeyCode.E)) {
-            if (dialogueNum == dialogues.Length - 1) {
-                dialogueNum = 0;
-                dialogueMenu = new Dialogue (dialogues [dialogueNum], textBackgroundImg, textElement);
-                dialogueMenu.displayDialogue ();
-            } else {
-                dialogueNum++;
-                dialogueMenu = new Dialogue (dialogues [dialogueNum], textBackgroundImg, textElement);
-                dialogueMenu.displayDialogue ();
+        if (Input.GetKeyDown (KeyCode.F)) {
+            
+            //if there is no text in the process of animating
+            if (!isWriting)
+            {
+                //if at the start of dialogue, open it and play sound effect (if it exists)
+                if (currentLine == 0)
+                {
+                    inPopUp = true;
+                    popUpPrompt.gameObject.SetActive(false);
+                    nameElement.text = NPCName;
+                    nameElement.gameObject.SetActive(true);
+                    nameBackgroundImage.gameObject.SetActive(true);
+
+                    if (interactDialogueSound != null && !interactDialogueSound.isPlaying)
+                    {
+                        interactDialogueSound.Play();
+                    }
+
+                    writingCoroutine = WriteDialogue();
+
+                    StartCoroutine(writingCoroutine);
+
+                }
+                //otherwise if it is not at the end of the dialogue, write next line
+                else if (currentLine < dialogueArr.Length)
+                {
+                    writingCoroutine = WriteDialogue();
+
+                    StartCoroutine(writingCoroutine);
+
+                }
+                //if it is at the end of the dialogue, begin dialogue exit
+                else
+                {
+                    exitDialogueMenuOnClick();
+                }
+            } 
+            //if there is text still being written, end the coroutine and display the text immediately
+            else
+            {
+                StopCoroutine(writingCoroutine);
+                dialogueMenu = new Dialogue(dialogueArr[currentLine], textBackgroundImg, textElement);
+                dialogueMenu.displayDialogue();
+
+                isWriting = false;
+                currentLine++;
+
             }
         }
     }
     private void showPromptWhenInRange () {
-        if (!inPopUp)                                        // checks if the user is in the pop up
-            popUpPrompt.gameObject.SetActive (true);
+        if (!inPopUp && isInDetectionRange())
+            popUpPrompt.gameObject.SetActive(true);
     }
-    private void showDialogueOnClick () {
-        if (Input.GetKeyDown (KeyCode.F))
-            showDialogueMenu (false);
+
+    //moves to the next cycle of dialogue
+    public void newDialogueArray()
+    {
+        currentDialogueArr++;
+        currentLine = 0;
+        dialogueArr = allDialogue[currentDialogueArr];
+    }
+
+    //coroutine for dialogue animation. Will display each character of dialogue bit by bit,
+    //based on textSpeed
+    IEnumerator WriteDialogue()
+    {
+        //updates flag isWriting to indicate that coroutine is in progress
+        isWriting = true;
+
+        int index = 0;
+        string changingText = "";
+
+        while (index < dialogueArr[currentLine].Length)
+        {
+            changingText += dialogueArr[currentLine][index];
+            dialogueMenu = new Dialogue(changingText, textBackgroundImg, textElement);
+            dialogueMenu.displayDialogue();
+
+            index++;
+
+            yield return new WaitForSeconds(textSpeed);
+        }
+
+        //updates flag after text animation finishes
+        isWriting = false;
+        
+        //changes index to next line of dialogue
+        currentLine++;
     }
 }

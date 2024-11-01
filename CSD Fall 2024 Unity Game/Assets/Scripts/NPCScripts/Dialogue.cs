@@ -32,7 +32,6 @@ public class Dialogue : MonoBehaviour
             textBackground.gameObject.SetActive(true);
             text.text = dialogue;
             text.gameObject.SetActive(true);
-            Debug.Log(dialogue);
         }
     }
 
