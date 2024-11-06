@@ -50,7 +50,10 @@ public class SporeProjectileScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (!collision.CompareTag("Spore"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void redirectSpore()
