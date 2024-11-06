@@ -36,12 +36,18 @@ public class HamsterSpawner : MonoBehaviour, InteractableInterface
                 if (Input.GetKeyDown(KeyCode.F))
                 {
                     toBeSpawned.SetActive(true);
+                    popUpPrompt.gameObject.SetActive(false);
                 }
-            } else
+            }
+            else
             {
                 popUpPrompt.gameObject.SetActive(false);
             }
-        } 
+        }
+        else
+        {
+            popUpPrompt.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
