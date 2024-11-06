@@ -30,6 +30,9 @@ public class KillPlayer : MonoBehaviour
         player.transform.position = respawnPoint.position;
         Debug.Log("You Died! ");
         dieMessage.SetActive(true);
-        hallucinationEffect.GetComponent<DistortionControl>().clearDistortion();
+        if (hallucinationEffect != null)
+        {
+            hallucinationEffect.GetComponent<DistortionControl>().clearDistortion();
+        }
     }
 }
