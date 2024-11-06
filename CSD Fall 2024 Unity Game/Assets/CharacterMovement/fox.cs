@@ -14,9 +14,10 @@ public class fox : MonoBehaviour
     [SerializeField] private float currentSpeed;
 
     [SerializeField]
-    [Tooltip("Max amount of time the player can sprint for, also dictates how long it takes for them to regain full sprint after using it")]
+    [Tooltip("Max amount of time the player sprints for, also dictates how long it takes for them to regain sprint after using it")]
     private float maxSprintTime;
     private float sprintTimeRemaining;
+    private bool isSprinting;
 
     private SpriteRenderer spriteRenderer;
     [SerializeField] private Rigidbody2D body;
@@ -58,6 +59,7 @@ public class fox : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         body=GetComponent<Rigidbody2D>();
         sprintTimeRemaining = maxSprintTime;
+        isSprinting = false;
         sprintUI.setVisibility(false);
     }
 
@@ -107,17 +109,21 @@ public class fox : MonoBehaviour
         }
     }
 
-    //Manages sprinting mechanic of the fox
+    //Controls the speed of the player based off if they're walking or sprinting
     public void speed_Up()
     {
-        if (sprint.ReadValue<float>()>0 && sprintTimeRemaining > 0)
+
+        //Once the sprint button is pressed for the place to continue sprinting until sprintTimeRemaining runs out
+        if ((sprint.ReadValue<float>()>0 && maxSprintTime <= sprintTimeRemaining)||isSprinting)
         {
             currentSpeed = defaultMoveSpeed*runSpeedTimeFactor;
             sprintTimeRemaining -= Time.deltaTime;
+            isSprinting = sprintTimeRemaining > 0;
         }
         else
         {
-            currentSpeed = defaultMoveSpeed;
+            float slowFactor = sprintTimeRemaining / maxSprintTime;
+            currentSpeed = defaultMoveSpeed * slowFactor;
         }
     }
 
@@ -125,7 +131,7 @@ public class fox : MonoBehaviour
     //Increments SprintTimeRemaining whenever sprint key is not being press
     private void recover_Sprint()
     {
-        if(sprintTimeRemaining <= maxSprintTime && Mathf.Approximately(sprint.ReadValue<float>(), 0))
+        if(sprintTimeRemaining <= maxSprintTime && !isSprinting)
         {
             sprintTimeRemaining += Time.deltaTime;
         }
