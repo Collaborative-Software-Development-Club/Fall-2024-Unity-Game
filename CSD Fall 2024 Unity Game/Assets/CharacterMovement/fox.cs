@@ -9,22 +9,41 @@ using UnityEngine.UI;
 public class fox : MonoBehaviour
 {
     [Header("Character Speed")]
-    [SerializeField] private float defaultMoveSpeed;
-    [SerializeField] private float runSpeedTimeFactor;
-    [SerializeField] private float currentSpeed;
 
     [SerializeField]
-    [Tooltip("Max amount of time the player can sprint for, also dictates how long it takes for them to regain full sprint after using it")]
-    private float maxSprintTime;
-    private float sprintTimeRemaining;
+    [Tooltip("Default speed of player")]
+    private float defaultMoveSpeed;
 
+    [SerializeField]
+    [Tooltip("Factor to multiply speed by when sprinting")]
+    private float sprintSpeedTimeFactor;
+
+    [SerializeField]
+    [Tooltip("Factor to multiply speed by when recovering sprint")] 
+    private float tiredSpeedTimeFactor;
+
+    private float currentSpeed;
+    //----------------------------------------------------------------------------------------------------------------------------------
+    [Header("Sprint Mechanics")]
+
+    [SerializeField]
+    [Tooltip("Max amount of time the player sprints for")]
+    private float maxSprintTime;
+
+    [SerializeField]
+    [Tooltip("The factor by which the recovery time should be multiplied by. When this equals 1, the recovery time will match maxSprintTime.")]
+    private float recoverSpeedFactor;
+    private float sprintTimeRemaining;
+    private bool isSprinting;
+    private bool isTired;
+    //----------------------------------------------------------------------------------------------------------------------------------
+    [Header("Misc")]
     private SpriteRenderer spriteRenderer;
     [SerializeField] private Rigidbody2D body;
     private InputAction action;
     private InputAction sprint;
     private PlayerInputActions playerMap;
     private Animator anim;
-
     [SerializeField] private PauseMenuScript pauseMenuScript;
 
 
@@ -32,7 +51,7 @@ public class fox : MonoBehaviour
     [SerializeField]
     private SprintUI sprintUI;
 
-        // Start is called before the first frame update
+     
     void Awake()
     {
         playerMap = new PlayerInputActions();
@@ -52,13 +71,15 @@ public class fox : MonoBehaviour
     }
 
 
-
+    // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         body=GetComponent<Rigidbody2D>();
         sprintTimeRemaining = maxSprintTime;
+        isSprinting = false;
         sprintUI.setVisibility(false);
+        currentSpeed = 0;
     }
 
     // Update is called once per frame
@@ -107,13 +128,20 @@ public class fox : MonoBehaviour
         }
     }
 
-    //Manages sprinting mechanic of the fox
+    //Controls the speed of the player based off if they're walking or sprinting
     public void speed_Up()
     {
-        if (sprint.ReadValue<float>()>0 && sprintTimeRemaining > 0)
+
+        //Once the sprint button is pressed for the place to continue sprinting until sprintTimeRemaining runs out
+        if (isTired)
         {
-            currentSpeed = defaultMoveSpeed*runSpeedTimeFactor;
+            currentSpeed = defaultMoveSpeed * tiredSpeedTimeFactor;
+        }
+        else if ((sprint.ReadValue<float>()>0 && maxSprintTime <= sprintTimeRemaining)||isSprinting)
+        {
+            currentSpeed = defaultMoveSpeed*sprintSpeedTimeFactor;
             sprintTimeRemaining -= Time.deltaTime;
+            isSprinting = sprintTimeRemaining > 0;
         }
         else
         {
@@ -125,9 +153,14 @@ public class fox : MonoBehaviour
     //Increments SprintTimeRemaining whenever sprint key is not being press
     private void recover_Sprint()
     {
-        if(sprintTimeRemaining <= maxSprintTime && Mathf.Approximately(sprint.ReadValue<float>(), 0))
+        if(sprintTimeRemaining <= maxSprintTime && !isSprinting)
         {
-            sprintTimeRemaining += Time.deltaTime;
+            isTired = true;
+            sprintTimeRemaining += Time.deltaTime * recoverSpeedFactor;
+        }
+        else
+        {
+            isTired = false;
         }
     }
 
