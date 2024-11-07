@@ -18,6 +18,7 @@ TagManager:
   - granade
   - greenVegetable
   - redVegetable
+  - Audio
   layers:
   - Default
   - TransparentFX
