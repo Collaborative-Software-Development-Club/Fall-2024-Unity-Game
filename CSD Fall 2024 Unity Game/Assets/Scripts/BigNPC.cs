@@ -8,9 +8,20 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using System;
 
+/*
+ * NPC Script for large NPC sprites (i.e. the wolf tree.)
+ * Unlike typical script, relies on collision trigger to enable dialogue and
+ * allows the user to swap to a custom camera angle when in dialogue.
+ */
 public class BigNPC : MonoBehaviour, InteractableInterface
 {
 
+    // Camera references
+    [Header("Camera Settings")]
+    [Tooltip("Camera to switch to during dialogue")]
+    [SerializeField] private Camera dialogueCamera;
+    [Tooltip("Main camera to revert to after dialogue")]
+    [SerializeField] private Camera mainCamera;
 
     [Tooltip("Name which will be displayed in dialogue.")]
     [SerializeField] private string NPCName;
@@ -127,6 +138,12 @@ public class BigNPC : MonoBehaviour, InteractableInterface
         //only exits if there is a dialogue menu open
         if (dialogueIsOpen || inPopUp)
         {
+            if (mainCamera != null && dialogueCamera != null)
+            {
+                dialogueCamera.enabled = false;
+                mainCamera.enabled = true;
+            }
+
             //will stop writing animation if stil active
             if (writingCoroutine != null)
             {
@@ -157,6 +174,11 @@ public class BigNPC : MonoBehaviour, InteractableInterface
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            if (dialogueCamera != null && mainCamera != null)
+            {
+                mainCamera.enabled = false;
+                dialogueCamera.enabled = true;
+            }
 
             //if there is no text in the process of animating
             if (!isWriting)
