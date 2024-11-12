@@ -21,8 +21,6 @@ public class SoundControl : MonoBehaviour
     void Update()
     {
         speed = fox.velocity;
-        Debug.Log("wind"+windSound.isPlaying);
-        Debug.Log("grass"+grassSound.isPlaying);
         playSound();
     }
 

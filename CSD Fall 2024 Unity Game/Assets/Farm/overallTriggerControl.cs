@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class overallTriggerControl : MonoBehaviour
 {
     private bool bucketBool = false;
     private bool showBucket = false;
-    private bool bloodBool = false;
+    public bool bloodBool = false;
     private bool showBlood = false;
     private bool vegBool = false;
     private bool showVeg = false;
@@ -32,7 +31,7 @@ public class overallTriggerControl : MonoBehaviour
     private GameObject door;
     private GameObject eventText;
     private GameObject radioSoundSource;
-    private GameObject pigHead;
+    private GameObject currentTriggerObject; // 用于存储当前触发的对象
 
     void Start()
     {
@@ -40,15 +39,83 @@ public class overallTriggerControl : MonoBehaviour
         eventText = GameObject.Find("EventText");
         doorRb = door.GetComponent<Rigidbody2D>();
         radioSoundSource = GameObject.Find("RadioAudio");
-        pigHead = GameObject.Find("pigHead");
         Debug.Log(eventText);
         radioSoundSource.SetActive(false);
-        pigHead.SetActive(false);
     }
 
     void Update()
     {
-        if (bucketBool && bloodBool && vegBool && sandBagBool && doorBool && woodBool && hayBool && !allTriggered)
+        boolsControl();
+        if (Input.GetKeyDown(KeyCode.F) && currentTriggerObject != null)
+        {
+            HandleTrigger(currentTriggerObject);
+        }
+        showTexts();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        currentTriggerObject = collision.gameObject; // 存储当前触发的对象
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject == currentTriggerObject)
+        {
+            currentTriggerObject = null; // 清除当前触发的对象
+        }
+        ResetTexts();
+    }
+
+    void HandleTrigger(GameObject triggerObject)
+    {
+        if (triggerObject.name == "BucketTriggerer")
+        {
+            bucketBool = true;
+            showBucket = true;
+            Debug.Log("Bucket triggered");
+        }
+        else if (triggerObject.name == "BloodTriggerer")
+        {
+            bloodBool = true;
+            showBlood = true;
+            Debug.Log("Blood triggered");
+        }
+        else if (triggerObject.name == "VegetableTriggerer")
+        {
+            vegBool = true;
+            showVeg = true;
+            Debug.Log("Veg triggered");
+        }
+        else if (triggerObject.name == "SandBagsTriggerer")
+        {
+            sandBagBool = true;
+            showSandBag = true;
+            Debug.Log("SandBags triggered");
+        }
+        else if (triggerObject.name == "DoorTriggerer")
+        {
+            doorBool = true;
+            showDoor = true;
+            Debug.Log("Door triggered");
+        }
+        else if (triggerObject.name == "WoodsTriggerer")
+        {
+            woodBool = true;
+            showWood = true;
+            Debug.Log("Woods triggered");
+        }
+        else if (triggerObject.name == "HayTriggerer")
+        {
+            hayBool = true;
+            showHay = true;
+            Debug.Log("Hay triggered");
+        }
+    }
+
+    void boolsControl()
+    {
+        if (bucketBool && bloodBool && vegBool && sandBagBool && doorBool && woodBool && hayBool)
         {
             Destroy(door.GetComponent<Collider2D>());
             allTriggered = true;
@@ -58,62 +125,9 @@ public class overallTriggerControl : MonoBehaviour
         {
             radioSoundSource.SetActive(true);
         }
-        if (allTriggered && showBucket && Input.GetKeyDown(KeyCode.F))
-        {
-            pigHead.SetActive(true);
-        }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            if (collision.gameObject.name == "BucketTriggerer")
-            {
-                bucketBool = true;
-                showBucket = true;
-                Debug.Log("Bucket triggered");
-            }
-            else if (collision.gameObject.name == "BloodTriggerer")
-            {
-                bloodBool = true;
-                showBlood = true;
-                Debug.Log("Blood triggered");
-            }
-            else if (collision.gameObject.name == "VegetableTriggerer")
-            {
-                vegBool = true;
-                showVeg = true;
-                Debug.Log("Veg triggered");
-            }
-            else if (collision.gameObject.name == "SandBagsTriggerer")
-            {
-                sandBagBool = true;
-                showSandBag = true;
-                Debug.Log("SandBags triggered");
-            }
-            else if (collision.gameObject.name == "DoorTriggerer")
-            {
-                doorBool = true;
-                showDoor = true;
-                Debug.Log("Door triggered");
-            }
-            else if (collision.gameObject.name == "WoodsTriggerer")
-            {
-                woodBool = true;
-                showWood = true;
-                Debug.Log("Woods triggered");
-            }
-            else if (collision.gameObject.name == "HayTriggerer")
-            {
-                hayBool = true;
-                showHay = true;
-                Debug.Log("Hay triggered");
-            }
-            showTexts();
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
+    void ResetTexts()
     {
         showBucket = false;
         showBlood = false;
@@ -124,49 +138,38 @@ public class overallTriggerControl : MonoBehaviour
         showHay = false;
         eventText.GetComponent<TextMeshProUGUI>().SetText("");
         eventText.GetComponent<TextMeshProUGUI>().color = Color.white;
-        pigHead.SetActive(false);
     }
+
     void showTexts()
     {
-            if (showBucket)
-            {
-                eventText.GetComponent<TextMeshProUGUI>().SetText(bucketEventText);
-            }
-            else if (showBlood)
-            {
-                eventText.GetComponent<TextMeshProUGUI>().SetText(bloodEventText);
-                eventText.GetComponent<TextMeshProUGUI>().color = Color.red;
-            }
-            else if (showVeg)
-            {
-                eventText.GetComponent<TextMeshProUGUI>().SetText(vegEventText);
-            }
-            else if (showDoor)
-            {
-                eventText.GetComponent<TextMeshProUGUI>().SetText(doorEventText);
-            }
-            else if (showWood)
-            {
-                eventText.GetComponent<TextMeshProUGUI>().SetText(woodEventText);
-            }
-            else if (showHay)
-            {
-                eventText.GetComponent<TextMeshProUGUI>().SetText(hayEventText);
-            }
-            else if (showSandBag)
-            {
-                eventText.GetComponent<TextMeshProUGUI>().SetText(sandBagsText);
-            }
-    }
-    void showItem(Collider2D collision)
-    {
-        if (allTriggered && collision.gameObject.name == "BucketTriggerer")
+        if (showBucket)
         {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                pigHead.SetActive(true);
-            }
+            eventText.GetComponent<TextMeshProUGUI>().SetText(bucketEventText);
+        }
+        else if (showBlood)
+        {
+            eventText.GetComponent<TextMeshProUGUI>().SetText(bloodEventText);
+            eventText.GetComponent<TextMeshProUGUI>().color = Color.red;
+        }
+        else if (showVeg)
+        {
+            eventText.GetComponent<TextMeshProUGUI>().SetText(vegEventText);
+        }
+        else if (showDoor)
+        {
+            eventText.GetComponent<TextMeshProUGUI>().SetText(doorEventText);
+        }
+        else if (showWood)
+        {
+            eventText.GetComponent<TextMeshProUGUI>().SetText(woodEventText);
+        }
+        else if (showHay)
+        {
+            eventText.GetComponent<TextMeshProUGUI>().SetText(hayEventText);
+        }
+        else if (showSandBag)
+        {
+            eventText.GetComponent<TextMeshProUGUI>().SetText(sandBagsText);
         }
     }
-   
 }

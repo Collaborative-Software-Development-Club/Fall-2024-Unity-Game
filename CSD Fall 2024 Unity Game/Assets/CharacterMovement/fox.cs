@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class fox : MonoBehaviour
 {
     [Header("Character Speed")]
-    [SerializeField] private float speed;
+    [SerializeField] public float speed;
     [SerializeField] private float runSpeedTimeFactor;
     [SerializeField] private float currentSpeed;
     private bool isRunning;
