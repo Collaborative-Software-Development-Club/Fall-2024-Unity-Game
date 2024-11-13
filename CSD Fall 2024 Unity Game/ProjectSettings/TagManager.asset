@@ -11,14 +11,6 @@ TagManager:
   - Spore
   - Inventory
   - Obstacle
-  - carrot
-  - potato
-  - tomato
-  - corn
-  - granade
-  - greenVegetable
-  - redVegetable
-  - Audio
   layers:
   - Default
   - TransparentFX
