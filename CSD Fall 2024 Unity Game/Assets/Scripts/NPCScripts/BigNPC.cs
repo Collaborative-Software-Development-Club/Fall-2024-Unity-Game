@@ -81,6 +81,7 @@ public class BigNPC : MonoBehaviour, InteractableInterface
 
     private void Start()
     {
+
         dialogueMenu = new Dialogue("", textBackgroundImg, textElement);
         dialogueArr = allDialogue[currentDialogueArr];
     }
