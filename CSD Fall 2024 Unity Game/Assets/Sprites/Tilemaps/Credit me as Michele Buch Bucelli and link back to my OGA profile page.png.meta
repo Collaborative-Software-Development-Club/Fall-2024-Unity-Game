@@ -1,0 +1,6067 @@
+fileFormatVersion: 2
+guid: 4ee55c876c4ec3b48980117ed46e2f3f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd19d5def97a92d4f80a6b2593f74304
+      internalID: 2139120468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b77b189d5adfd943a6943f2da8fcb44
+      internalID: 1696798031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6887e30e8456c4f93a6ee1358e4241
+      internalID: -161246017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1cd39bdb27d7f14994e7fadd41e909c
+      internalID: 575553245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a81f54341f1d5f47ba67d0607561d49
+      internalID: 1025328903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56ed8cd8c3d317459daef9734a483c0
+      internalID: 465797272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99cc8ce170643174eba87afc605b501f
+      internalID: 1933843858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a84baffab779949ade8af9803742a9
+      internalID: 1478570859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6dd0a57f315fb4589b6965b9697227
+      internalID: 928105550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061eb4b465a581e45ad3e8d659aef1f7
+      internalID: 1985236682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d9fdf570e3728459f422f3a650a195
+      internalID: 464352068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e2d16d17c97cc47947506a9cd0015f
+      internalID: 1127104760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18176fc953246a94cbda11d243d20c9c
+      internalID: 1940974112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb5e0f63d3697b418e8abf2bd613082
+      internalID: 1705904857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_14
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3401a12e66db92f4ba4ea81c8cfd5343
+      internalID: 697272486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_15
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece3b1c1101871541896dc972c105524
+      internalID: -1762889408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68eb347af6e8826468e9f374d650f966
+      internalID: -1798326846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_17
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c07816f75185a4cac505d03521bba2
+      internalID: -1946791165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_18
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2ee89fb52826c4f8a607f2d113b22e
+      internalID: 1599132765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_19
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8911c604176ba141b2c735ee9220a35
+      internalID: 736941334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_20
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3323bde0a39564e8b3aeb8345af9f4
+      internalID: 1378052129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_21
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb141226b437b774689153a1ffa36241
+      internalID: -476583687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5cd82ecc06e2e8439ce7979dbf145ee
+      internalID: -1275691897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_23
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157cd771bb132a845ac26c987888b12b
+      internalID: 786625480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_24
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1313250b21695c34a9b0cd631c168f2c
+      internalID: -1683386716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_25
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7a1aa9c44449c45aa25432984c01f9
+      internalID: 1215937832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f4bcb5751b2794b9f93e0751ed5b06
+      internalID: 1502759930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_27
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca819ec49c8de048bc85dc45fb5ef27
+      internalID: 113139877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_28
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b0e3e50171df745961b9bcfc2af395
+      internalID: -157476261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_29
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1dbf47ce5e18a4aa58de3b30228079
+      internalID: 387338546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_30
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84e2aa2fcc693149b9aa2e9007b2913
+      internalID: 274580577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_31
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5508db8abecb64d4f98b9a8c43f0f391
+      internalID: 490422845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_32
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92e3ca15698251418b38bfcd530dd24
+      internalID: 574392991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_33
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979798b3f91721f4a92bca01c8de8fd1
+      internalID: -485017404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_34
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12382a15941dac40bb70d954e0ea7c5
+      internalID: 1237094015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_35
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2a7d70c9443f749a15a69dbf4074b2
+      internalID: 484457573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_36
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34119fbe23a6b4b44ba689c63d98798a
+      internalID: -1057706766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_37
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be84a84ffadeda74fbf688e750561cf9
+      internalID: -557738762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74210df0f9887b34b932821aa0f3d87f
+      internalID: 1070204137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_39
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f3b835f2e29a74685de9a85cb6ba2c
+      internalID: 874684248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_40
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f85ec17998aa54486f5f0f79955d69
+      internalID: 1681681039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_41
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b82639ff4e8983146b1ef00888cfeca9
+      internalID: 1539175821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_42
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb6bc5d8e3fae948a28a1fe21fec951
+      internalID: -2088170150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2606763c6d88f4d8d003491e6de3ab
+      internalID: -587689357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_44
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a779bb6bbe139204abe967c88f8cfa4d
+      internalID: 1870690379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_45
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7aeb24acaecd5489ea0385a3ffe567
+      internalID: 1538133581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_46
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ccfa43c49e11a4e930cde43dcc350e
+      internalID: -757859031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_47
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2d61d00cb976444b5c42b389c382ae
+      internalID: 1460854047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_48
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ef289ba5f0b98478444e0effa32eb8
+      internalID: 653355124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_49
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2462be7b0cc04d443be19ef3599a2049
+      internalID: -16119816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_50
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 883a71dfceb46fe41b17f0657d9798a0
+      internalID: -639016298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_51
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa98ff67bea1d8147b9966636ee204bf
+      internalID: -1619702091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_52
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d265d0dc154044086023fe247974c6
+      internalID: 1613304708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_53
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2ac8d6031f97143960182fcb183ce6
+      internalID: 1010128201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_54
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32f4c8a002302e42b6768d40b268dc7
+      internalID: 1904287772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_55
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92a6fd67c07b2a4cbab05b79ba00c5d
+      internalID: -48649331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_56
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b427c05117e5c2346bd4039a0ab8d232
+      internalID: 800228336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_57
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c215bc082f7ef947b08e9518e548ad6
+      internalID: 186510317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_58
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca99a4fe2f491943809d3679a7c57d0
+      internalID: 733285526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_59
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc90cad122b9b6438c3e9aceae8c091
+      internalID: 2134035959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_60
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82bb43a29688a840a90313b6a7687de
+      internalID: -1660132747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_61
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e9a7c32c89afa409b6406f3ea82eb2
+      internalID: 655521651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_62
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c55176dfd32da4cb57e2fe708c2fd1
+      internalID: -828955707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6f526c18754d54bb802bf33a2aba36
+      internalID: 1142276817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_64
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49509a2edbf543846ae0adb3ec64c142
+      internalID: 1283507113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_65
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b005b35f0a0e0a94e9eaf16d0ea76817
+      internalID: -1187338055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_66
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4b4a1b532b062428564fff48a1e73e
+      internalID: -323705013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_67
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1dc9e42f56b6c44be19985be13a060
+      internalID: -596901677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_68
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1044ebbe069cf784cb414fa9d57ac5cb
+      internalID: 1968067180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_69
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 217e8fd407098ec44b3315c86eaad02b
+      internalID: 1212943304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_70
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba2ad938c2cbde94d80aeef1896fcd46
+      internalID: 290085562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_71
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2aae7760c7e69439cb76b34a31586a
+      internalID: -1892675213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_72
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ade0b99daea7744bd8d4b6a81d1097
+      internalID: 2096331537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_73
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc5e6b4c84ee434f8d690b1b61e74b1
+      internalID: 1140178826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_74
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b49a3cd9abe9304ca1d427871e443bc
+      internalID: 84254028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_75
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0c7f998af63a946bc20a8e3661fe3f
+      internalID: 1370047293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_76
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1feaf6aade3e7349afa0d5ee5fd5f43
+      internalID: 934531743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_77
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c40aae2364d8e4cabbf90656b0c2d1
+      internalID: 1279908035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_78
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e01fc16efb26114980d5daf07fa4a59
+      internalID: -571960909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_79
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 349ac1a65303f484ea8132dfa0e3667a
+      internalID: 940135742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_80
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086ec05f2fabbf4459f15a2541768d82
+      internalID: 110862151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_81
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3a1812d6bbb424d89d4db3ef784e19
+      internalID: -1940072249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_82
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06657313b46ddb4487c02710cd34fed
+      internalID: -1688249954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_83
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1446ec2c0f8890841b83914ebb2e1e41
+      internalID: 690658995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_84
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fe5c48262f4574fbac5c94dec5167a
+      internalID: -2129880400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca50a45d27124143876b1c505d91ce2
+      internalID: 756774610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_86
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ead4f281deaf348a3b4c04ae127d1c
+      internalID: 324535202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_87
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f26c722a29f7e4ebfe6c984610fd3e
+      internalID: 1761492594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_88
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a96dfefea08f442a8a4e186b735e3c
+      internalID: 465368508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_89
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5055b34192a5d0d4c81dc0b9f5307893
+      internalID: 266074667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_90
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cfa4226de085fd458510d6b7e7aeb5d
+      internalID: -1375199363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_91
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47497de418bddd3419f96dcc59515558
+      internalID: -1226690331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_92
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4540ff8818e1bc54898877a936b5d4e5
+      internalID: -1322682202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_93
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c975ce53963e44c4f84fb9266b600776
+      internalID: -191580480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_94
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c5b4a0075441d4c9429e61580d062a
+      internalID: 1780602887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_95
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4a51eabafe4cb4d8e42c54feccbf6f
+      internalID: -2013459128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_96
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9f45b991a6c2542bc093b518d76c8b
+      internalID: -544639963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_97
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439c845f5bfeedd4fbe7e1477301b480
+      internalID: 978053197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_98
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdceacff5528d0b4db26d93f6b73a124
+      internalID: -456179058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_99
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfef03877bf5cc4eb1d5d28875f0a88
+      internalID: 691324188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_100
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785cfe27882fef04d9a340bf3bb76319
+      internalID: -679789807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_101
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6daf3dff0df4c5a41ab85ce6a19085b9
+      internalID: 62893745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_102
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a23f0acb5e78be4090b04faf644233f
+      internalID: -1618648797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_103
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a871a43d933de7843bcd5869321d6f41
+      internalID: -2090626945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_104
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c098c6c0ce1c9e4ea3acb82321293c8
+      internalID: 1949567757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_105
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948569431176dc34e954908e9d32cce3
+      internalID: 1263819035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_106
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103e22a2bd1163045b6bd6f935849c5b
+      internalID: -1409847236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_107
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c766cbf9272cd04fab2839beb123c41
+      internalID: -1817240231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_108
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2796e6a876f5cd439279657e6f99ad6
+      internalID: 1341667823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_109
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e71aa71abe4a34eb6f4c79e0ea6558
+      internalID: -804257244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_110
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30e3e32027f5f6429647a590314f674
+      internalID: 1404268264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_111
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35baa5d4ec72c34f94ecef5a942fa11
+      internalID: -1097885545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_112
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efae8e87722634b48940d0b03e04ce07
+      internalID: -678928718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_113
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41231b87a348f9741b1067ed554d2576
+      internalID: 720971390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_114
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd51be48c6e6a4a499acda964eeda3f9
+      internalID: -1287489076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_115
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a123f2c4928944b96531ea87f73fab
+      internalID: -158596510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_116
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8349e808f3658bb42846cccb283256d1
+      internalID: -1207177369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_117
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fe9eba26f9b334e8b49f1c47993117
+      internalID: 577577206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_118
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81b815cd83adfc41b97f85ce975bb13
+      internalID: -401522369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_119
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acda8d93f62db1047917a482cf40a294
+      internalID: -1630904006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_120
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd512651d3b66f54ebdcdaaf5155daa1
+      internalID: -1339765091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_121
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be7c2a054369c34ea4b99c0d07c80c5
+      internalID: -1698459568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_122
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd39c5b50168154da62e5fab5f218d2
+      internalID: -2058039762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_123
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aeb80aa9c376364eb96d0880c0d0211
+      internalID: -2122965311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_124
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e69f24ac5dbc1943a57f2b5b4d9ea69
+      internalID: -749430251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_125
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3307ab6abdce2f43a72603d3f3e892a
+      internalID: 1904966061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_126
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2aa89f1d74e0c84b9a1334cdab7d8cf
+      internalID: 2024006992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_127
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b620733f484ed56409e82c6868d874e8
+      internalID: 264637301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_128
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a94d3afac6d78a48a7d1f160dd6f545
+      internalID: -652896740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_129
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458c89d164da54c46b48b5468c9ecbf1
+      internalID: -717589132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2936ad7b9605f144aa26530e1c6ab9f9
+      internalID: -1682405912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_131
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680b6ad5eb5912540afff800a3d26a22
+      internalID: 1234478570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_132
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bed268722adfa842935e4b0fc2a941f
+      internalID: 71307604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_133
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d83b3404aa3a9148affc0e92352f7e9
+      internalID: -1010928460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_134
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77f045c833852644910b5d449f92edc
+      internalID: -1349149135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_135
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b37ff51f8aa9284a9f16325693cbb53
+      internalID: -1128840183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_136
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109accb1b92b44a49b4e54a0d34869c7
+      internalID: -2123437882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_137
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ced7b9b8c68ad14e8f8fac6c468e08f
+      internalID: 56381142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_138
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4adfa5b74d908754891b7fe24980f9e2
+      internalID: 820754092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_139
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0e1a451f2890c46b410bb910cd8f98
+      internalID: -4529215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_140
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fe9e25ea7fd4944a8d2f67829a94a7
+      internalID: 2116305511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_141
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c3be8a2016abc4994d30de9adc4267
+      internalID: 842525193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_142
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b6de533fcc1e54681da46151ca4fb4
+      internalID: -371843416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_143
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3017f44b743facb429f1a5387cad19bc
+      internalID: 1180201869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_144
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670ab0680b4c27e48b8f2ef0b444f4e0
+      internalID: 1868369597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_145
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15dda2e837fdb34cab6b4599cc9e531
+      internalID: -1084806069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_146
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df90e03d71e10e4d80d6c26230f6c67
+      internalID: -1781164560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_147
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5b1ab644569c24f9ca3ee97a94aecd
+      internalID: 1091069804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_148
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176ee13a6c500024b846f19f3611fb0e
+      internalID: -594129593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_149
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0245bfa450565ab4abfa87f492bfed2c
+      internalID: 1589155382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_150
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7210f2f6160b6040a4fc611280a50a0
+      internalID: -900088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_151
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2c729a75cb3e948bffe0a4d505d79d
+      internalID: -1101973742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_152
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28aa519cececb54fa895c2dd631bfc1
+      internalID: 1250155220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_153
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a78b590672f1a4eaa640176ae8a1bc
+      internalID: 1417330831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_154
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf31f75989217934c97029daf26828fb
+      internalID: 1978633943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_155
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a5374b4a33f484eb80d74583dd98fd
+      internalID: -1776140346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_156
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95714c3bf2581a945b202c759198f0e0
+      internalID: 1694206002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_157
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8ff39e39eae3849829fdae3ee3d5d8
+      internalID: 1714066127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_158
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88476ec060ab5e14ca33793cc1905876
+      internalID: 1299992430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_159
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f45413c8890a9d4bbfeb18977832423
+      internalID: -698299402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_160
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359d4cde182e8604d874bf1d65c98635
+      internalID: 43292737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_161
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a4a007ed82c4642aa6ce4ca7c08f54
+      internalID: 1303221260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_162
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf9bc87bc1ba044da01eeafc227aba7
+      internalID: -364527259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_163
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb99b895a47aa34298c8d14186e459e
+      internalID: -1422723910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_164
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a655bbb6b0d93842912aeda8ab22f65
+      internalID: 455563789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_165
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2808cef5e9953540ab3d056d84a7dda
+      internalID: 513406619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_166
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85099f7bf52cb014aafef392b63b3ded
+      internalID: 117965430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_167
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36370688f8049d0418f12c29b995afb6
+      internalID: -1960826418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_168
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3f2efe1c276014795f77d5eb0152b1
+      internalID: 285233176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_169
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca1cb937f5478042a9110f521839652
+      internalID: -1614863272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_170
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f0d6f9637f97d4a9ce64f552bfe6d0
+      internalID: -726425291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_171
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5e28e42e849904eaabb8b96cfb590d
+      internalID: 1680682792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_172
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116319cca1619f9418339a2634d6a620
+      internalID: -169003887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_173
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f774f5fe428bb4046943c6ccc0bd28ad
+      internalID: -1545384107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_174
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69fc3adde1e28b469f2862b268797dc
+      internalID: -317798665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_175
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b4041c8086bc646b26477e34085dc5
+      internalID: -461506230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_176
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3e62c1aa903454ca31b8b16e911fc4
+      internalID: -1434828431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_177
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0800f087c335b364ca69068eaf6a63a8
+      internalID: 669896026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_178
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9461e1c1762aab49811fec8f392f7a1
+      internalID: 1493494985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_179
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf58e375baab15d4e94bcf84218dd003
+      internalID: 487804275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_180
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e27a62dbe9c5d46b9b614ffeb2c194
+      internalID: -2050756766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_181
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b84907f6007c54f852ab2fde55406e
+      internalID: 1729862583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_182
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d3077503eaa2049abc6c34856bc9c5
+      internalID: 408094618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_183
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c2903a42b8f5540a2d0c06fe1b5e37
+      internalID: 556744839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_184
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be84fdbe1cc5b04e9b6b83c53edbef8
+      internalID: -1399095277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_185
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3bc03c9e3b13444ad30148d1a03ed0
+      internalID: -127977281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_186
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8466e26832c1cdf48bd6e4b850a186f0
+      internalID: 464703566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_187
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a0690acacc896479e09f189959d94c
+      internalID: 885052774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_188
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4adb9f57890c0cb4fa02a6f6dbe0f4e0
+      internalID: 1054006634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_189
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43fd5bd36f64dd042983984f8a4b83d7
+      internalID: -1622613520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_190
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646d1ff2e21ea7948b3b858acdeeb208
+      internalID: 1935704420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_191
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751d78a751fce2c468dd977d1a0b7387
+      internalID: 1754610753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_192
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4a722e6de138c4eb5536381df621a8
+      internalID: -1190074476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_193
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e53612f0cccc041b76cf0fc4778e65
+      internalID: -170852363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_194
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4cef905202254469d67eed7f69c294
+      internalID: -973921333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_195
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81150726a93f06b4e847702910fe0f13
+      internalID: 555015205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_196
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d248c6db4aae0664886f2a9468c86149
+      internalID: -904516981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_197
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67bc8e7db8143d9449851de2d96ea6d6
+      internalID: -390150468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_198
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b90de5391fbb254c88590c46358e869
+      internalID: 703127810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_199
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34eb4ca6b534b3f4197268a95e5904cd
+      internalID: 973915932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_200
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51847d5b26bd0e418722938bc401989
+      internalID: 853027364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_201
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83a96c0bbb326e4e936bdcb473922ef
+      internalID: -1396737392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_202
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308f7ff770afc6a47952e14d21ce1dca
+      internalID: -299356455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_203
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad3c1d275e7fe44c9c5100c8b04eefe
+      internalID: 1106508824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_204
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9213f9acc390b4480903b35b93de12
+      internalID: -1541638929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_205
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f830913e48beb44eb2bf489c7a7965a
+      internalID: -1999706242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_206
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba1d40272f1c944880acc8deb738d7a
+      internalID: -756813381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_207
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77dec6502709ed843a5c43ee231d7f2e
+      internalID: 1950134524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_208
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c54c64d85f37ef4a87af8fdbb0a5311
+      internalID: -568709860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_209
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931818ccda4de0f4696161034792e054
+      internalID: 324742866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_210
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4ab472822c46041a3325288ca901f2
+      internalID: 1851462843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_211
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bffcce706c2db488f1b1f4053273ef
+      internalID: -414905185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_212
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a692e53d729884ab1002b36a701695
+      internalID: 304039441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_213
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2455593fe23ff6c42bfaf75b5e969dd1
+      internalID: -1352891205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_214
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c4622226bd3594299311f9861a7be2
+      internalID: 61632923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_215
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef9922e096ebf74ab05d4864eb2aefb
+      internalID: -1311616760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_216
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384bc2e6940aac34a97f195ba18361b0
+      internalID: 1173953670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_217
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f8315b85b8a2842928892c5d01f31c
+      internalID: -201126637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_218
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a3091362bcc3e41948364543386f8a
+      internalID: 376153341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_219
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a97c5962403e54ab663596e2cc3ac6
+      internalID: -1397076450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_220
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e2af2d53f980d44b5132aa6a784783
+      internalID: -486833045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_221
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b20ad0d4a22e544ebca03bbff224b5d
+      internalID: 1676021894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_222
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: debd4a9a0460e20489bb8b648d565c13
+      internalID: -938640367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_223
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8325520e5cc3adf48bbed1c41a23ab5f
+      internalID: -2007815828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_224
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc18724e77b9ff47b596651bd2ee890
+      internalID: 522135871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_225
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733d7987bf44ae6439d0812a373e1c8c
+      internalID: -895735308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_226
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501d469215f11b2419d913bb1ca16f11
+      internalID: -1755740020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_227
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef37d70365b92054b9ed1b01e73a5336
+      internalID: -1749376623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_228
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 476c6e6317358dd4e969176db5e96116
+      internalID: -544414056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_229
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213e94b2af3353d4ba80bb17918b9850
+      internalID: -1941557338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_230
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c2da91c84c285419e7ea216ff136cc
+      internalID: -1661182008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_231
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b9faa9a1d1a04d41b6ad006596b1c75
+      internalID: -1051403226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_232
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276212c1b597b124dbe69c76828734fd
+      internalID: 386039240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_233
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45a31fdddda1874dba6381a4e227d83
+      internalID: -1956133471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_234
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f430c0bc8dcfc3243b3a6b952e389cca
+      internalID: -1252284322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_235
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a55cce5ce0a524dad28eefca05b259
+      internalID: 1503745569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_236
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef3c22c8893c4d489facd7b52f50e3d
+      internalID: -1777769246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_237
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a37624e286643e4eb263675349b3c9e
+      internalID: 908164252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_238
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5463f7bfbe96a146a9c7e45a890e570
+      internalID: 1790608041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_239
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69600515e4b7c674386f1f2dbb86c332
+      internalID: 399982284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_240
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 195e256bd51408f40830da5394323fda
+      internalID: 1679942217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_241
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3164cc72abfe329468c0c4b6666381cd
+      internalID: -1859194043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_242
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5bcab6fbd83b641aab1cbeecfbdbf7
+      internalID: -1964224403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_243
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52d8cae0bb68a04aa7c399943d25004
+      internalID: -1707689670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_244
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581da06123acfc54292413d6c1226974
+      internalID: 808421533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_245
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81f08ec59bcd704ab39e7408b0ebc47
+      internalID: 930588603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_246
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d89102e6c40c374da66a685d96d48cc
+      internalID: 858136599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_247
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11c50a80bd8f1e4d967d4d25eb66612
+      internalID: -1307598739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_248
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4be1d7efc22014184080e72d152196
+      internalID: 45904481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_249
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b17eebcf8ead1f46944f40f3296929f
+      internalID: 136444102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_250
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8371c190fed44409fc113322bb56aa
+      internalID: 143159703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_251
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3dbfee42eb5b114d9da70e0b6416993
+      internalID: -1270543407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_252
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b9257699aff36488f18850e590ec21
+      internalID: 370666543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_253
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b420afd52b200f34186d75b2e2b3bfcb
+      internalID: 1983194070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_254
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938062653a92db740b8f21d81198eeec
+      internalID: 590831543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_255
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02dfd9d2f4acc4428282872ba50c924
+      internalID: -373054894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_256
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bec2e1d0ab080949accc1b39e4f240d
+      internalID: 493171594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_257
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2f9508c584bd6469a0694167a6fc3c
+      internalID: 830305721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_258
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f0a097162ffea439460f3c3aa5cd20
+      internalID: 1391382199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_259
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7fdbbd214bf604294ac4372f1c5180
+      internalID: 888137860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_260
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd163cd56862c544b8d0e723d1f7c779
+      internalID: 1033690767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_261
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c4dbcd80ccf8e48b7c8a52e86a5072
+      internalID: -1714502816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_262
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1076e54a6a69b84fa0686d9553922e9
+      internalID: 402367187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_263
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290975773494cd641a1139fbe26790fb
+      internalID: 1328383370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_264
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27c38eb251595345ba8f1632f945870
+      internalID: -1636504560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_265
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd29301fc4134048a67d8e01c4230d6
+      internalID: 510162322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_266
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73e8947c6934d14fb6cdc7b2bc8c002
+      internalID: 37486596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_267
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027de59a34bbe4345a3cb2b0cc120a51
+      internalID: -503377162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_268
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61bf2686c6a48c5428ed3640bce817e6
+      internalID: -475991453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit me as Michele Buch Bucelli and link back to my OGA profile page_269
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b81e8f30ae6144c898da575babde4c
+      internalID: 361786494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_0: 2139120468
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_1: 1696798031
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_10: 464352068
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_100: -679789807
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_101: 62893745
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_102: -1618648797
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_103: -2090626945
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_104: 1949567757
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_105: 1263819035
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_106: -1409847236
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_107: -1817240231
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_108: 1341667823
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_109: -804257244
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_11: 1127104760
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_110: 1404268264
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_111: -1097885545
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_112: -678928718
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_113: 720971390
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_114: -1287489076
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_115: -158596510
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_116: -1207177369
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_117: 577577206
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_118: -401522369
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_119: -1630904006
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_12: 1940974112
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_120: -1339765091
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_121: -1698459568
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_122: -2058039762
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_123: -2122965311
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_124: -749430251
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_125: 1904966061
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_126: 2024006992
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_127: 264637301
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_128: -652896740
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_129: -717589132
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_13: 1705904857
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_130: -1682405912
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_131: 1234478570
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_132: 71307604
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_133: -1010928460
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_134: -1349149135
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_135: -1128840183
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_136: -2123437882
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_137: 56381142
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_138: 820754092
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_139: -4529215
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_14: 697272486
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_140: 2116305511
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_141: 842525193
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_142: -371843416
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_143: 1180201869
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_144: 1868369597
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_145: -1084806069
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_146: -1781164560
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_147: 1091069804
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_148: -594129593
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_149: 1589155382
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_15: -1762889408
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_150: -900088
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_151: -1101973742
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_152: 1250155220
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_153: 1417330831
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_154: 1978633943
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_155: -1776140346
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_156: 1694206002
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_157: 1714066127
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_158: 1299992430
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_159: -698299402
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_16: -1798326846
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_160: 43292737
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_161: 1303221260
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_162: -364527259
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_163: -1422723910
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_164: 455563789
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_165: 513406619
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_166: 117965430
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_167: -1960826418
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_168: 285233176
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_169: -1614863272
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_17: -1946791165
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_170: -726425291
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_171: 1680682792
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_172: -169003887
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_173: -1545384107
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_174: -317798665
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_175: -461506230
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_176: -1434828431
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_177: 669896026
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_178: 1493494985
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_179: 487804275
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_18: 1599132765
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_180: -2050756766
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_181: 1729862583
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_182: 408094618
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_183: 556744839
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_184: -1399095277
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_185: -127977281
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_186: 464703566
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_187: 885052774
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_188: 1054006634
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_189: -1622613520
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_19: 736941334
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_190: 1935704420
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_191: 1754610753
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_192: -1190074476
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_193: -170852363
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_194: -973921333
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_195: 555015205
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_196: -904516981
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_197: -390150468
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_198: 703127810
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_199: 973915932
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_2: -161246017
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_20: 1378052129
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_200: 853027364
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_201: -1396737392
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_202: -299356455
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_203: 1106508824
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_204: -1541638929
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_205: -1999706242
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_206: -756813381
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_207: 1950134524
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_208: -568709860
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_209: 324742866
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_21: -476583687
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_210: 1851462843
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_211: -414905185
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_212: 304039441
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_213: -1352891205
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_214: 61632923
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_215: -1311616760
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_216: 1173953670
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_217: -201126637
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_218: 376153341
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_219: -1397076450
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_22: -1275691897
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_220: -486833045
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_221: 1676021894
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_222: -938640367
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_223: -2007815828
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_224: 522135871
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_225: -895735308
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_226: -1755740020
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_227: -1749376623
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_228: -544414056
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_229: -1941557338
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_23: 786625480
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_230: -1661182008
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_231: -1051403226
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_232: 386039240
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_233: -1956133471
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_234: -1252284322
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_235: 1503745569
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_236: -1777769246
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_237: 908164252
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_238: 1790608041
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_239: 399982284
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_24: -1683386716
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_240: 1679942217
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_241: -1859194043
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_242: -1964224403
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_243: -1707689670
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_244: 808421533
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_245: 930588603
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_246: 858136599
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_247: -1307598739
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_248: 45904481
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_249: 136444102
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_25: 1215937832
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_250: 143159703
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_251: -1270543407
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_252: 370666543
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_253: 1983194070
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_254: 590831543
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_255: -373054894
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_256: 493171594
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_257: 830305721
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_258: 1391382199
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_259: 888137860
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_26: 1502759930
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_260: 1033690767
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_261: -1714502816
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_262: 402367187
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_263: 1328383370
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_264: -1636504560
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_265: 510162322
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_266: 37486596
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_267: -503377162
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_268: -475991453
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_269: 361786494
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_27: 113139877
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_28: -157476261
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_29: 387338546
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_3: 575553245
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_30: 274580577
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_31: 490422845
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_32: 574392991
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_33: -485017404
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_34: 1237094015
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_35: 484457573
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_36: -1057706766
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_37: -557738762
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_38: 1070204137
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_39: 874684248
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_4: 1025328903
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_40: 1681681039
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_41: 1539175821
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_42: -2088170150
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_43: -587689357
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_44: 1870690379
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_45: 1538133581
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_46: -757859031
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_47: 1460854047
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_48: 653355124
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_49: -16119816
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_5: 465797272
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_50: -639016298
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_51: -1619702091
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_52: 1613304708
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_53: 1010128201
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_54: 1904287772
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_55: -48649331
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_56: 800228336
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_57: 186510317
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_58: 733285526
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_59: 2134035959
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_6: 1933843858
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_60: -1660132747
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_61: 655521651
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_62: -828955707
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_63: 1142276817
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_64: 1283507113
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_65: -1187338055
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_66: -323705013
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_67: -596901677
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_68: 1968067180
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_69: 1212943304
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_7: 1478570859
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_70: 290085562
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_71: -1892675213
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_72: 2096331537
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_73: 1140178826
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_74: 84254028
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_75: 1370047293
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_76: 934531743
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_77: 1279908035
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_78: -571960909
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_79: 940135742
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_8: 928105550
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_80: 110862151
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_81: -1940072249
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_82: -1688249954
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_83: 690658995
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_84: -2129880400
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_85: 756774610
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_86: 324535202
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_87: 1761492594
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_88: 465368508
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_89: 266074667
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_9: 1985236682
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_90: -1375199363
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_91: -1226690331
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_92: -1322682202
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_93: -191580480
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_94: 1780602887
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_95: -2013459128
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_96: -544639963
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_97: 978053197
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_98: -456179058
+      Credit me as Michele Buch Bucelli and link back to my OGA profile page_99: 691324188
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
