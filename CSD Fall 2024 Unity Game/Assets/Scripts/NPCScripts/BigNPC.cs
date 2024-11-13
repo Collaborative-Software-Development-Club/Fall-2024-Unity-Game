@@ -6,42 +6,54 @@ using TMPro;
 using static System.Net.Mime.MediaTypeNames;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
+using System;
 
-public class NPC : MonoBehaviour, InteractableInterface {
+/*
+ * NPC Script for large NPC sprites (i.e. the wolf tree.)
+ * Unlike typical script, relies on collision trigger to enable dialogue and
+ * allows the user to swap to a custom camera angle when in dialogue.
+ */
+public class BigNPC : MonoBehaviour, InteractableInterface
+{
 
+    // Camera references
+    [Header("Camera Settings")]
+    [Tooltip("Camera to switch to during dialogue")]
+    [SerializeField] private Camera dialogueCamera;
+    [Tooltip("Main camera to revert to after dialogue")]
+    [SerializeField] private Camera mainCamera;
 
     [Tooltip("Name which will be displayed in dialogue.")]
     [SerializeField] private string NPCName;
 
-    [Header ("TMPro UI Elements")]
+    [Header("TMPro UI Elements")]
     [Tooltip("Background art for NPC name. UI Element Name: DialogueMenuBackground")]
     [SerializeField] private RawImage nameBackgroundImage;
     [Tooltip("Text element to display NPC name. UI Element Name: DialogueText")]
     [SerializeField] private TextMeshProUGUI nameElement;
-    [Tooltip ("Text element to display dialogue. UI Element Name: DialogueText")]
+    [Tooltip("Text element to display dialogue. UI Element Name: DialogueText")]
     [SerializeField] private TextMeshProUGUI textElement;
-    [Tooltip ("Background art for dialogue. UI Element Name: DialogueMenuBackground")]
+    [Tooltip("Background art for dialogue. UI Element Name: DialogueMenuBackground")]
     [SerializeField] private RawImage textBackgroundImg;
-    [Tooltip ("Text element telling the user how to interact. UI Element Name: InteractPrompt")]
+    [Tooltip("Text element telling the user how to interact. UI Element Name: InteractPrompt")]
     [SerializeField] private TextMeshProUGUI popUpPrompt;
 
-    [Header ("")]
-    [Tooltip ("GameObject for the player")]
+    [Header("")]
+    [Tooltip("GameObject for the player")]
     [SerializeField] private GameObject player;
 
-    [Header ("")]
-    [Tooltip ("Player-NPC detection border radius")]
-    [SerializeField] private int detectionRadius = 3;
 
-    
-    [Header ("Dialogue(s)")]
+    [Header("Dialogue(s)")]
     //allDialogue array allows the current cycle of dialogue to switch based on some sort of trigger
     [SerializeField] private string[][] allDialogue;
     //a single grouping of dialogue that the player can cycle through
-    [SerializeField] private string [] dialogueArr;
+    [SerializeField] private string[] dialogueArr;
 
     //The amount of time between each character being rendered in the dialogue box
     [SerializeField] private float textSpeed = 0.02f;
+
+    //boolean which is manipulated based on whether the player is in the area of dialogue
+    private bool isInRange = false;
 
     //tracks the dialouge array to be cycled through
     private int currentDialogueArr = 0;
@@ -67,23 +79,43 @@ public class NPC : MonoBehaviour, InteractableInterface {
     //This field does not need to be filled in the inspector, only if you want a sound effect to play if NPC is interacted with
     public AudioSource interactDialogueSound;
 
-    private void Start () {
-        dialogueMenu = new Dialogue ("", textBackgroundImg, textElement);
+    private void Start()
+    {
+
+        dialogueMenu = new Dialogue("", textBackgroundImg, textElement);
         dialogueArr = allDialogue[currentDialogueArr];
     }
 
-    private void Update () {
-        Interact ();
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject == player)
+        {
+            isInRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject == player)
+        {
+            isInRange = false ;
+        }
+    }
+
+    private void Update()
+    {
+        Interact();
     }
 
     // implementation of Interact() method from I_Interactable.cs
-    public void Interact () {
+    public void Interact()
+    {
         //if the player is close enough to the npc
-        if (isInDetectionRange())
+        if (isInRange)
         {
             //if the dialogue is already open
             if (!dialogueIsOpen)
-            {                             
+            {
                 showPromptWhenInRange();
                 cycleDialoguesOnClick();
             }
@@ -92,7 +124,7 @@ public class NPC : MonoBehaviour, InteractableInterface {
                 popUpPrompt.gameObject.SetActive(false);
                 cycleDialoguesOnClick();
             }
-        } 
+        }
         //if out of range, exit dialogue menu
         else
         {
@@ -101,25 +133,25 @@ public class NPC : MonoBehaviour, InteractableInterface {
         }
     }
 
-    //returns true if player is within detetctionRadius
-    public bool isInDetectionRange () {
-        return Mathf.Sqrt (Mathf.Pow (transform.position.x - player.transform.position.x, 2) +
-            Mathf.Pow (transform.position.y - player.transform.position.y, 2)) <= detectionRadius;
-    }
-
     //exits and resets the dialogue menu
     private void exitDialogueMenuOnClick()
     {
         //only exits if there is a dialogue menu open
-        if (dialogueIsOpen || inPopUp) 
-        { 
+        if (dialogueIsOpen || inPopUp)
+        {
+            if (mainCamera != null && dialogueCamera != null)
+            {
+                dialogueCamera.enabled = false;
+                mainCamera.enabled = true;
+            }
+
             //will stop writing animation if stil active
             if (writingCoroutine != null)
             {
                 StopCoroutine(writingCoroutine);
                 writingCoroutine = null;
             }
-        
+
             if (npcFollow != null)
             {
                 npcFollow.isFollowing = true;
@@ -134,14 +166,21 @@ public class NPC : MonoBehaviour, InteractableInterface {
             nameBackgroundImage.gameObject.SetActive(false);
             dialogueMenu.disableDialogue();
 
-            
+
         }
     }
 
     //Main controller of dialogue. Opens and closes each line of dialogue
-    private void cycleDialoguesOnClick () {
-        if (Input.GetKeyDown (KeyCode.F)) {
-            
+    private void cycleDialoguesOnClick()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (dialogueCamera != null && mainCamera != null)
+            {
+                mainCamera.enabled = false;
+                dialogueCamera.enabled = true;
+            }
+
             //if there is no text in the process of animating
             if (!isWriting)
             {
@@ -177,7 +216,7 @@ public class NPC : MonoBehaviour, InteractableInterface {
                 {
                     exitDialogueMenuOnClick();
                 }
-            } 
+            }
             //if there is text still being written, end the coroutine and display the text immediately
             else
             {
@@ -191,8 +230,9 @@ public class NPC : MonoBehaviour, InteractableInterface {
             }
         }
     }
-    private void showPromptWhenInRange () {
-        if (!inPopUp && isInDetectionRange())
+    private void showPromptWhenInRange()
+    {
+        if (!inPopUp && isInRange)
             popUpPrompt.gameObject.SetActive(true);
     }
 
@@ -227,7 +267,7 @@ public class NPC : MonoBehaviour, InteractableInterface {
 
         //updates flag after text animation finishes
         isWriting = false;
-        
+
         //changes index to next line of dialogue
         currentLine++;
     }
