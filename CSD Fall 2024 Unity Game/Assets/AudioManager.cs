@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -8,8 +7,8 @@ public class AudioManager : MonoBehaviour
     private Rigidbody2D player;
 
     [Header("Audio Source")]
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource SFXSource;
+    public AudioSource musicSource;
+    public AudioSource SFXSource;
 
     [Header("Audio Clip")]
     public AudioClip background;
@@ -28,19 +27,25 @@ public class AudioManager : MonoBehaviour
     {
         if (!player.velocity.Equals(Vector2.zero))
         {
-            SFXSource.Play();
+            if (!SFXSource.isPlaying)
+            {
+                SFXSource.Play();
+            }
         }
         else
         {
             SFXSource.Pause();
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         SFXSource.clip = walkingGrass;
-        
-        
+        SFXSource.Play();
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        SFXSource.Pause();
     }
 }
