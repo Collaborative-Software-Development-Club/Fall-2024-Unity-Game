@@ -38,8 +38,9 @@ public class characterDeath : MonoBehaviour
             dieMessage.SetActive(true);
             respawnPrompt.SetActive(true);
             died = true;
-            tempSpeed=player.GetComponent<fox>().speed;
-            player.GetComponent<fox>().speed=0;
+            //changed "speed" to currentSpeed from updated fox script
+            //tempSpeed=player.GetComponent<fox>().currentSpeed;
+            //player.GetComponent<fox>().currentSpeed=0;
         }
     }
     void respawn()
@@ -49,7 +50,8 @@ public class characterDeath : MonoBehaviour
             transform.position = respawnPoint;
             dieMessage.SetActive(false);
             respawnPrompt.SetActive(false);
-            player.GetComponent<fox>().speed = tempSpeed;
+            //changed "speed" to currentSpeed from updated fox script
+            //player.GetComponent<fox>().currentSpeed = tempSpeed;
             audioSpawner.destroyAllPrefabs();
         }
     }

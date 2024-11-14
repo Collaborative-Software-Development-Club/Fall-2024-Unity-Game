@@ -1908,7 +1908,7 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 7333256610129737093, guid: 0269abbea35fbd34c908707a072a9437, type: 2}
-    value: {fileID: 1544326031}
+    value: {fileID: 0}
   - key: {fileID: 3592168874964228206, guid: 0269abbea35fbd34c908707a072a9437, type: 2}
     value: {fileID: 1284975048}
   - key: {fileID: 3313242907392171930, guid: 0269abbea35fbd34c908707a072a9437, type: 2}
@@ -1922,7 +1922,7 @@ PlayableDirector:
   - key: {fileID: -4692002049464485990, guid: 0269abbea35fbd34c908707a072a9437, type: 2}
     value: {fileID: 1170586407}
   - key: {fileID: -4918488176022468226, guid: 8921a00109620c2418fc14f1f27b107b, type: 2}
-    value: {fileID: 1544326031}
+    value: {fileID: 0}
   - key: {fileID: -7507519839065944841, guid: 8921a00109620c2418fc14f1f27b107b, type: 2}
     value: {fileID: 1170586407}
   - key: {fileID: 1167491022257136313, guid: 8921a00109620c2418fc14f1f27b107b, type: 2}
@@ -2346,12 +2346,12 @@ GameObject:
   m_Component:
   - component: {fileID: 226675295}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player(OLD--NEED FOR CUTSCENE)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &226675295
 Transform:
   m_ObjectHideFlags: 0
@@ -4792,7 +4792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &394414599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4811,8 +4811,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 1
-  m_LookAt: {fileID: 1544326030}
-  m_Follow: {fileID: 1544326030}
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 100
     OrthographicSize: 5
@@ -9554,7 +9554,7 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 7333256610129737093, guid: 0269abbea35fbd34c908707a072a9437, type: 2}
-    value: {fileID: 1544326031}
+    value: {fileID: 0}
   - key: {fileID: 3592168874964228206, guid: 0269abbea35fbd34c908707a072a9437, type: 2}
     value: {fileID: 1284975048}
   - key: {fileID: 3313242907392171930, guid: 0269abbea35fbd34c908707a072a9437, type: 2}
@@ -11028,7 +11028,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &950932324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13533,7 +13533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ece2e41de253942bcfdc806645d8cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followCharacter: {fileID: 1544326030}
+  followCharacter: {fileID: 0}
   distanceFromCharacter: 5
   followCharacterPositions: []
   allowableSampleDistance: 0.5
@@ -13558,19 +13558,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30890188a5e1d74d947695b603639e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCName: Raven
-  nameBackgroundImage: {fileID: 977540852}
-  nameElement: {fileID: 1824524360}
-  textElement: {fileID: 2114029358}
-  textBackgroundImg: {fileID: 312492845}
-  popUpPrompt: {fileID: 1935933806}
-  player: {fileID: 1544326025}
-  detectionRadius: 3
-  dialogueArr:
-  - Be careful of those spores...
-  textSpeed: 0.02
-  npcFollow: {fileID: 0}
-  interactDialogueSound: {fileID: 1170586405}
 --- !u!212 &1170586403
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16280,6 +16267,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1453724828
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3448614770462301931, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.4350395
+      objectReference: {fileID: 0}
+    - target: {fileID: 3448614770462301931, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 68.122116
+      objectReference: {fileID: 0}
+    - target: {fileID: 3448614770462301931, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.015443392
+      objectReference: {fileID: 0}
+    - target: {fileID: 3448614770462301931, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3448614770462301931, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3448614770462301931, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3448614770462301931, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3448614770462301931, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3448614770462301931, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3448614770462301931, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628574443873206457, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220295797736865112, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220295797736865112, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220295797736865112, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
 --- !u!1001 &1454307409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17437,7 +17493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &1544326026
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -17512,12 +17568,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b5aa3f644240794d8f48d51117553bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  runSpeedTimeFactor: 0
-  currentSpeed: 0
+  defaultMoveSpeed: 0
+  sprintSpeedTimeFactor: 0
+  tiredSpeedTimeFactor: 0
+  maxSprintTime: 0
+  recoverSpeedFactor: 0
   body: {fileID: 1544326027}
-  foxCollision: {fileID: 0}
   pauseMenuScript: {fileID: 1483145086}
+  sprintUI: {fileID: 0}
 --- !u!212 &1544326029
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23883,7 +23941,7 @@ PrefabInstance:
     - target: {fileID: 2075523915304974668, guid: a6c3b4f5951e70b46968b4aaadb49286, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1544326028}
+      objectReference: {fileID: 0}
     - target: {fileID: 2075523915304974668, guid: a6c3b4f5951e70b46968b4aaadb49286, type: 3}
       propertyPath: oneShot
       value: 0
@@ -25927,6 +25985,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 572360379}
+  - {fileID: 1453724828}
   - {fileID: 226675295}
   - {fileID: 1240898948}
   - {fileID: 2139357869}
