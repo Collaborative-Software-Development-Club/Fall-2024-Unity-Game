@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KillPlayer : MonoBehaviour
 {
@@ -15,21 +17,14 @@ public class KillPlayer : MonoBehaviour
         dieMessage.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-      /*if (Input.GetKeyDown(KeyCode.E))
-        {
-            killPlayer();
-        }
-      */
-    }
 
     public void killPlayer()
     {
-        player.transform.position = respawnPoint.position;
         Debug.Log("You Died! ");
-        dieMessage.SetActive(true);
-        hallucinationEffect.GetComponent<DistortionControl>().clearDistortion();
+        if (hallucinationEffect != null)
+        {
+            hallucinationEffect.GetComponent<DistortionControl>().clearDistortion();
+        }
+        SceneManager.LoadScene("Main");
     }
 }

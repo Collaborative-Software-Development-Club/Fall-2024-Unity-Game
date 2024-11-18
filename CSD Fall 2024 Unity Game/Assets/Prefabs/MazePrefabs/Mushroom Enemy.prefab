@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 12}
+  m_LocalScale: {x: 24, y: 24, z: 24}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spore: {fileID: 340704952879707311, guid: cff14ce999c26a8448f0aea3f6689807, type: 3}
   spawnRate: 4
-  range: 15
+  range: 30
 --- !u!95 &6924864705977172592
 Animator:
   serializedVersion: 5

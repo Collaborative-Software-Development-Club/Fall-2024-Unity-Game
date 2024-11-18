@@ -50,13 +50,8 @@ public class SporeProjectileScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.gameObject.CompareTag("Spore"))
+        if (!collision.CompareTag("Spore"))
         {
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                killPlayer.killPlayer();
-
-            }
             Destroy(gameObject);
         }
     }
