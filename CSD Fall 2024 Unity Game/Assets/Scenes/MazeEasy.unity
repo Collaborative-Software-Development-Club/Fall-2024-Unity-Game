@@ -7863,7 +7863,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -3.8746948, y: 59.8364}
+  m_AnchoredPosition: {x: -3.8747559, y: 59.8364}
   m_SizeDelta: {x: -27.6728, y: 96.8873}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &635754208
@@ -10477,6 +10477,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &845498562 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 897202554025190107, guid: d1ce5d920bc655144b4a6e0f7f3a4830, type: 3}
+  m_PrefabInstance: {fileID: 1453724828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &852493757
 GameObject:
   m_ObjectHideFlags: 0
@@ -13484,7 +13489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ece2e41de253942bcfdc806645d8cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followCharacter: {fileID: 0}
+  followCharacter: {fileID: 845498562}
   distanceFromCharacter: 5
   followCharacterPositions: []
   allowableSampleDistance: 0.5
@@ -13712,7 +13717,7 @@ Animator:
   m_GameObject: {fileID: 1170586400}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3689c83634880cc478a851ffc917783e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

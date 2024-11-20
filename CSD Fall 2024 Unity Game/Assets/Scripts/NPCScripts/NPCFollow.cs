@@ -16,6 +16,7 @@ public class NPCFollow : MonoBehaviour
 
     public Sprite[] spritesArray; // 0 is up, 1 is left, 2 is down, 3 is right
     private SpriteRenderer spriteRenderer;
+    private Animator anim;
 
     public float sampleTimeDifference = 0.02f;
     private float sampleTime;
@@ -23,10 +24,12 @@ public class NPCFollow : MonoBehaviour
     public float followSpeed = 30f;
 
     public bool isFollowing = false;
+    private bool isMoving = false;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         sampleTime = Time.time;
         followCharacterPositions.Add(followCharacter.position);
     }
@@ -53,6 +56,8 @@ public class NPCFollow : MonoBehaviour
             followCharacterPositions.Add(followCharacter.position);
         }
 
+        isMoving = false;
+
         //check to see if character should be following
         if (isFollowing)
         {
@@ -61,6 +66,7 @@ public class NPCFollow : MonoBehaviour
             {
                 // No obstacles detected, move toward the player
                 transform.position = Vector2.MoveTowards(transform.position, followCharacter.position, step);
+                isMoving = true;
             }
             else
             {
@@ -76,22 +82,30 @@ public class NPCFollow : MonoBehaviour
 
     private void ChangeSprite()
     {
-        // Determine which sprite to display based on movement direction
-        if (movementDirection.y > 0.1f)
-        {
-            spriteRenderer.sprite = spritesArray[0]; // Up
+        anim.SetBool("Idle", false);
+        // change animation based on direction of movement
+        if (isMoving == false) {
+            anim.SetBool("Idle", true);
         }
-        else if (movementDirection.y < -0.1f)
+        else if (movementDirection.x < 0)
         {
-            spriteRenderer.sprite = spritesArray[2]; // Down
+            anim.SetInteger("DirectionMoving", 4);
+            spriteRenderer.flipX = true;
         }
-        else if (movementDirection.x > 0.1f)
+        else if (movementDirection.x > 0)
         {
-            spriteRenderer.sprite = spritesArray[3]; // Right
+            anim.SetInteger("DirectionMoving", 2);
+            spriteRenderer.flipX = false;
         }
-        else if (movementDirection.x < -0.1f)
+        else if (movementDirection.y < 0)
         {
-            spriteRenderer.sprite = spritesArray[1]; // Left
+            anim.SetInteger("DirectionMoving", 3);
+            spriteRenderer.flipX = false;
+        }
+        else if (movementDirection.y > 0)
+        {
+            anim.SetInteger("DirectionMoving", 1);
+            spriteRenderer.flipX = false;
         }
 
         
