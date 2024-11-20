@@ -8,26 +8,26 @@ public class DistortionControl : MonoBehaviour
     private Vector2 distortionSpeed;
     private float distortionScale;
     private Vector2 distortionStrength;
-    public Vector2 distortionSpeedGradient = new Vector2(10.0f, 10.0f);
-    public Vector2 distortionStrengthGradient = new Vector2(10.0f, 10.0f);
-    public float distortionScaleGradient = 10f;
-    public int sporeStep = 5; // The number of spores required to enhance the distortion effect
+    [SerializeField] private Vector2 distortionSpeedGradient;
+    [SerializeField] private Vector2 distortionStrengthGradient;
+    [SerializeField] private float distortionScaleGradient = 10f;
+    [SerializeField] private int sporeStep = 5; // The number of spores required to enhance the distortion effect
     private int currentSporeCount;
     private int previousSpore;
     private Hallucination hallucinationComponent; // Cache the Hallucination component
-    private System.Random random;
+    private Transform playerTransform;
 
     // Start is called before the first frame update
     void Start()
     {
         objectMaterial = GetComponent<Renderer>().sharedMaterial; // Use sharedMaterial to avoid creating material instances
+        clearDistortion(); //Reset shader to 0
         distortionSpeed = objectMaterial.GetVector("_DistortionSpeed");
         distortionScale = objectMaterial.GetFloat("_GradientScale");
         distortionStrength = objectMaterial.GetVector("_DistortionStrength");
-        hallucinationComponent = GameObject.Find("Fox").GetComponent<Hallucination>(); // Cache the Hallucination component
-        Debug.Log(hallucinationComponent);
+        hallucinationComponent = GameObject.FindGameObjectWithTag("Player").GetComponent<Hallucination>(); // Cache the Hallucination component
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         currentSporeCount = hallucinationComponent.sporeCount;
-        random = new System.Random();
         previousSpore = 0;
     }
 
@@ -41,6 +41,11 @@ public class DistortionControl : MonoBehaviour
         }
         // Update previous spore count
         previousSpore = currentSporeCount;
+
+
+        //Move hallcination effect to follow player
+        transform.position = playerTransform.position;
+
     }
 
     void updateDistortion()
@@ -49,21 +54,21 @@ public class DistortionControl : MonoBehaviour
         if (currentSporeCount % sporeStep == 0 && currentSporeCount != previousSpore)
         {
             // Update material properties
-            objectMaterial.SetVector("_DistortionSpeed", distortionSpeed + distortionSpeedGradient);
+            objectMaterial.SetVector("_DistortionSpeed", distortionSpeedGradient);
             objectMaterial.SetFloat("_GradientScale", distortionScale + distortionScaleGradient);
-            objectMaterial.SetVector("_DistortionStrength", distortionStrength + distortionStrengthGradient);
+            objectMaterial.SetVector("_DistortionStrength", distortionStrengthGradient);
 
             // Update internal state
-            distortionSpeed += distortionSpeedGradient;
-            distortionStrength += distortionStrengthGradient;
+            distortionSpeed = distortionSpeedGradient;
+            distortionStrength = distortionStrengthGradient;
             distortionScale += distortionScaleGradient;
         }
     }
 
     public void clearDistortion()
     {
-        objectMaterial.SetVector("_DistortionSpeed", new Vector2(0f, 0f));
+        objectMaterial.SetVector("_DistortionSpeed", Vector2.zero);
         objectMaterial.SetFloat("_GradientScale", 0);
-        objectMaterial.SetVector("_DistortionStrength", new Vector2(0.1f, 0.1f));
+        objectMaterial.SetVector("_DistortionStrength", Vector2.zero);
     }
 }
