@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -12,7 +13,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Audio Clip")]
     public AudioClip background;
-    public AudioClip walkingGrass;
+    public AudioClip walking;
 
     // Start is called before the first frame update
     void Start()
@@ -40,12 +41,12 @@ public class AudioManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SFXSource.clip = walkingGrass;
-        SFXSource.Play();
+        SFXSource.clip = walking;
+        SFXSource.Play(); // Start playing the walking sound when entering the trigger
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        SFXSource.Pause();
+        SFXSource.Pause(); // Optional: Stop or pause the walking sound when leaving the trigger
     }
 }

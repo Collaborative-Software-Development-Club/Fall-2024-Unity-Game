@@ -5733,7 +5733,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1900321458}
   SFXSource: {fileID: 1484187700}
-  background: {fileID: 8300000, guid: 4923aeedb6bfb9242aad7c9ec862cac2, type: 3}
+  background: {fileID: 8300000, guid: f11538b5df534054993764b40f0babaf, type: 3}
+  walking: {fileID: 0}
 --- !u!4 &498445053
 Transform:
   m_ObjectHideFlags: 0
