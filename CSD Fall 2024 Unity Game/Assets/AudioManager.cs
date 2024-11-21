@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Clip")]
     public AudioClip background;
     public AudioClip walking;
+    public AudioClip sandWalking;
     public AudioClip treeTalking;
 
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class AudioManager : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         musicSource.clip = background;
         musicSource.Play();
+        walkingSource.clip = sandWalking;
     }
 
     // Update is called once per frame
@@ -49,7 +51,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        walkingSource.Pause(); // Optional: Stop or pause the walking sound when leaving the trigger
+        walkingSource.clip = sandWalking;
     }
 
     public void PlaySFX(AudioClip clip)
