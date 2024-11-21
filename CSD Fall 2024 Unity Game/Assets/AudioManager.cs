@@ -10,10 +10,12 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Source")]
     public AudioSource musicSource;
     public AudioSource SFXSource;
+    public AudioSource walkingSource; // Dedicated source for walking sound
 
     [Header("Audio Clip")]
     public AudioClip background;
     public AudioClip walking;
+    public AudioClip treeTalking;
 
     // Start is called before the first frame update
     void Start()
@@ -28,25 +30,30 @@ public class AudioManager : MonoBehaviour
     {
         if (!player.velocity.Equals(Vector2.zero))
         {
-            if (!SFXSource.isPlaying)
+            if (!walkingSource.isPlaying)
             {
-                SFXSource.Play();
+                walkingSource.Play();
             }
         }
         else
         {
-            SFXSource.Pause();
+            walkingSource.Pause();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SFXSource.clip = walking;
-        SFXSource.Play(); // Start playing the walking sound when entering the trigger
+        walkingSource.clip = walking;
+        walkingSource.Play(); // Start playing the walking sound when entering the trigger
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        SFXSource.Pause(); // Optional: Stop or pause the walking sound when leaving the trigger
+        walkingSource.Pause(); // Optional: Stop or pause the walking sound when leaving the trigger
+    }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        SFXSource.PlayOneShot(clip);
     }
 }
