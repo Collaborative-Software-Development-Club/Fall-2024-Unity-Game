@@ -15,15 +15,15 @@ public class NPC : MonoBehaviour, InteractableInterface {
 
     [Header ("TMPro UI Elements")]
     [Tooltip("Background art for NPC name. UI Element Name: DialogueMenuBackground")]
-    [SerializeField] private GameObject nameBackgroundImage;
+    [SerializeField] private RawImage nameBackgroundImage;
     [Tooltip("Text element to display NPC name. UI Element Name: DialogueText")]
     [SerializeField] private TextMeshProUGUI nameElement;
     [Tooltip ("Text element to display dialogue. UI Element Name: DialogueText")]
     [SerializeField] private TextMeshProUGUI textElement;
     [Tooltip ("Background art for dialogue. UI Element Name: DialogueMenuBackground")]
-    [SerializeField] private GameObject textBackgroundImg;
+    [SerializeField] private RawImage textBackgroundImg;
     [Tooltip ("Text element telling the user how to interact. UI Element Name: InteractPrompt")]
-    [SerializeField] private GameObject popUpPrompt;
+    [SerializeField] private TextMeshProUGUI popUpPrompt;
 
     [Header ("")]
     [Tooltip ("GameObject for the player")]

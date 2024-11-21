@@ -12,10 +12,10 @@ public class Dialogue : MonoBehaviour
 {
     string dialogue;
 
-    private GameObject textBackground;
+    private RawImage textBackground;
     private TextMeshProUGUI text;
 
-    public Dialogue(string dialogue, GameObject textBackground, TextMeshProUGUI text)
+    public Dialogue(string dialogue, RawImage textBackground, TextMeshProUGUI text)
     {
         this.dialogue = dialogue;
         this.textBackground = textBackground;
