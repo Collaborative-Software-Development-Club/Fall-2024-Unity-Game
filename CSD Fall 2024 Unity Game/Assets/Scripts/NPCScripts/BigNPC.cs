@@ -15,7 +15,6 @@ using System;
  */
 public class BigNPC : MonoBehaviour, InteractableInterface
 {
-
     // Camera references
     [Header("Camera Settings")]
     [Tooltip("Camera to switch to during dialogue")]
@@ -76,11 +75,21 @@ public class BigNPC : MonoBehaviour, InteractableInterface
     //This field does not need to be filled in the inspector, only if the NPC will follow the player after dialogue
     public NPCFollow npcFollow;
 
-    //This field does not need to be filled in the inspector, only if you want a sound effect to play if NPC is interacted with
-    public AudioSource interactDialogueSound;
+    //sound
+    public AudioManager audioManager;
 
     private void Start()
     {
+        // Initialize audioManager in the Start method
+        GameObject audioObject = GameObject.FindGameObjectWithTag("Audio");
+        if (audioObject != null)
+        {
+            audioManager = audioObject.GetComponent<AudioManager>();
+        }
+        else
+        {
+            Debug.LogError("AudioManager object with tag 'Audio' not found!");
+        }
 
         dialogueMenu = new Dialogue("", textBackgroundImg, textElement);
         dialogueArr = allDialogue[currentDialogueArr];
@@ -193,10 +202,8 @@ public class BigNPC : MonoBehaviour, InteractableInterface
                     nameElement.gameObject.SetActive(true);
                     nameBackgroundImage.gameObject.SetActive(true);
 
-                    if (interactDialogueSound != null && !interactDialogueSound.isPlaying)
-                    {
-                        interactDialogueSound.Play();
-                    }
+                    //plays sound
+                    audioManager.PlaySFX(audioManager.treeTalking);
 
                     writingCoroutine = WriteDialogue();
 
