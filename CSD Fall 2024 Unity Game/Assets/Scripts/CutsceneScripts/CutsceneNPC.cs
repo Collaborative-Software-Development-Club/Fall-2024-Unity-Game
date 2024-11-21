@@ -15,11 +15,11 @@ public class CutsceneNPC : MonoBehaviour
     [Tooltip("Name which will be displayed in dialogue.")]
     [SerializeField] private TextMeshProUGUI nameElement;
     [Tooltip("Background art for dialogue. UI Element Name: DialogueMenuBackground")]
-    [SerializeField] private RawImage nameBackgroundImg;
+    [SerializeField] private GameObject nameBackgroundImg;
     [Tooltip("Text element to display dialogue. UI Element Name: DialogueText")]
     [SerializeField] private TextMeshProUGUI textElement;
     [Tooltip("Background art for dialogue. UI Element Name: DialogueMenuBackground")]
-    [SerializeField] private RawImage textBackgroundImg;
+    [SerializeField] private GameObject textBackgroundImg;
     
     [Header("")]
 

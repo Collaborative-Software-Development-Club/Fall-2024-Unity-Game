@@ -7,9 +7,8 @@ public class WarningControl : MonoBehaviour
 {
     public int warningThreshold; // The number of spores required to show the warning sign
     private int sporeCount;
-    public GameObject warningText;
-    public GameObject sporeObject;
-    public GameObject player;
+    [SerializeField] private GameObject warningText;
+    [SerializeField] private GameObject player;
     private TextMeshProUGUI warningTextComponent;
 
     // Start is called before the first frame update
@@ -37,17 +36,17 @@ public class WarningControl : MonoBehaviour
         // »ñÈ¡Íæ¼ÒµÄ Hallucination ×é¼şÖĞµÄ sporeCount
         sporeCount = player.GetComponent<Hallucination>().sporeCount;
 
-        // ¼ì²éÊÇ·ñ´ïµ½ÁËæß×ÓÊıÁ¿ãĞÖµ
+        // ¼EéÊÇ·ñ´E½ÁËæß×ÓÊıÁ¿ãĞÖµ
         if (sporeCount >= warningThreshold)
         {
-            // ÉèÖÃÎÄ±¾Í¸Ã÷¶ÈÎª 1£¨ÍêÈ«²»Í¸Ã÷£©
+            // ÉèÖÃÎÄ±¾Í¸Ã÷¶ÈÎª 1£¨ÍE«²»Í¸Ã÷£©
             Color color = warningTextComponent.color;
             color.a = 1f;  // ÉèÖÃ alpha Í¨µÀÎª 1
             warningTextComponent.color = color;
         }
         else
         {
-            // Èç¹ûÃ»ÓĞ´ïµ½ãĞÖµ£¬¿ÉÒÔ¼ÌĞø±£³ÖÍ¸Ã÷£¨¿ÉÑ¡£©
+            // Èç¹ûÃ»ÓĞ´E½ãĞÖµ£¬¿ÉÒÔ¼ÌĞø±£³ÖÍ¸Ã÷£¨¿ÉÑ¡£©
             Color color = warningTextComponent.color;
             color.a = 0f;  // ÉèÖÃ alpha Í¨µÀÎª 0
             warningTextComponent.color = color;
