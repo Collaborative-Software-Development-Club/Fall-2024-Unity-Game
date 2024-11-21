@@ -461,7 +461,7 @@ MonoBehaviour:
   maxSprintTime: 1
   recoverSpeedFactor: 0.5
   audioClips:
-  - {fileID: 8300000, guid: 8acc1be3536e559429db55498b311fea, type: 3}
+  - {fileID: 8300000, guid: 28603ad0b1f2f11498dd018f35667ac0, type: 3}
   - {fileID: 8300000, guid: ad8af8d274c83534aa6096f294630901, type: 3}
   body: {fileID: 5448392505692305741}
   pauseMenuScript: {fileID: 0}
