@@ -14,7 +14,10 @@ public class ShiningRock : MonoBehaviour, InteractableInterface
     [Tooltip("GameObject for the player")]
     [SerializeField] private GameObject player;
 
+
     public int detectionRadius = 4;
+
+    private int position;
 
 
     //returns true if player is within detetctionRadius
@@ -39,13 +42,19 @@ public class ShiningRock : MonoBehaviour, InteractableInterface
 
     public void ChangeSprite()
     {
-
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            position++;
+            rockRenderer.sprite = rockSprites[position % rockSprites.Count];
+        }
     }
 
 
     void Start()
     {
         popUpPrompt.SetActive(false);
+        position = 0;
+        rockRenderer.sprite = rockSprites[position % rockSprites.Count];
     }
 
 

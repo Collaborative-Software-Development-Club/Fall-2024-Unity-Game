@@ -110,22 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GeodeSpriteSheet_2
+      name: GeodeSpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 8
         y: 69
-        width: 64
+        width: 49
         height: 54
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7545f18c15b9fda4983ea7bd2ebe7dbe
-      internalID: -1017995043
+      spriteID: ad20c9a5be8d2e448940065e2f8ad490
+      internalID: -658769941
       vertices: []
       indices: 
       edges: []
@@ -134,40 +134,61 @@ TextureImporter:
       name: GeodeSpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 67
-        y: 68
-        width: 61
-        height: 58
+        x: 73
+        y: 69
+        width: 49
+        height: 56
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ecca8c446a54d84ea73d8fc73cee393
-      internalID: -197749301
+      spriteID: 0776e3644cfef5944be8f7c7cf81cf00
+      internalID: -1275927316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeodeSpriteSheet_0
+      name: GeodeSpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 5
-        width: 64
-        height: 54
+        x: 71
+        y: 7
+        width: 48
+        height: 56
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a7f5186948d1574fa299b3afea4dbd8
-      internalID: 146227214
+      spriteID: 04fc58269c7be0f4fa27f418bf707c95
+      internalID: -2023194903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GeodeSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 5
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b6b08a681b1634da5b9b878108945c
+      internalID: 1020307088
       vertices: []
       indices: 
       edges: []
@@ -183,9 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GeodeSpriteSheet_0: 146227214
-      GeodeSpriteSheet_1: -197749301
-      GeodeSpriteSheet_2: -1017995043
+      GeodeSpriteSheet_0: -658769941
+      GeodeSpriteSheet_1: -1275927316
+      GeodeSpriteSheet_2: -2023194903
+      GeodeSpriteSheet_3: 1893898746
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
