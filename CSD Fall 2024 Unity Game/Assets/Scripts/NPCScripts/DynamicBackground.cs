@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-//Small script meant to allow an image ui background to scale to the length of text
+// Small script meant to allow an image UI background to scale to the length of text
 public class DynamicBackground : MonoBehaviour
 {
     [SerializeField]
@@ -13,18 +13,26 @@ public class DynamicBackground : MonoBehaviour
 
     private void Start()
     {
-        float preferredWidth = name.preferredWidth;
-        backgroundImage.sizeDelta = new Vector2(preferredWidth + 10f, backgroundImage.sizeDelta.y);
+        // Ensure the pivot is set correctly so only the right side grows
+        backgroundImage.pivot = new Vector2(0, 0.5f);
+
+        // Adjust the background size initially
+        UpdateBackgroundSize();
     }
 
-    void Update()
+    private void Update()
+    {
+        // Continuously adjust the background size based on the text width
+        UpdateBackgroundSize();
+    }
+
+    private void UpdateBackgroundSize()
     {
         // Get the preferred width of the text
         float preferredWidth = name.preferredWidth;
 
         // Set the background sizeDelta width, but keep the height the same
-        // Add padding if necessary, e.g., 10f
-        backgroundImage.sizeDelta = new Vector2(preferredWidth + 10f, backgroundImage.sizeDelta.y);
+        // Add padding if necessary, e.g., 25f
+        backgroundImage.sizeDelta = new Vector2(preferredWidth + 30f, backgroundImage.sizeDelta.y);
     }
 }
-
