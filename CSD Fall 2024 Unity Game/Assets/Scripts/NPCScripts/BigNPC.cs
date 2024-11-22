@@ -75,22 +75,12 @@ public class BigNPC : MonoBehaviour, InteractableInterface
     //This field does not need to be filled in the inspector, only if the NPC will follow the player after dialogue
     public NPCFollow npcFollow;
 
-    //sound
-    public AudioManager audioManager;
+    //Audio source for opening dialouge
+    private AudioSource npcSfx;
 
     private void Start()
     {
-        // Initialize audioManager in the Start method
-        GameObject audioObject = GameObject.FindGameObjectWithTag("Audio");
-        if (audioObject != null)
-        {
-            audioManager = audioObject.GetComponent<AudioManager>();
-        }
-        else
-        {
-            Debug.LogError("AudioManager object with tag 'Audio' not found!");
-        }
-
+        npcSfx = GetComponent<AudioSource>();
         dialogueMenu = new Dialogue("", textBackgroundImg, textElement);
         dialogueArr = allDialogue[currentDialogueArr];
     }
@@ -203,7 +193,7 @@ public class BigNPC : MonoBehaviour, InteractableInterface
                     nameBackgroundImage.gameObject.SetActive(true);
 
                     //plays sound
-                    audioManager.PlaySFX(audioManager.treeTalking);
+                    npcSfx.Play();
 
                     writingCoroutine = WriteDialogue();
 

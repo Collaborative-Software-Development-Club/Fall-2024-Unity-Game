@@ -16,11 +16,17 @@ public class DistortionControl : MonoBehaviour
     private int previousSpore;
     private Hallucination hallucinationComponent; // Cache the Hallucination component
     private Transform playerTransform;
+    private GlobalAudioManager audioManager;
+    private float pitchDistortionFactor = 1;
+    [Tooltip("How much the audio's pitch should be distorted by for each hallucination level")]
+    [SerializeField]
+    private float pitchDistortionGradient;
 
     // Start is called before the first frame update
     void Start()
     {
         objectMaterial = GetComponent<Renderer>().sharedMaterial; // Use sharedMaterial to avoid creating material instances
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<GlobalAudioManager>(); // Cache audioManager component
         clearDistortion(); //Reset shader to 0
         distortionSpeed = objectMaterial.GetVector("_DistortionSpeed");
         distortionScale = objectMaterial.GetFloat("_GradientScale");
@@ -57,18 +63,23 @@ public class DistortionControl : MonoBehaviour
             objectMaterial.SetVector("_DistortionSpeed", distortionSpeedGradient);
             objectMaterial.SetFloat("_GradientScale", distortionScale + distortionScaleGradient);
             objectMaterial.SetVector("_DistortionStrength", distortionStrengthGradient);
+            
+            //Update audio properties
+            audioManager.changePitchOfAllSounds(pitchDistortionFactor + pitchDistortionGradient);
 
             // Update internal state
             distortionSpeed = distortionSpeedGradient;
             distortionStrength = distortionStrengthGradient;
             distortionScale += distortionScaleGradient;
+            pitchDistortionFactor += pitchDistortionGradient;
         }
     }
-
+    
     public void clearDistortion()
     {
         objectMaterial.SetVector("_DistortionSpeed", Vector2.zero);
         objectMaterial.SetFloat("_GradientScale", 0);
         objectMaterial.SetVector("_DistortionStrength", Vector2.zero);
+        audioManager.changePitchOfAllSounds(1);
     }
 }

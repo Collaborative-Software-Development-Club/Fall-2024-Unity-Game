@@ -8,10 +8,10 @@ public class MovingWall : MonoBehaviour
 {
     [Tooltip("The speed at which the wall will move to it's destination position")]
     [SerializeField]
-    float wallSpeed;
+    private float wallSpeed;
 
     //targetX and targetY represent the destination coordinate
-    float targetX, targetY;
+    private float targetX, targetY;
 
     /*
      * isObjectMoving tracks if the player is moving or not
@@ -19,10 +19,13 @@ public class MovingWall : MonoBehaviour
      * isIncreasingX and isIncreasingY checks to see if the destination position is less than or greater than current position
      * this is then used to make sure that the wall doesn't overshoot it's location
      */
-    bool isObjectMoving, isIncreasingX, isIncreasingY;
+    private bool isObjectMoving, isIncreasingX, isIncreasingY;
 
     //Stores the rigidBody component for the purpose of changing it's velocity later
-    Rigidbody2D body;
+    private Rigidbody2D body;
+
+    //Audiosource for wall
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +33,7 @@ public class MovingWall : MonoBehaviour
         //Initializing needed variables
         isObjectMoving = false;
         body = GetComponent<Rigidbody2D>();
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -63,6 +66,9 @@ public class MovingWall : MonoBehaviour
 
     public void Move(float x, float y)
     {
+        //Play wallMove sound
+        audioSource.Play();
+
         //Set goal location
         targetX = x;
         targetY = y;
