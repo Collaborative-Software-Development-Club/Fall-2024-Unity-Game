@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class toFarm : MonoBehaviour
 {
+    [SerializeField] GameObject fox;
     // Start is called before the first frame update
     void Start()
     {
-        
+        fox = GameObject.Find("Fox");
     }
 
     // Update is called once per frame
@@ -18,6 +19,9 @@ public class toFarm : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("Farm");
+        if (collision.Equals(fox))
+        {
+            SceneManager.LoadScene("Farm");
+        }
     }
 }

@@ -70,6 +70,7 @@ public class NPC : MonoBehaviour, InteractableInterface {
     private void Start () {
         dialogueMenu = new Dialogue ("", textBackgroundImg, textElement);
         dialogueArr = allDialogue[currentDialogueArr];
+        nameBackgroundImage.gameObject.SetActive(false);
     }
 
     private void Update () {
