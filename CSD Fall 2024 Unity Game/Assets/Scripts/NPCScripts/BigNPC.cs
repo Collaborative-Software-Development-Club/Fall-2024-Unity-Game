@@ -202,9 +202,6 @@ public class BigNPC : MonoBehaviour, InteractableInterface
                     nameElement.gameObject.SetActive(true);
                     nameBackgroundImage.gameObject.SetActive(true);
 
-                    //plays sound
-                    audioManager.PlaySFX(audioManager.treeTalking);
-
                     writingCoroutine = WriteDialogue();
 
                     StartCoroutine(writingCoroutine);
