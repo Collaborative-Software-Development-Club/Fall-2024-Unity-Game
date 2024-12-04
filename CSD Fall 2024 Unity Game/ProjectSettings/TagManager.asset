@@ -11,6 +11,8 @@ TagManager:
   - Spore
   - Inventory
   - Obstacle
+  - Bear
+  - BearSpawn
   layers:
   - Default
   - TransparentFX

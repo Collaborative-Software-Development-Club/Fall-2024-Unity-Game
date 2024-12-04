@@ -65,14 +65,14 @@ public class fox : MonoBehaviour
         playerMap = new PlayerInputActions();
         anim = GetComponent<Animator>();
     }
-    void OnEnable()
+    public void OnEnable()
     {
         action = playerMap.PlayerAction.Movement;
         sprint = playerMap.PlayerAction.Sprint;
         action.Enable();
         sprint.Enable();
     }
-    void OnDisable()
+    public void OnDisable()
     {
         sprint.Disable();
         action.Disable();

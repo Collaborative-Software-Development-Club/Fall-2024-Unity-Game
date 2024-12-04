@@ -23,7 +23,7 @@ public class ShiningRock : MonoBehaviour, InteractableInterface
 
     public int detectionRadius = 4;
 
-    public bool hasLight = false;
+    public bool hasLight;
 
     //0 is facing front, 1 is facing left, 2 is up, 3 is right
     public int orientation;
@@ -73,13 +73,14 @@ public class ShiningRock : MonoBehaviour, InteractableInterface
         if (hasLight)
         {
             light.SetActive(true);
+            Debug.Log("lightsetactive");
         }
         else
         {
             light.SetActive(false);
         }
 
-        Debug.Log("Still checking");
+        //Debug.Log("Still checking");
     }
 
     void Start()

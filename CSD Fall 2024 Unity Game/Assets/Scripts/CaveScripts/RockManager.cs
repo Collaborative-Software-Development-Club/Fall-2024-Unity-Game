@@ -30,6 +30,7 @@ public class RockManager : MonoBehaviour
                 if (lightSource.bounds.Intersects(rockCollider.bounds))
                 {
                     rock.hasLight = true;
+                    Debug.Log("GLTrue");
                     break; // Once lit, no need to check other lights.
                 }
             }
@@ -57,6 +58,7 @@ public class RockManager : MonoBehaviour
                     if (lightCollider.bounds.Intersects(otherCollider.bounds))
                     {
                         otherRock.hasLight = true;
+                        Debug.Log("GLTrue2");
                     }
                 }
             }
