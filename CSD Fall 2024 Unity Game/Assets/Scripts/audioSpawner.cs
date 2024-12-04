@@ -9,15 +9,12 @@ public class audioSpawner : MonoBehaviour
     public overallTriggerControl overallTriggerControl;
     public GameObject prefabSound;
     private GameObject parentPrefab;
-    private GameObject door;
     private int temp;
     private bool turnOffSounds=false;
     // Start is called before the first frame update
     void Start()
     {
-        door = GameObject.Find("Door");
-        hitCount=door.GetComponent<doorHitCount>().hitCount;
-        temp=hitCount;
+
         parentPrefab = new GameObject("ParentPrefabSound");
         turnOffSounds=overallTriggerControl.allTriggered;
     }
@@ -25,7 +22,6 @@ public class audioSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hitCount = door.GetComponent<doorHitCount>().getHitCount();
         turnOffSounds = overallTriggerControl.allTriggered;
         if (hitCount > temp&&hitCount<=maxSoundSpawned)
         {
@@ -33,10 +29,7 @@ public class audioSpawner : MonoBehaviour
             prefab.transform.parent=parentPrefab.transform;
             temp = hitCount;
         }
-        if (door == null)
-        {
-            Debug.Log("door没有正确赋值");
-        }
+
         if (turnOffSounds)
         {
             destroyAllPrefabs();
