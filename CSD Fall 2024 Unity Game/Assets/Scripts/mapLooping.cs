@@ -7,7 +7,7 @@ public class mapLooping : MonoBehaviour
     private GameObject fox;
     private GameObject fogEffect;
     public ghostFox ghostFox;
-    private bool isLooping;
+    public bool isLooping;
     // Start is called before the first frame update
     void Start()
     {
