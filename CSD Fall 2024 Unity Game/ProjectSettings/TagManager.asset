@@ -11,6 +11,14 @@ TagManager:
   - Spore
   - Inventory
   - Obstacle
+  - Audio
+  - carrot
+  - tomato
+  - potato
+  - corn
+  - granade
+  - greenVegetable
+  - redVegetable
   layers:
   - Default
   - TransparentFX
@@ -20,7 +28,7 @@ TagManager:
   - UI
   - Player
   - Post
-  - 
+  - ghostFox
   - 
   - 
   - 
