@@ -24,14 +24,15 @@ public class MainMenuManager : MonoBehaviour {
         creditsUI.SetActive (false);
     }
     public void LoadPlayer () {
-        string path = Application.persistentDataPath + "/player.txt";
-        if (File.Exists (path)) {
-            PlayerData data = SaveSystem.LoadPlayer ();
-            SceneManager.LoadScene (data.scene);
+        /*PlayerData data = SaveSystem.LoadPlayer ();
+        int scene;
+        if (data == null) {
+            scene = 0;
         } else {
-            SaveSystem.SavePlayer (0);
-            SceneManager.LoadScene(0);
+            scene = data.scene;
         }
+        SceneManager.LoadScene (data.scene);*/
+        SceneManager.LoadScene (0);
     }
 
     public void GoToSettingsPage () {

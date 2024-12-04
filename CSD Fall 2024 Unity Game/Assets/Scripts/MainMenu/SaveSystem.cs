@@ -16,7 +16,11 @@ public static class SaveSystem {
     public static PlayerData LoadPlayer () {
         string path = Application.persistentDataPath + "/player.txt";
 
-        if (File.Exists (path)) {
+        if (!File.Exists (path)) {
+            SavePlayer (0);
+        }
+
+        try {
             BinaryFormatter formatter = new BinaryFormatter ();
             FileStream stream = new FileStream (path, FileMode.Open);
 
@@ -25,7 +29,7 @@ public static class SaveSystem {
             stream.Close ();
 
             return playerData;
-        } else {
+        } catch {
             Debug.Log ("Save file not found: " + path);
             return null;
         }
