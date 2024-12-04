@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -37,6 +38,13 @@ public class fox : MonoBehaviour
     private bool isSprinting;
     private bool isTired;
     //----------------------------------------------------------------------------------------------------------------------------------
+    [Header("Audio")]
+    private AudioSource audioSource;
+    private float walkLoopDelay;
+    private float walkLoopTimeLeft;
+    [SerializeField]
+    AudioClip[] audioClips;
+    
     [Header("Misc")]
     private SpriteRenderer spriteRenderer;
     [SerializeField] private Rigidbody2D body;
@@ -74,8 +82,16 @@ public class fox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Audio
+        audioSource = GetComponent<AudioSource>();
+        walkLoopTimeLeft = 0;
+        walkLoopDelay = 0.39f;
+
+        //Rigid Body and Sprite
         spriteRenderer = GetComponent<SpriteRenderer>();
         body=GetComponent<Rigidbody2D>();
+
+        //Movement Mechanics
         sprintTimeRemaining = maxSprintTime;
         isSprinting = false;
         sprintUI.setVisibility(false);
@@ -87,6 +103,7 @@ public class fox : MonoBehaviour
     {
         updateSprite();
         speed_Up();
+        controlAudio();
         move();
         recover_Sprint();
         updateSprintBar();
@@ -96,7 +113,7 @@ public class fox : MonoBehaviour
     public void move()
     {
         Vector2 movement = action.ReadValue<Vector2>();
-        body.velocity = movement*currentSpeed;
+        body.velocity = movement * currentSpeed;
     }
 
     public void updateSprite()
@@ -127,7 +144,6 @@ public class fox : MonoBehaviour
             anim.SetBool("Idle", true);
         }
     }
-
     //Controls the speed of the player based off if they're walking or sprinting
     public void speed_Up()
     {
@@ -137,11 +153,15 @@ public class fox : MonoBehaviour
         {
             currentSpeed = defaultMoveSpeed * tiredSpeedTimeFactor;
         }
-        else if ((sprint.ReadValue<float>()>0 && maxSprintTime <= sprintTimeRemaining)||isSprinting)
+        else if (isSprinting)
         {
             currentSpeed = defaultMoveSpeed*sprintSpeedTimeFactor;
             sprintTimeRemaining -= Time.deltaTime;
             isSprinting = sprintTimeRemaining > 0;
+        } else if ((sprint.WasPressedThisFrame() && maxSprintTime <= sprintTimeRemaining))
+        {
+            audioSource.PlayOneShot(Array.Find(audioClips,clip => clip.name == "DashSfx"));
+            isSprinting = true;
         }
         else
         {
@@ -149,6 +169,38 @@ public class fox : MonoBehaviour
         }
     }
 
+    private void controlAudio()
+    {
+        controlWalkAudio();
+    }
+
+    //Handles the step sound effect to try to make it run somewhat on time with the player animation
+    private void controlWalkAudio()
+    {
+        if (!anim.GetBool("Idle"))
+        {
+            if (walkLoopTimeLeft <= 0)
+            {
+                const float volume = 0.1f;
+                audioSource.PlayOneShot(Array.Find(audioClips, clip => clip.name == "WalkSfx"), volume);
+                walkLoopTimeLeft = walkLoopDelay;
+            }
+            else
+            {
+                float timeFactor = 1;
+                if (isSprinting)
+                {
+                    timeFactor = sprintSpeedTimeFactor;
+                }
+                walkLoopTimeLeft -= Time.deltaTime * timeFactor;
+            }
+
+        }
+        else
+        {
+            walkLoopTimeLeft = 0;
+        }
+    }
 
     //Increments SprintTimeRemaining whenever sprint key is not being press
     private void recover_Sprint()

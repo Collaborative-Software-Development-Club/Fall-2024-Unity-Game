@@ -21,7 +21,7 @@ MonoBehaviour:
     value: 87.61
   threshold:
     overrideState: 1
-    value: 0
+    value: 0.36
   softKnee:
     overrideState: 1
     value: 0.5
@@ -36,7 +36,7 @@ MonoBehaviour:
     value: 0
   color:
     overrideState: 1
-    value: {r: 1, g: 1, b: 1, a: 1}
+    value: {r: 1, g: 0, b: 0, a: 1}
   fastMode:
     overrideState: 1
     value: 0
@@ -77,7 +77,7 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 0
+    value: 1
   gradingMode:
     overrideState: 1
     value: 1

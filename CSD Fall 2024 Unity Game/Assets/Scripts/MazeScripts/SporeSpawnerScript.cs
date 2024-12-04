@@ -23,7 +23,11 @@ public class SporeSpawnerScript : MonoBehaviour
     //The range in which the mushroom will start firing
     public float range;
 
+    //Ray to track if mushroom has line of sight
     private Ray sightRay;
+
+    //Audio Source to play sound effect
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +36,7 @@ public class SporeSpawnerScript : MonoBehaviour
         animator = GetComponent<Animator>();
         spawnDelay = spawnRate;
         sightRay.origin = transform.position;
+        audioSource = gameObject.GetComponent<AudioSource>();
         
     }
 
@@ -73,7 +78,8 @@ public class SporeSpawnerScript : MonoBehaviour
     }
 
     void spawnSpore()
-    { 
+    {
+        audioSource.Play();
         Instantiate(spore, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
     }
 
