@@ -78,8 +78,13 @@ public class BigNPC : MonoBehaviour, InteractableInterface
     //sound
     public AudioManager audioManager;
 
+    //Handles storyProgression if NPC has the StoryProgressor Script
+    private StoryProgressor storyProgressor;
+
     private void Start()
     {
+        storyProgressor = gameObject.GetComponent<StoryProgressor>();
+
         // Initialize audioManager in the Start method
         GameObject audioObject = GameObject.FindGameObjectWithTag("Audio");
         if (audioObject != null)
@@ -218,6 +223,10 @@ public class BigNPC : MonoBehaviour, InteractableInterface
                 //if it is at the end of the dialogue, begin dialogue exit
                 else
                 {
+                    if(storyProgressor != null)
+                    {
+                        storyProgressor.advanceStory();
+                    }
                     exitDialogueMenuOnClick();
                 }
             }
