@@ -1615,6 +1615,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 738232555}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 619073495}
@@ -1684,6 +1696,18 @@ MonoBehaviour:
         - m_Target: {fileID: 220987647}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 738232555}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4714,7 +4738,8 @@ PlayableDirector:
   - key: {fileID: -4692002049464485990, guid: 0269abbea35fbd34c908707a072a9437, type: 2}
     value: {fileID: 619073494}
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - 7d5abbaf6810d3e4292150754c5b1539: {fileID: 738232553}
 --- !u!4 &347807109
 Transform:
   m_ObjectHideFlags: 0
@@ -16091,7 +16116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6045329380656110699, guid: ee708689f6ebfee4fbf9265e75f28046, type: 3}
       propertyPath: m_Name
-      value: DebugStoryProgressionManager
+      value: StoryProgressionManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
