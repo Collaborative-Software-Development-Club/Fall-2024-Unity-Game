@@ -5,7 +5,7 @@ using UnityEngine;
 public class TongueSpawnerScript : MonoBehaviour
 {
     private Transform player;
-    public GameObject tongue;
+    public GameObject tonguePrefab;
     public float spawnRate;
     private float timer = 0;
     public float spawnRange;
@@ -28,14 +28,17 @@ public class TongueSpawnerScript : MonoBehaviour
             }
             else
             {
-                spawnTongue();
+                SpawnTongue();
                 timer = 0;
             }
         }
     }
 
-    void spawnTongue()
+    void SpawnTongue()
     {
-        Instantiate(tongue, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+        GameObject tongue = Instantiate(tonguePrefab, transform.position, Quaternion.identity);
+
+        // Set a timeout to destroy tongue clones if they persist
+        Destroy(tongue, 5f);
     }
 }
