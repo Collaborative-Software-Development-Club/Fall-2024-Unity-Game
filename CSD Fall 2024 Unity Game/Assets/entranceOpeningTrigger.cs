@@ -11,7 +11,7 @@ public class entranceOpeningTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (following.enabled = true)
+        if (following.isFollowing == true)
         {
             barrier.SetActive(false);
         }
