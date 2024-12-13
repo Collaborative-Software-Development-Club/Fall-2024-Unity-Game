@@ -5,42 +5,38 @@ using UnityEngine;
 
 public class overallTriggerControl : MonoBehaviour
 {
-    private bool bucketBool = false;
-    private bool showBucket = false;
+    public bool bucketBool = false;
     public bool bloodBool = false;
-    private bool showBlood = false;
-    private bool vegBool = false;
-    private bool showVeg = false;
-    private bool sandBagBool = false;
-    private bool showSandBag = false;
-    private bool doorBool = false;
-    private bool showDoor = false;
-    private bool woodBool = false;
-    private bool showWood = false;
-    private bool hayBool = false;
-    private bool showHay = false;
+    public bool sandBagBool = false;
+    public bool woodBool = false;
+    public bool hayBool = false;
+
     public bool allTriggered;
     public string bucketEventText;
     public string bloodEventText;
     public string vegEventText;
-    public string doorEventText;
     public string woodEventText;
     public string hayEventText;
     public string sandBagsText;
-    private Rigidbody2D doorRb;
-    private GameObject door;
+
     private GameObject eventText;
-    private GameObject radioSoundSource;
-    private GameObject currentTriggerObject; // 用于存储当前触发的对象
+    private GameObject currentTriggerObject;
+
+    // Define the correct order of triggers
+    private List<string> correctOrder = new List<string> {
+        "BucketTriggerer",
+        "BloodTriggerer",
+        "SandBagsTriggerer",
+        "WoodsTriggerer",
+        "HayTriggerer"
+    };
+
+    private int currentStep = 0; // Track the player's progress in the sequence
 
     void Start()
     {
-        door = GameObject.Find("Door");
         eventText = GameObject.Find("EventText");
-        doorRb = door.GetComponent<Rigidbody2D>();
-        radioSoundSource = GameObject.Find("RadioAudio");
         Debug.Log(eventText);
-        radioSoundSource.SetActive(false);
     }
 
     void Update()
@@ -50,126 +46,80 @@ public class overallTriggerControl : MonoBehaviour
         {
             HandleTrigger(currentTriggerObject);
         }
-        showTexts();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        currentTriggerObject = collision.gameObject; // 存储当前触发的对象
+        currentTriggerObject = collision.gameObject;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject == currentTriggerObject)
         {
-            currentTriggerObject = null; // 清除当前触发的对象
+            currentTriggerObject = null;
         }
         ResetTexts();
     }
 
     void HandleTrigger(GameObject triggerObject)
     {
-        if (triggerObject.name == "BucketTriggerer")
+        string triggerName = triggerObject.name;
+        string eventTextContent = GetEventText(triggerName);
+
+        if (currentStep < correctOrder.Count && triggerName == correctOrder[currentStep])
         {
-            bucketBool = true;
-            showBucket = true;
-            Debug.Log("Bucket triggered");
+            // Correct trigger in the sequence
+            currentStep++;
+            eventText.GetComponent<TextMeshProUGUI>().SetText(eventTextContent);
+            eventText.GetComponent<TextMeshProUGUI>().color = Color.red;
+
+            // Update the bools based on the trigger
+            UpdateBool(triggerName);
         }
-        else if (triggerObject.name == "BloodTriggerer")
+        else
         {
-            bloodBool = true;
-            showBlood = true;
-            Debug.Log("Blood triggered");
-        }
-        else if (triggerObject.name == "VegetableTriggerer")
-        {
-            vegBool = true;
-            showVeg = true;
-            Debug.Log("Veg triggered");
-        }
-        else if (triggerObject.name == "SandBagsTriggerer")
-        {
-            sandBagBool = true;
-            showSandBag = true;
-            Debug.Log("SandBags triggered");
-        }
-        else if (triggerObject.name == "DoorTriggerer")
-        {
-            doorBool = true;
-            showDoor = true;
-            Debug.Log("Door triggered");
-        }
-        else if (triggerObject.name == "WoodsTriggerer")
-        {
-            woodBool = true;
-            showWood = true;
-            Debug.Log("Woods triggered");
-        }
-        else if (triggerObject.name == "HayTriggerer")
-        {
-            hayBool = true;
-            showHay = true;
-            Debug.Log("Hay triggered");
+            // Incorrect trigger
+            eventText.GetComponent<TextMeshProUGUI>().SetText(eventTextContent);
+            eventText.GetComponent<TextMeshProUGUI>().color = Color.white;
+
+            // Reset the sequence
+            currentStep = 0;
+            Debug.Log("Wrong sequence! Resetting...");
         }
     }
 
     void boolsControl()
     {
-        if (bucketBool && bloodBool && vegBool && sandBagBool && doorBool && woodBool && hayBool)
+        if (bucketBool && bloodBool && sandBagBool && woodBool && hayBool)
         {
-            Destroy(door.GetComponent<Collider2D>());
             allTriggered = true;
             Debug.Log("All triggered!");
-        }
-        if (allTriggered)
-        {
-            radioSoundSource.SetActive(true);
         }
     }
 
     void ResetTexts()
     {
-        showBucket = false;
-        showBlood = false;
-        showVeg = false;
-        showSandBag = false;
-        showDoor = false;
-        showWood = false;
-        showHay = false;
         eventText.GetComponent<TextMeshProUGUI>().SetText("");
         eventText.GetComponent<TextMeshProUGUI>().color = Color.white;
     }
 
-    void showTexts()
+    string GetEventText(string triggerName)
     {
-        if (showBucket)
-        {
-            eventText.GetComponent<TextMeshProUGUI>().SetText(bucketEventText);
-        }
-        else if (showBlood)
-        {
-            eventText.GetComponent<TextMeshProUGUI>().SetText(bloodEventText);
-            eventText.GetComponent<TextMeshProUGUI>().color = Color.red;
-        }
-        else if (showVeg)
-        {
-            eventText.GetComponent<TextMeshProUGUI>().SetText(vegEventText);
-        }
-        else if (showDoor)
-        {
-            eventText.GetComponent<TextMeshProUGUI>().SetText(doorEventText);
-        }
-        else if (showWood)
-        {
-            eventText.GetComponent<TextMeshProUGUI>().SetText(woodEventText);
-        }
-        else if (showHay)
-        {
-            eventText.GetComponent<TextMeshProUGUI>().SetText(hayEventText);
-        }
-        else if (showSandBag)
-        {
-            eventText.GetComponent<TextMeshProUGUI>().SetText(sandBagsText);
-        }
+        if (triggerName == "BucketTriggerer") return bucketEventText;
+        if (triggerName == "BloodTriggerer") return bloodEventText;
+        if (triggerName == "SandBagsTriggerer") return sandBagsText;
+        if (triggerName == "WoodsTriggerer") return woodEventText;
+        if (triggerName == "HayTriggerer") return hayEventText;
+        return "Unknown Trigger";
+    }
+
+    void UpdateBool(string triggerName)
+    {
+        if (triggerName == "BucketTriggerer") bucketBool = true;
+        else if (triggerName == "BloodTriggerer") bloodBool = true;
+        else if (triggerName == "SandBagsTriggerer") sandBagBool = true;
+        else if (triggerName == "WoodsTriggerer") woodBool = true;
+        else if (triggerName == "HayTriggerer") hayBool = true;
     }
 }

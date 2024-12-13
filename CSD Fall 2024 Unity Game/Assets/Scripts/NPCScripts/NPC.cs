@@ -67,9 +67,15 @@ public class NPC : MonoBehaviour, InteractableInterface {
     //This field does not need to be filled in the inspector, only if you want a sound effect to play if NPC is interacted with
     public AudioSource interactDialogueSound;
 
+    //StoryProgressor stuff man, if you're seeing this just talk to Caleb
+    private StoryProgressor storyProgressor;
+
     private void Start () {
+        storyProgressor = gameObject.GetComponent<StoryProgressor> ();
+
         dialogueMenu = new Dialogue ("", textBackgroundImg, textElement);
         dialogueArr = allDialogue[currentDialogueArr];
+        nameBackgroundImage.gameObject.SetActive(false);
     }
 
     private void Update () {
@@ -175,6 +181,10 @@ public class NPC : MonoBehaviour, InteractableInterface {
                 //if it is at the end of the dialogue, begin dialogue exit
                 else
                 {
+                    if (storyProgressor != null)
+                    {
+                        storyProgressor.advanceStory();
+                    }
                     exitDialogueMenuOnClick();
                 }
             } 

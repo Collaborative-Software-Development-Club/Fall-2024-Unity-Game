@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class ghostEvent : MonoBehaviour
 {
-    public GameObject ghostFox;
     public GameObject fox;
     private bool bloodBool;
     // Start is called before the first frame update
     void Start()
     {
-        ghostFox.SetActive(false);
     }
 
     // Update is called once per frame
@@ -19,7 +17,7 @@ public class ghostEvent : MonoBehaviour
         bloodBool = fox.GetComponent<overallTriggerControl>().bloodBool;
         if (bloodBool)
         {
-            ghostFox.SetActive(true);
+
         }
     }
 }

@@ -76,20 +76,14 @@ public class BigNPC : MonoBehaviour, InteractableInterface
     public NPCFollow npcFollow;
 
     //sound
-    public AudioManager audioManager;
+    public AudioSource talkSfx;
+
+    //Handles storyProgression if NPC has the StoryProgressor Script
+    private StoryProgressor storyProgressor;
 
     private void Start()
     {
-        // Initialize audioManager in the Start method
-        GameObject audioObject = GameObject.FindGameObjectWithTag("Audio");
-        if (audioObject != null)
-        {
-            audioManager = audioObject.GetComponent<AudioManager>();
-        }
-        else
-        {
-            Debug.LogError("AudioManager object with tag 'Audio' not found!");
-        }
+        storyProgressor = gameObject.GetComponent<StoryProgressor>();
 
         dialogueMenu = new Dialogue("", textBackgroundImg, textElement);
         dialogueArr = allDialogue[currentDialogueArr];
@@ -201,10 +195,7 @@ public class BigNPC : MonoBehaviour, InteractableInterface
                     nameElement.text = NPCName;
                     nameElement.gameObject.SetActive(true);
                     nameBackgroundImage.gameObject.SetActive(true);
-
-                    //plays sound
-                    audioManager.PlaySFX(audioManager.treeTalking);
-
+                    talkSfx.Play();
                     writingCoroutine = WriteDialogue();
 
                     StartCoroutine(writingCoroutine);
@@ -221,6 +212,10 @@ public class BigNPC : MonoBehaviour, InteractableInterface
                 //if it is at the end of the dialogue, begin dialogue exit
                 else
                 {
+                    if(storyProgressor != null)
+                    {
+                        storyProgressor.advanceStory();
+                    }
                     exitDialogueMenuOnClick();
                 }
             }

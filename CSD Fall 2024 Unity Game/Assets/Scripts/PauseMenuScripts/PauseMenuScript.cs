@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,9 +22,21 @@ public class PauseMenuScript : MonoBehaviour
     public UnityEvent GamePaused;
     public UnityEvent GameResumed;
 
+    private GlobalAudioManager audioManager;
+    private bool hasAudioManager;
+
+    //Start is called at the start
+    private void Start()
+    {
+        audioManager = FindObjectOfType<GlobalAudioManager>();
+        hasAudioManager = audioManager != null;
+    }
+
+
     // Update is called once per frame
     private void Update()
     {   
+        
         //pause menu can only be opened with escape key press
         if (Input.GetKeyDown(KeyCode.Escape)) {
             //change current pause state to opposite pause state
@@ -46,6 +60,10 @@ public class PauseMenuScript : MonoBehaviour
      */
     public void ResumeGame()
     {
+        if (hasAudioManager)
+        {
+            audioManager.playAllSounds();
+        }
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         
@@ -57,6 +75,10 @@ public class PauseMenuScript : MonoBehaviour
 
     public void PauseGame()
     {
+        if (hasAudioManager)
+        {
+            audioManager.pauseAllSounds();
+        }
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 

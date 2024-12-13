@@ -30,6 +30,7 @@ public class hamster : MonoBehaviour
 
         // Initialize walking target to a random position within bounds
         SetNewWalkingTarget();
+
     }
 
     // Update is called once per frame
